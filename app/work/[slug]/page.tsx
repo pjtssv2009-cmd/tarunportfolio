@@ -25,8 +25,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${project.title} — Tarun A | UI/UX Designer`,
-    description: project.description || `Case study and design breakdown for ${project.title} by Tarun A, UI/UX Designer based in Chennai, India.`,
+    title: `${project.title} | Tarun A — UI/UX & Product Designer`,
+    description: project.description || `Case study and design breakdown for ${project.title} by Tarun A, UI/UX and Product Designer based in Chennai, India.`,
     openGraph: {
       title: `${project.title} — Tarun A`,
       description: project.description,

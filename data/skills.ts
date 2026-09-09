@@ -6,65 +6,87 @@ export interface SkillCategory {
 
 export const skillsData: SkillCategory[] = [
   {
-    category: "UX DESIGN",
-    description: "Designing seamless pathways, user flows, and interaction architectures.",
+    category: "UX & Product Design",
+    description: "End-to-end product design, information architecture, and structured user journeys.",
     skills: [
-      "User Experience Design",
+      "UX Design",
+      "Product Design",
+      "User Research",
+      "User Flows",
       "Information Architecture",
-      "Wireframing & Flowcharts",
-      "Interactive Prototyping",
-      "Task Flow Optimization",
+      "User Journey Mapping",
+      "Wireframing",
+      "Usability Testing",
       "Heuristic Evaluation",
-      "Usability Testing"
+      "Task Flow Optimization"
     ]
   },
   {
-    category: "UI DESIGN",
-    description: "Crafting modern, accessible, high-contrast, and aesthetic interfaces.",
+    category: "UI & Interaction Design",
+    description: "Clean typography, responsive layout systems, and purposeful micro-interactions.",
     skills: [
-      "User Interface Design",
-      "Design Systems & Tokens",
-      "Mobile App UI (iOS & Android)",
+      "UI Design",
+      "Mobile App Design",
       "Responsive Web Design",
-      "Typography & Layout Hierarchy",
-      "Micro-Interactions",
+      "Interaction Design",
+      "Visual Design",
+      "Typography",
+      "Layout Systems",
+      "Accessibility",
+      "Micro-interactions",
       "Component Architecture"
     ]
   },
   {
-    category: "RESEARCH & STRATEGY",
-    description: "Deriving actionable insights to guide product decisions.",
+    category: "Design Systems",
+    description: "Reusable component architectures, variables, design tokens, and developer handoff.",
     skills: [
-      "User Research & Interviews",
-      "User Persona Development",
-      "Competitive Benchmarking",
-      "Empathy Mapping",
-      "Customer Journey Mapping",
-      "Problem Definition"
+      "Figma Design Systems",
+      "Components",
+      "Variables",
+      "Design Tokens",
+      "Component Libraries",
+      "UI Patterns",
+      "Prototyping",
+      "Developer Handoff"
     ]
   },
   {
-    category: "VISUAL & BRAND",
-    description: "Visual storytelling and brand alignment across digital touchpoints.",
+    category: "Research & Strategy",
+    description: "Evidence-grounded user research, persona definition, and competitive analysis.",
+    skills: [
+      "User Interviews",
+      "Personas",
+      "Empathy Mapping",
+      "Competitive Analysis",
+      "Customer Journey Mapping",
+      "Problem Definition",
+      "UX Audits"
+    ]
+  },
+  {
+    category: "Visual & Brand Design",
+    description: "Digital illustrations, custom iconography, brand identity, and art direction.",
     skills: [
       "Visual Design",
       "Digital Illustration",
       "Iconography",
-      "Graphic Layout",
-      "Poster & Asset Design",
-      "Moodboards & Art Direction"
+      "Graphic Design",
+      "Layout Design",
+      "Brand Identity",
+      "Art Direction"
     ]
   },
   {
-    category: "TOOLS & SOFTWARE",
-    description: "Industry-standard design and prototyping toolset.",
+    category: "Design Tools",
+    description: "Industry-standard design, vector, and prototyping software.",
     skills: [
       "Figma",
-      "Balsamiq Mockups",
-      "Marvel",
-      "InVision",
       "Adobe Photoshop",
-      "Adobe Illustrator"
+      "Adobe Illustrator",
+      "Balsamiq",
+      "Marvel",
+      "InVision"
     ]
   }
 ];

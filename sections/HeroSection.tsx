@@ -32,14 +32,14 @@ export const HeroSection: React.FC = () => {
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E5E5DE] shadow-xs">
                 <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                 <span className="text-xs text-[#222222] font-semibold">
-                  UI/UX Designer · Chennai, India
+                  UI/UX & Product Designer · Chennai, India
                 </span>
               </div>
 
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 border border-[#ECECE6] text-xs text-[#555555]">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
                 <span className="text-[11px] font-medium tracking-wide">
-                  {profileData.availability}
+                  Open to Full-time & Freelance
                 </span>
               </div>
             </motion.div>
@@ -52,23 +52,26 @@ export const HeroSection: React.FC = () => {
               className="max-w-3xl"
             >
               <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-tight text-[#111111] leading-[1.06] sm:leading-[1.04] mb-6 sm:mb-8">
-                Designing digital experiences that make{" "}
+                Designing intuitive digital products that solve{" "}
                 <span className="text-accent underline decoration-accent/30 decoration-2 underline-offset-8">
-                  complexity
+                  real user
                 </span>{" "}
-                feel simple.
+                and business problems.
               </h1>
             </motion.div>
 
             {/* Supporting Description */}
-            <motion.p
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-              className="max-w-xl text-base sm:text-lg text-[#555555] leading-relaxed mb-8 sm:mb-10 font-normal"
+              className="space-y-4 max-w-xl text-base sm:text-lg text-[#555555] leading-relaxed mb-8 sm:mb-10 font-normal"
             >
-              {profileData.subheadline}
-            </motion.p>
+              <p>{profileData.subheadline}</p>
+              <p className="text-sm sm:text-base text-[#666666]">
+                {profileData.heroSubtext}
+              </p>
+            </motion.div>
 
             {/* CTA Buttons */}
             <motion.div
@@ -107,27 +110,26 @@ export const HeroSection: React.FC = () => {
             >
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-3.5 h-3.5 text-accent" />
-                <span>User Research & Usability</span>
+                <span>UX Research & Usability</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-3.5 h-3.5 text-accent" />
-                <span>Mobile & Web Systems</span>
+                <span>Figma Design Systems</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-3.5 h-3.5 text-accent" />
-                <span>Interactive Prototyping</span>
+                <span>Mobile & Web Products</span>
               </div>
             </motion.div>
           </div>
 
-          {/* Right Column: Pure 3D PNG Image Showcase (5 Cols) — No Frame, No Box */}
+          {/* Right Column: 3D Canvas Showcase */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="lg:col-span-5 relative w-full h-[380px] sm:h-[460px] lg:h-[540px] flex items-center justify-center pointer-events-auto"
           >
-            {/* Pure 3D WebGL Canvas Layer */}
             <HeroScene className="w-full h-full" />
           </motion.div>
 
@@ -137,9 +139,9 @@ export const HeroSection: React.FC = () => {
       {/* Bottom Sub-Bar */}
       <div className="relative z-10 max-w-7xl mx-auto w-full pt-6 border-t border-[#E5E5DE]/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-[#777777]">
         <div className="flex items-center gap-4 sm:gap-6">
-          <span>Product & Interaction Design</span>
+          <span className="font-medium text-[#444444]">Based in Chennai, India</span>
           <span className="hidden md:inline text-[#AAAAAA]">·</span>
-          <span className="hidden md:inline">Based in Chennai, India</span>
+          <span className="hidden md:inline">Open to Full-time & Freelance Opportunities</span>
         </div>
 
         <Link
@@ -155,4 +157,3 @@ export const HeroSection: React.FC = () => {
     </section>
   );
 };
-

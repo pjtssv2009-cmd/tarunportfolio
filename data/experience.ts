@@ -24,73 +24,77 @@ export const experienceData: ExperienceItem[] = [
   {
     id: "exp-1",
     role: "User Experience Designer",
-    company: "Digiryte UK",
+    company: "Digiryte",
     employmentType: "Full-time",
-    period: "April 2026 — Present (6 months)",
-    location: "Manchester Area, United Kingdom",
-    description: "Designing intuitive, user-centered digital solutions and interactive web/mobile experiences for international clients, conducting UX analyses, and collaborating across agile product teams.",
+    period: "April 2026 – Present",
+    location: "Manchester, UK / Remote",
+    description: "Designing user-centered digital products and web/mobile experiences for international clients while collaborating with product managers, developers, and stakeholders.",
     responsibilities: [
-      "Leading end-to-end UX design workflows from research and persona mapping to final interface specification.",
-      "Collaborating with cross-functional product teams, engineers, and stakeholders to deliver seamless digital experiences.",
-      "Designing responsive, accessible web and mobile prototypes in Figma.",
-      "Applying user-centric design principles to optimize complex user flows and drive product adoption."
+      "Lead UX workflows from requirements and research through high-fidelity UI and prototyping.",
+      "Design responsive web and mobile experiences using Figma.",
+      "Translate complex business requirements into clear user flows and information architectures.",
+      "Collaborate with developers and product teams throughout the product lifecycle.",
+      "Improve usability through user-centered design principles, UX analysis, and iterative design.",
+      "Create reusable components and scalable design patterns for consistent product experiences."
     ],
-    skills: ["User Experience (UX)", "Interaction Design", "Figma", "User Research", "Wireframing", "Design Systems"],
+    skills: ["UX Design", "Interaction Design", "Figma", "User Research", "Wireframing", "Design Systems"],
     isCurrent: true
   },
   {
     id: "exp-2",
-    role: "Associate Engineer - UI/UX",
-    company: "Xenovex Technologies Private Limited",
+    role: "Associate Engineer — UI/UX",
+    company: "Xenovex Technologies",
     employmentType: "Full-time",
-    period: "March 2024 — March 2026",
+    period: "March 2024 – March 2026",
     location: "Chennai, India",
-    description: "Crafted user-centric digital solutions for government and private organizations, increasing user engagement rates by up to 35% and delivering accessible interfaces adopted by 100,000+ users across web and mobile platforms.",
+    description: "Designed user-centered digital products for government and private-sector organizations across web and mobile platforms.",
     responsibilities: [
-      "Crafted user-centric digital solutions for government and private organizations, increasing user engagement rates by up to 35%.",
-      "Partnered with developers, marketers, and product leads to deliver seamless digital experiences under tight deadlines.",
-      "Applied design thinking and agile methodologies to solve organizational challenges, improving team velocity and product-market fit.",
-      "Conducted user interviews and usability testing, leading to a 30% decrease in user-reported friction points.",
-      "Documented design workflows and onboarded new hires, increasing design team proficiency by 2X within six months.",
-      "Led projects from requirements gathering to high-fidelity prototyping, accelerating handoff to developers by 25%.",
-      "Specialized in Figma and interactive design, enabling rapid iteration and stakeholder feedback cycles.",
-      "Delivered accessible, intuitive interfaces adopted by 100,000+ users across web and mobile platforms."
+      "Designed digital experiences adopted by 100,000+ users across web and mobile platforms.",
+      "Contributed to product improvements that increased user engagement by up to 35%.",
+      "Conducted user interviews and usability testing, contributing to a 30% reduction in reported friction points.",
+      "Led design projects from requirements gathering through high-fidelity prototyping and developer handoff.",
+      "Improved design-to-development handoff efficiency by 25% through structured design workflows.",
+      "Created design documentation and supported onboarding for new team members.",
+      "Collaborated with developers, marketers, product leads, and stakeholders to deliver production-ready experiences.",
+      "Applied accessibility principles aligned with WCAG 2.1 AA."
     ],
     kpis: [
-      "Reduced project turnaround time by 35%",
-      "Achieved average user satisfaction score of 4.6 / 5",
-      "Ensured accessibility compliance at WCAG 2.1 Level AA"
+      "100K+ Users",
+      "Up to 35% Engagement Improvement",
+      "30% Fewer Friction Points",
+      "25% Faster Handoff"
     ],
-    skills: ["Figma", "Design Thinking", "Agile Methodologies", "User Interviews", "Usability Testing", "Design Systems", "WCAG 2.1 AA", "Prototyping"]
+    skills: ["Figma", "Design Thinking", "Agile", "User Research", "Usability Testing", "Design Systems", "Prototyping", "WCAG 2.1 AA"]
   },
   {
     id: "exp-3",
     role: "UI/UX Design Intern",
     company: "Techienutpam",
     employmentType: "Internship",
-    period: "October 2023 — November 2023",
-    location: "Chennai, Tamil Nadu, India",
-    description: "Supported UI/UX design initiatives, crafting user flows, low-to-high fidelity wireframes, and interactive component prototypes for emerging product features.",
+    period: "October 2023 – November 2023",
+    location: "Chennai, India",
+    description: "Supported UI/UX design initiatives across user flows, wireframes, mobile interfaces, prototypes, and design system maintenance.",
     responsibilities: [
-      "Created structured wireframes, screen task flows, and mobile application interface designs in Figma.",
-      "Assisted senior designers in design system maintenance, typographic hierarchy, and UI asset creation.",
-      "Participated in user feedback evaluation to iteratively refine interaction flows."
+      "Created user flows, task flows, and low-to-high fidelity wireframes.",
+      "Designed mobile application interfaces in Figma.",
+      "Supported design system maintenance and UI asset creation.",
+      "Participated in user feedback evaluation and interaction refinement."
     ],
     skills: ["Figma", "UI Design", "Wireframing", "User Flows", "Prototyping"]
   },
   {
     id: "exp-4",
     role: "Graphic Design Intern",
-    company: "aNumak & Company ®",
+    company: "aNumak & Company",
     employmentType: "Internship",
-    period: "March 2023 — June 2023",
-    location: "Greater Bengaluru Area, India",
-    description: "Produced high-impact graphics and promotional materials that boosted engagement on client channels by 60% and supported marketing campaigns with a 45% improved conversion rate.",
+    period: "March 2023 – June 2023",
+    location: "Bengaluru Area, India",
+    description: "Created digital graphics, promotional materials, brand assets, and marketing visuals for client campaigns.",
     responsibilities: [
-      "Produced high-impact graphics and promotional materials that boosted engagement on client channels by 60%.",
-      "Managed the entire design process, from concept through final production, supporting marketing campaigns that saw a 45% better conversion rate.",
-      "Utilized Adobe Creative Suite, Figma, and Illustrator to maintain brand consistency and high visual appeal.",
-      "Collaborated with cross-functional teams including marketing, product, and development to ensure assets aligned with campaign KPIs."
+      "Designed digital and promotional assets for marketing campaigns.",
+      "Developed visual concepts from initial ideas through final production.",
+      "Maintained brand consistency across campaign materials.",
+      "Collaborated with marketing, product, and development teams."
     ],
     skills: ["Adobe Creative Suite", "Adobe Illustrator", "Figma", "Graphic Design", "Brand Identity", "Visual Design"]
   }
@@ -98,30 +102,29 @@ export const experienceData: ExperienceItem[] = [
 
 export const educationData: EducationItem[] = [
   {
-    degree: "UX/UI DESIGN",
+    degree: "UX/UI Design Specialization",
     institution: "School Of Techies",
-    period: "July 2023 — January 2024",
+    period: "July 2023 – January 2024",
     location: "Chennai, India",
     highlights: [
-      "UX/UI Design specialization covering user research, wireframing, design systems, and rapid prototyping."
+      "Specialized training in UX research, wireframing, information architecture, UI design, design systems, prototyping, and usability."
     ]
   },
   {
-    degree: "B.E Automobile Engineering",
-    institution: "Easwari Engineering College (SRM Group)",
-    period: "August 2020 — June 2023",
+    degree: "B.E. Automobile Engineering",
+    institution: "Easwari Engineering College — SRM Group",
+    period: "August 2020 – June 2023",
     location: "Chennai, India",
     highlights: [
-      "Member of Student Society Of Automotive Engineers.",
-      "Elected to Chief Editorial and Technical Head for Student Society Of Automotive Engineers in 2021.",
-      "Elected Vice Captain of Team Peregrine Kire.",
-      "IKR - Indian Karting Race Team vice captain (December 2021 — August 2022)"
+      "Chief Editorial & Technical Head — Student Society of Automotive Engineers",
+      "Vice Captain — Team Peregrine Kire",
+      "Vice Captain — IKR Indian Karting Race Team"
     ]
   },
   {
     degree: "Diploma in Automobile Engineering",
     institution: "Aalim Muhammed Salegh Polytechnic College",
-    period: "June 2017 — July 2020",
+    period: "June 2017 – July 2020",
     location: "Chennai, India"
   }
 ];

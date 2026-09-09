@@ -27,12 +27,15 @@ export const Footer: React.FC = () => {
                   className="h-full w-auto object-contain"
                 />
               </div>
-              <p className="text-sm text-[#999999] mb-4">
-                {profileData.role} · {profileData.location}
+              <p className="text-sm text-[#CCCCCC] font-medium mb-1">
+                {profileData.role} · Chennai, India
+              </p>
+              <p className="text-xs text-[#888888] mb-4">
+                Designing intuitive digital products for web and mobile.
               </p>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1A1A1D] border border-[#2D2D32] text-xs text-[#CCCCCC]">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span>{profileData.availability}</span>
+                <span>Available for Full-time & Freelance Opportunities</span>
               </div>
             </div>
           </div>
@@ -67,12 +70,20 @@ export const Footer: React.FC = () => {
               Experience
             </Link>
             <Link
-              href="/#services"
+              href="/#expertise"
               className="text-sm text-[#AAAAAA] hover:text-white transition-colors"
               onMouseEnter={() => setCursorType("pointer")}
               onMouseLeave={() => setCursorType("default")}
             >
-              Services
+              Product Design Expertise
+            </Link>
+            <Link
+              href="/#faq"
+              className="text-sm text-[#AAAAAA] hover:text-white transition-colors"
+              onMouseEnter={() => setCursorType("pointer")}
+              onMouseLeave={() => setCursorType("default")}
+            >
+              FAQ
             </Link>
             <Link
               href="/#contact"
@@ -115,7 +126,7 @@ export const Footer: React.FC = () => {
               onMouseEnter={() => setCursorType("arrow")}
               onMouseLeave={() => setCursorType("default")}
             >
-              <span>LinkedIn Profile</span>
+              <span>LinkedIn</span>
               <ArrowUpRight className="w-4 h-4 text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
             <a
@@ -126,7 +137,7 @@ export const Footer: React.FC = () => {
               onMouseEnter={() => setCursorType("arrow")}
               onMouseLeave={() => setCursorType("default")}
             >
-              <span>Behance Portfolio</span>
+              <span>Behance</span>
               <ArrowUpRight className="w-4 h-4 text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
           </div>
@@ -136,7 +147,7 @@ export const Footer: React.FC = () => {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#777777]">
           <p>© 2026 {profileData.name}. All rights reserved.</p>
           <p className="font-serif italic text-[#888888] tracking-wide">
-            Designed with intention.
+            Designing intuitive digital products for web and mobile.
           </p>
           <div className="flex items-center gap-4">
             <a

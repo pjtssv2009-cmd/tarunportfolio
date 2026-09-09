@@ -35,8 +35,8 @@ export const projectsData: Project[] = [
     id: "rewad-loyalty",
     slug: "rewad",
     number: "01",
-    title: "Rewad — Loyalty & Rewards Ecosystem",
-    category: "FinTech & Loyalty · Multi-Platform Ecosystem",
+    title: "Rewad — Loyalty & Rewards Platform",
+    category: "FinTech & Loyalty · Mobile App · Merchant Platform · Admin Portal",
     role: "UI/UX Product Designer",
     year: "2024 — 2026",
     featured: true,
@@ -51,20 +51,20 @@ export const projectsData: Project[] = [
       "Figma",
       "Design Systems",
       "Prototyping",
-      "User Research",
-      "Wireframing"
+      "UX Research",
+      "Information Architecture"
     ],
     tags: [
       "Customer Mobile App",
-      "Business Merchant App",
-      "Admin Portal",
+      "Merchant POS",
+      "Business Admin Portal",
       "Marketing Website",
-      "Loyalty Rewards",
-      "QR Scanner",
-      "UI/UX"
+      "Loyalty & Rewards",
+      "UI/UX Design",
+      "Figma"
     ],
-    description: "Complete multi-platform digital loyalty ecosystem: Customer mobile app, merchant scanning app, responsive website, and business analytics admin portal.",
-    overview: "Rewad (rewad.co) is a modern customer loyalty ecosystem designed to replace physical stamp cards for local businesses (cafés, salons, boutiques, and restaurants). As product designer, I architected all 4 interconnected pillars of the product: the Customer Mobile App for digital stamp collection & gift redemption, the Merchant Mobile App for sub-second POS barcode scanning, the responsive Marketing Website, and the comprehensive Web Admin Portal for business owners to configure promotions, double-stamp days, and analyze customer lifetime value.",
+    description: "Designed a multi-platform loyalty ecosystem connecting customers, merchants, and business teams through a customer mobile app, merchant POS scanner, marketing website, and business administration platform.",
+    overview: "Rewad is a comprehensive loyalty and rewards ecosystem designed to replace physical stamp cards for local businesses. As product designer, I architected all 4 interconnected pillars of the product: the Customer Mobile App for digital stamp collection & gift redemption, the Merchant Mobile App for sub-second POS barcode scanning, the responsive Marketing Website, and the comprehensive Web Admin Portal for business owners to configure promotions and analyze customer retention.",
     problem: "Physical punch cards lead to high loss rates and provide zero data insights to business owners. Existing digital loyalty solutions were either clunky enterprise software or created unacceptable checkout delays at the cash register.",
     research: "Conducted field interviews with retail staff and everyday café customers. Discovered that POS verification must take less than 3 seconds to avoid checkout lines, and consumers engage significantly more when rewarded with visual milestone progress rings.",
     process: "Mapped user flows across four interconnected interfaces simultaneously. Built clickable prototypes in Figma, conducted in-person cashier testing to optimize tap targets for one-handed operation, and created a unified multi-platform design token system.",
@@ -76,8 +76,8 @@ export const projectsData: Project[] = [
     id: "the-trippin",
     slug: "trippin",
     number: "02",
-    title: "Trippin — Custom Apparel & Streetwear Design",
-    category: "Streetwear & Apparel · Graphic & Merchandise Design",
+    title: "Trippin — Custom Apparel & Streetwear Brand",
+    category: "Brand Design · E-commerce · Visual Design · Merchandise",
     role: "T-Shirt & Apparel Designer",
     year: "2024 — 2026",
     featured: true,
@@ -91,21 +91,18 @@ export const projectsData: Project[] = [
     tools: [
       "Adobe Illustrator",
       "Adobe Photoshop",
-      "Figma",
-      "Vector Graphics",
-      "Typography"
+      "Figma"
     ],
     tags: [
-      "T-Shirt Design",
-      "Apparel Design",
-      "Streetwear",
+      "Brand Exploration",
       "Typography",
-      "Merchandise",
-      "Brand Identity",
-      "Print Production"
+      "Graphic Design",
+      "Apparel Graphics",
+      "Merchandise Design",
+      "Digital Assets"
     ],
-    description: "Custom graphic apparel, streetwear typography, and corporate gifting merchandise collections manufactured for brands, startups, and events across India.",
-    overview: "Trippin (thetrippin.com) manufactures premium custom apparel (Trippin Tees) and corporate gifting products (Trippin Cutz) for teams, events, and modern brands across India. As T-Shirt Designer, I conceptualized and developed high-impact graphic illustrations, bold typography compositions, back-print artworks, and ready-to-print production vectors across multiple seasonal merchandise lines.",
+    description: "Designed visual identities, typography, graphic apparel, and merchandise experiences for brands, startups, events, and corporate clients across India.",
+    overview: "Trippin manufactures premium custom apparel and merchandise for teams, startups, events, and modern brands across India. As designer, I conceptualized and developed high-impact visual identities, typography lockups, graphic apparel collections, and ready-to-print digital production assets.",
     problem: "Merging cutting-edge streetwear aesthetics (cyber-minimalism, Japanese typography, brutalist grid layouts) with industrial screen-printing constraints, ink cures, and brand identity guidelines.",
     research: "Analyzed contemporary streetwear design trends, poster typography, and technical garment manufacturing constraints (fabric weights, DTG vs. screen printing color separations, bleed margins).",
     process: "Iterated through dozens of vector sketches, typography lockups, and 3D digital garment renders to test visual balance, contrast on various fabric colors, and print placement scale.",
@@ -117,8 +114,8 @@ export const projectsData: Project[] = [
     id: "soughteasy-admin",
     slug: "soughteasy",
     number: "03",
-    title: "SoughtEasy — Enterprise SaaS Admin Portal",
-    category: "Enterprise SaaS · Admin Portal UI/UX",
+    title: "SoughtEasy — Enterprise SaaS Admin Platform",
+    category: "Enterprise SaaS · Admin Portal · CRM · Workforce Management",
     role: "Admin Portal UI/UX Designer",
     year: "2024 — 2026",
     featured: true,
@@ -132,25 +129,24 @@ export const projectsData: Project[] = [
     tools: [
       "Figma",
       "Design Systems",
-      "Component Architecture",
       "Information Architecture",
-      "Data Visualization"
+      "Data Visualization",
+      "Prototyping"
     ],
     tags: [
-      "Admin Portal",
       "Enterprise SaaS",
-      "CRM Dashboard",
-      "HR Management",
-      "Finance Operations",
+      "Admin Portal",
+      "CRM",
+      "Workforce Management",
       "UI/UX Design",
-      "Figma"
+      "Data Visualization"
     ],
-    description: "Solely designed the complete multi-tenant administrative portal for SoughtEasy, unifying CRM pipelines, workforce HR management, finance, and role-based permissions.",
-    overview: "SoughtEasy (soughteasy.co.nz) by Chasvi Co Limited (Auckland, New Zealand & Bengaluru, India) is an integrated SMB business operating platform. I was solely responsible for architecting and designing the complete Admin Portal — the central command hub giving operations managers, HR leaders, and business owners comprehensive control over organizational telemetry, team performance, sales pipelines, and access governance.",
+    description: "Designed a multi-tenant enterprise administration platform that brings CRM, workforce management, HR operations, finance, permissions, and business workflows into a centralized experience.",
+    overview: "SoughtEasy is an integrated enterprise SMB business operating platform. I was responsible for architecting and designing the complete Admin Portal — the central command hub giving operations managers, HR leaders, and business owners comprehensive control over organizational telemetry, team performance, sales pipelines, and access governance.",
     problem: "SMB admins were burdened with fragmented spreadsheets, isolated CRM tools, and disjointed employee management systems, causing severe administrative drag and high error rates.",
     research: "Conducted usability interviews with SMB operations managers and team leads. Found that fast bulk editing, glanceable KPI health widgets, and granular permission matrices were the highest priorities for fatigue-free daily management.",
-    process: "Created a scalable 8px design system with modular card components, high-density data tables, multi-parameter filtering, and custom data visualization graphs in Figma.",
-    solution: "A modern, responsive dark/light admin dashboard featuring real-time business health telemetry, visual CRM deal pipelines, HR employee metrics, granular permission toggles, and seamless financial reporting.",
+    process: "Created a scalable design system with modular card components, high-density data tables, multi-parameter filtering, and custom data visualization graphs in Figma.",
+    solution: "A modern, responsive admin dashboard featuring real-time business health telemetry, visual CRM deal pipelines, HR employee metrics, granular permission toggles, and seamless financial reporting.",
     outcome: "Accelerated administrative task turnaround by 40%, streamlined workforce onboarding, and provided executives with unified operational governance.",
     learnings: "High-density enterprise portals succeed when information hierarchy prioritizes rapid scanning without visual noise, coupled with instant confirmation feedback for critical administrative operations."
   },
@@ -158,8 +154,8 @@ export const projectsData: Project[] = [
     id: "sudhanya-app",
     slug: "sudhanya",
     number: "04",
-    title: "Sudhanya — Organic Foods & Farm Groceries App",
-    category: "E-Commerce & AgriTech · Mobile App Design",
+    title: "Sudhanya — Organic Grocery Mobile App",
+    category: "E-commerce · AgriTech · Mobile App",
     role: "Mobile App UI/UX Designer",
     year: "2024",
     featured: true,
@@ -173,21 +169,20 @@ export const projectsData: Project[] = [
     tools: [
       "Figma",
       "Mobile UI Design",
-      "Prototyping",
       "User Journey Mapping",
+      "Prototyping",
       "Design Systems"
     ],
     tags: [
-      "Mobile App Design",
-      "Organic E-Commerce",
-      "Farm to Table",
-      "Subscription UX",
-      "Grocery Shopping",
+      "E-commerce",
+      "AgriTech",
+      "Mobile App",
+      "User Journeys",
       "UI/UX Design",
-      "Figma"
+      "Prototyping"
     ],
-    description: "End-to-end mobile application design for Sudhanya Organic Store, delivering a seamless farm-to-table shopping experience, organic grocery subscriptions, and sustainable pantry essentials.",
-    overview: "Sudhanya is a premier retailer of naturally grown, chemical-free organic foods — offering unpolished rice, wooden cold-pressed oils, whole-grain millets, and sustainable agricultural essentials. I designed the dedicated mobile application (iOS & Android) focusing on clear product categorization, organic certification transparency, recurring weekly delivery subscriptions, and effortless checkout.",
+    description: "Designed an end-to-end mobile shopping experience for organic groceries, including product discovery, product browsing, shopping journeys, subscriptions, and sustainable food purchasing.",
+    overview: "Sudhanya is a retailer of naturally grown, chemical-free organic foods — offering unpolished rice, wooden cold-pressed oils, whole-grain millets, and sustainable agricultural essentials. I designed the dedicated mobile application (iOS & Android) focusing on clear product categorization, organic certification transparency, recurring weekly delivery subscriptions, and effortless checkout.",
     problem: "Online organic grocery shoppers often encounter skepticism regarding product authenticity, complicated delivery windows, and high friction when trying to set up recurring weekly orders for kitchen essentials.",
     research: "Studied mobile grocery consumer behavior and household purchasing cycles. Discovered that highlighting farm origin stories, showing clear nutritional breakdowns, and offering a 1-tap 'Weekly Essentials Subscription' dramatically improved customer retention and basket size.",
     process: "Mapped user flows for first-time onboarding, category discovery (Cold-Pressed Oils, Grains & Cereals, Natural Pulses), item customization, subscription schedule manager, and quick radius-based delivery checkout.",
@@ -199,8 +194,8 @@ export const projectsData: Project[] = [
     id: "corpfin-hub",
     slug: "corpfinhub",
     number: "05",
-    title: "CorpFin Hub — UK M&A & Private Capital Marketplace",
-    category: "FinTech & Investment Banking · Web Platform & Deal Marketplace",
+    title: "CorpFin Hub — M&A & Private Capital Marketplace",
+    category: "FinTech · Investment Banking · Web Platform · Marketplace",
     role: "Senior Product UI/UX Designer",
     year: "2024 — 2026",
     featured: true,
@@ -220,19 +215,17 @@ export const projectsData: Project[] = [
     ],
     tags: [
       "FinTech",
-      "M&A Marketplace",
       "Investment Banking",
-      "Digital NDA",
-      "Deal Pipeline",
-      "Virtual Data Room",
+      "Web Platform",
+      "Marketplace",
       "UI/UX Design",
-      "Figma"
+      "Data Visualization"
     ],
-    description: "Comprehensive digital marketplace platform connecting UK business owners, M&A advisors, and vetted institutional investors for mid-market company acquisitions and capital raising (£2M+ revenue).",
-    overview: "CorpFin Hub (corpfinhub.co.uk) is a premier UK financial technology platform founded by HSA Advisory to streamline mergers and acquisitions (M&A), capital raising, and strategic investments for the UK mid-market. I designed the complete digital experience — including the deal discovery marketplace, automated digital NDA signing, confidential virtual data rooms, investor matching engine, and advisor deal-flow management dashboards.",
+    description: "Designed a digital marketplace connecting UK business owners, M&A advisors, and institutional investors for mid-market acquisitions and capital raising.",
+    overview: "CorpFin Hub is a UK financial technology platform founded to streamline mergers and acquisitions (M&A), capital raising, and strategic investments for the UK mid-market. The product required clear information architecture, financial data presentation, search and discovery flows, and trust-focused user experiences.",
     problem: "Mid-market M&A transactions traditionally suffer from opaque deal sourcing, slow manual NDA exchange over email, fragmented valuation negotiations, and poor visibility for business sellers looking to connect with qualified acquirers.",
     research: "Conducted in-depth interviews with UK corporate finance directors, boutique investment bankers, private equity analysts, and business owners. Identified the need for strict confidentiality tiers, frictionless digital NDA authorization, and clear deal pipeline progression stages.",
-    process: "Created an institutional-grade dark financial interface design system. Designed confidential teaser cards, 2-way investor matching matrices, structured M&A transaction pipelines (Discovery → NDA Signed → IM Review → Due Diligence → Closing), and encrypted virtual data room document viewers.",
+    process: "Created an institutional-grade financial interface design system. Designed confidential teaser cards, 2-way investor matching matrices, structured M&A transaction pipelines, and encrypted virtual data room document viewers.",
     solution: "A high-security, responsive fintech web platform featuring automated NDA execution, deal pipeline Kanban visualizations, multi-parameter investor matching filters, valuation comparison matrices, and secure document telemetry.",
     outcome: "Accelerated deal discovery and NDA turnaround times from days to minutes, connecting hundreds of vetted UK mid-market opportunities with institutional acquirers and corporate finance professionals.",
     learnings: "Designing for high-stakes finance demands uncompromising security indicators, rock-solid information hierarchy, and intuitive disclosure controls to preserve seller confidentiality at every stage of the deal."
@@ -259,15 +252,13 @@ export const projectsData: Project[] = [
       "InVision"
     ],
     "tags": [
-      "UX design",
+      "UX Design",
       "UI/UX",
       "Figma",
-      "user interface",
-      "ui design",
-      "user experience",
-      "User research"
+      "Automotive Community",
+      "User Research"
     ],
-    "description": "Bridging the gap between automotive enthusiasts by providing a seamless platform for connection and shared passion.",
+    "description": "UX/UI design for an automotive community platform connecting enthusiasts through profiles, content, discussions, and community interactions.",
     "stats": {
       "appreciations": {
         "all": 16
@@ -279,10 +270,10 @@ export const projectsData: Project[] = [
         "all": 2
       }
     },
-    "overview": "Ride Dude is a specialized mobile platform conceived to bridge the gap between automotive and motorcycle enthusiasts, providing a dedicated space for community meetups, route sharing, vehicle profiling, and shared passion.",
+    "overview": "Ride Dude is an automotive community platform conceived to bridge the gap between automotive and motorcycle enthusiasts, providing a dedicated space for community meetups, route sharing, vehicle profiling, and shared passion.",
     "problem": "Automotive enthusiasts previously relied on fragmented social platforms that lacked dedicated vehicle logs, verified group ride navigation, or community gear recommendations.",
     "research": "Conducted target audience surveys and competitor audits across enthusiast forums to identify core user motivations: finding local riding groups, logging bike maintenance, and discovering scenic motorcycle routes.",
-    "process": "Synthesized user research into distinct personas (The Weekend Cruiser vs. The Track Day Enthusiast), mapped the end-to-end trip creation flow, and drafted low-fidelity wireframes in Balsamiq before refining in Marvel and Figma.",
+    "process": "Synthesized user research into distinct personas, mapped the end-to-end trip creation flow, and drafted low-fidelity wireframes before refining in Figma.",
     "solution": "An intuitive mobile interface featuring community ride feeds, live ride telemetry, route planning with elevation profiles, and customizable garage profiles.",
     "learnings": "Designing for enthusiasts requires respecting established community terminology and prioritizing glanceable information during high-focus tasks like route navigation."
   },
@@ -305,17 +296,13 @@ export const projectsData: Project[] = [
       "Figma"
     ],
     "tags": [
-      "digital education",
-      "ux/ui",
+      "Digital Education",
+      "UX/UI",
       "Figma",
-      "ui design",
-      "user experience",
-      "Interface",
-      "Education",
-      "student",
-      "portfolio"
+      "Learning Journeys",
+      "User Experience"
     ],
-    "description": "A comprehensive digital experience and interface design project created for Aprender UX Case Study.",
+    "description": "UX design for an education platform focused on improving course discovery, learning journeys, navigation, and digital learning interactions.",
     "stats": {
       "appreciations": {
         "all": 8
@@ -364,18 +351,13 @@ export const projectsData: Project[] = [
       "Figma"
     ],
     "tags": [
-      "ux",
-      "Figma",
-      "user experience",
-      "Mobile app",
+      "Mobile App",
       "UI/UX",
-      "fitness",
-      "branding ",
-      "visual identity",
-      "customer experience",
-      "User research"
+      "Fitness",
+      "Health Analytics",
+      "Figma"
     ],
-    "description": "A comprehensive digital experience and interface design project created for FitPeo Fitness Application.",
+    "description": "Mobile fitness experience designed to help users discover workouts, manage fitness activities, track progress, and maintain consistent routines.",
     "stats": {
       "appreciations": {
         "all": 2
@@ -387,7 +369,7 @@ export const projectsData: Project[] = [
         "all": 0
       }
     },
-    "overview": "FitPeo is a comprehensive modern health and fitness application designed to simplify daily activity monitoring, workout regimen tracking, and biometric vital trends.",
+    "overview": "FitPeo is a modern health and fitness application designed to simplify daily activity monitoring, workout regimen tracking, and biometric vital trends.",
     "problem": "Users struggle with fragmented fitness apps that separate workout logging, nutritional intake, and wearable health statistics into isolated silos.",
     "research": "Analyzed mobile fitness workflows and discovered that users abandon tracking when logging routines requires more than 3 taps.",
     "process": "Architected a unified daily dashboard with glanceable circular metrics, structured workout cards, and quick-add actions for logging sets and reps.",
@@ -410,21 +392,16 @@ export const projectsData: Project[] = [
       "/images/projects/194519395/module_0.png"
     ],
     "tools": [
-      "Figma "
+      "Figma"
     ],
     "tags": [
       "UI/UX",
-      "redesign website",
-      "Figma",
-      "ui design",
-      "user interface",
-      "landing page",
-      "UX design",
-      "user experience",
-      "irctc",
-      "irctc website redesign"
+      "Redesign",
+      "Information Architecture",
+      "Railway Booking",
+      "Figma"
     ],
-    "description": "A comprehensive digital experience and interface design project created for IRCTC Website Redesign.",
+    "description": "UX/UI redesign concept exploring clearer information architecture, journey planning, navigation, and railway booking interactions for travelers.",
     "stats": {
       "appreciations": {
         "all": 5
@@ -438,7 +415,7 @@ export const projectsData: Project[] = [
     },
     "overview": "A comprehensive UX/UI redesign of the Indian Railways Catering and Tourism Corporation (IRCTC) web ticketing platform, addressing usability friction and cognitive overload.",
     "problem": "The existing IRCTC interface suffered from heavy visual clutter, confusing quota selections, cluttered seat availability matrices, and a high-friction booking flow during peak Tatkal hours.",
-    "research": "Conducted heuristic evaluations of the current booking funnel and surveyed frequent rail passengers. Key friction points included train search input confusion, ambiguous confirmation statuses, and cluttered advertisement placement.",
+    "research": "Conducted heuristic evaluations of the booking funnel and surveyed frequent rail passengers. Key friction points included train search input confusion, ambiguous confirmation statuses, and cluttered advertisement placement.",
     "process": "Re-architected the main search interface into a clean, contextual booking bar. Redesigned the train listing view with instant class-wise availability cards and an unburdened 3-step checkout.",
     "solution": "A clean, modern web interface with clear fare comparisons, instant filters for departure time and train class, transparent seat availability indicators, and an accessible booking flow.",
     "learnings": "Redesigning mission-critical public infrastructure requires preserving familiar booking terminology while radically simplifying the visual and interaction hierarchy."
@@ -447,7 +424,7 @@ export const projectsData: Project[] = [
     "id": "218257955",
     "slug": "exotic-indian-eats",
     "number": "10",
-    "title": "Exotic Indian Eats A Responsive Website",
+    "title": "Exotic Indian Eats Responsive Website",
     "category": "Culinary & Dining · Responsive Web Design",
     "role": "UI/UX Designer",
     "year": "2024",
@@ -464,17 +441,12 @@ export const projectsData: Project[] = [
     ],
     "tags": [
       "UI/UX",
-      "Figma",
-      "landing page",
-      "Web Design ",
-      "ui design",
-      "user experience",
-      "Food ",
-      "Food Website",
-      "Website",
-      "foodwebsitedesign"
+      "Web Design",
+      "Responsive Web",
+      "Food Exploration",
+      "Figma"
     ],
-    "description": "A comprehensive digital experience and interface design project created for Exotic Indian Eats A Responsive Website.",
+    "description": "Responsive restaurant website designed to improve menu discovery, food exploration, brand presentation, and online customer interaction.",
     "stats": {
       "appreciations": {
         "all": 5
@@ -497,7 +469,7 @@ export const projectsData: Project[] = [
     "id": "232917963",
     "slug": "enipu",
     "number": "11",
-    "title": "Case Study (Enipu)",
+    "title": "Enipu Case Study",
     "category": "Food & Beverage · End-to-End Case Study",
     "role": "UI/UX Designer",
     "year": "2024",
@@ -520,18 +492,13 @@ export const projectsData: Project[] = [
       "Figma"
     ],
     "tags": [
-      "case study design",
+      "Case Study",
       "Figma",
       "UI/UX",
-      "ui design",
-      "Web",
-      "landing page",
-      "user interface",
-      "UX design",
-      "user experience",
-      "Interface"
+      "Menu Discovery",
+      "Responsive Web"
     ],
-    "description": "A comprehensive digital experience and interface design project created for Case Study (Enipu).",
+    "description": "Digital food and restaurant experience focused on brand presentation, menu discovery, content hierarchy, and responsive web interaction.",
     "stats": {
       "appreciations": {
         "all": 6
@@ -573,16 +540,12 @@ export const projectsData: Project[] = [
       "InVision"
     ],
     "tags": [
-      "UX design",
-      "UI/UX",
+      "UI Design",
+      "Design Systems",
       "Figma",
-      "ui design",
-      "user experience",
-      "uxresearch",
-      "UI designer",
-      "uxdesignerportfolio"
+      "Automotive UI"
     ],
-    "description": "Bridging the gap between automotive enthusiasts by providing a seamless platform for connection and shared passion.",
+    "description": "High-fidelity UI and design system implementation for the Ride Dude automotive community application.",
     "stats": {
       "appreciations": {
         "all": 7
@@ -620,16 +583,10 @@ export const projectsData: Project[] = [
     "tags": [
       "UI/UX",
       "Figma",
-      "user interface",
-      "ui design",
-      "Education",
-      "student",
-      "school",
-      "learning",
-      "research",
-      "UX design"
+      "Education UI",
+      "Interaction Design"
     ],
-    "description": "A comprehensive digital experience and interface design project created for Aprender UI Case Study.",
+    "description": "UI design system and interactive student dashboard interface for the Aprender education platform.",
     "stats": {
       "appreciations": {
         "all": 6
@@ -685,18 +642,12 @@ export const projectsData: Project[] = [
       "Figma"
     ],
     "tags": [
-      "movie",
-      "Poster Design",
-      "Social media post",
-      "Graphic Designer",
-      "Socialmedia",
+      "Cinematic UX",
+      "Visual Hierarchy",
       "Analysis",
-      "presentation",
-      "karate kid",
-      "Netflix",
-      "movieanalysis"
+      "Figma"
     ],
-    "description": "A comprehensive digital experience and interface design project created for Karate Kids Movie UXUI Analysis.",
+    "description": "UX/UI analysis exploring how cinematic content, visual hierarchy, navigation, and interaction patterns can shape a digital movie experience.",
     "stats": {
       "appreciations": {
         "all": 12
@@ -717,7 +668,7 @@ export const projectsData: Project[] = [
     "id": "187468131",
     "slug": "smart-remote",
     "number": "15",
-    "title": "Smart Remote All in One",
+    "title": "Smart Remote All-in-One",
     "category": "IoT & Smart Living · Mobile UI App",
     "role": "UI/UX Designer",
     "year": "2023",
@@ -733,15 +684,12 @@ export const projectsData: Project[] = [
       "Figma"
     ],
     "tags": [
-      "smart remote",
-      "user experience",
-      "Figma",
-      "UI/UX",
-      "ui design",
-      "user interface",
-      "remote"
+      "IoT",
+      "Smart Remote",
+      "Mobile UI",
+      "Tactile Gestures"
     ],
-    "description": "A comprehensive digital experience and interface design project created for Smart Remote All in One.",
+    "description": "IoT mobile interface concept for controlling multiple smart devices through a unified remote-control experience.",
     "stats": {
       "appreciations": {
         "all": 5
@@ -778,17 +726,12 @@ export const projectsData: Project[] = [
       "Figma"
     ],
     "tags": [
-      "Figma",
-      "landing page",
-      "UI",
-      "ui design",
-      "UI/UX",
-      "user interface",
-      "ux",
-      "Website",
-      "Website Design"
+      "E-Commerce",
+      "Plants",
+      "Landing Page",
+      "UI/UX"
     ],
-    "description": "Made my simple portfolio about plants online store",
+    "description": "E-commerce website concept for discovering and purchasing plants through a simple, visually focused online shopping experience.",
     "stats": {
       "appreciations": {
         "all": 4
@@ -809,7 +752,7 @@ export const projectsData: Project[] = [
     "id": "232911803",
     "slug": "enipu-web",
     "number": "17",
-    "title": "enipu (The taste of india )",
+    "title": "Enipu The Taste of India Web",
     "category": "Brand & Web · Digital Experience",
     "role": "UI/UX Designer",
     "year": "2024",
@@ -822,16 +765,12 @@ export const projectsData: Project[] = [
       "Figma"
     ],
     "tags": [
-      "Web Design ",
+      "Web Design",
       "Figma",
       "UI/UX",
-      "user interface",
-      "landing page",
-      "Website",
-      "design",
-      "ILLUSTRATION "
+      "Digital Illustration"
     ],
-    "description": "A comprehensive digital experience and interface design project created for enipu (The taste of india ).",
+    "description": "Responsive culinary web platform showcasing authentic recipes, brand storytelling, and regional Indian delicacies.",
     "stats": {
       "appreciations": {
         "all": 5

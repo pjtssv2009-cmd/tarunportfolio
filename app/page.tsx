@@ -8,39 +8,43 @@ import { ServicesSection } from "@/sections/ServicesSection";
 import { ExperienceSection } from "@/sections/ExperienceSection";
 import { AboutSection } from "@/sections/AboutSection";
 import { SkillsSection } from "@/sections/SkillsSection";
+import { FaqSection } from "@/sections/FaqSection";
 import { ContactSection } from "@/sections/ContactSection";
 
 export default function HomePage() {
   return (
     <div className="w-full">
-      {/* 01. Hero with 3D Canvas */}
+      {/* 01. Hero Section */}
       <HeroSection />
 
-      {/* 02. Philosophy & Introduction */}
+      {/* 02. Introduction & Philosophy */}
       <PhilosophySection />
 
-      {/* 03. Selected Work (Featured Case Studies with Asymmetric Layouts) */}
+      {/* 03. Selected Product Design Work */}
       <SelectedWorkSection />
 
-      {/* 04. More Work (UI Case Studies, Visual Analysis, IoT & Responsive Web) */}
+      {/* 04. More Work & Case Studies */}
       <MoreWorkSection />
 
-      {/* 05. How I Think (5-Step Design Methodology) */}
+      {/* 05. Product Design Process */}
       <ProcessSection />
 
-      {/* 06. What I Do (Interactive Typographic Services) */}
+      {/* 06. Product Design Expertise */}
       <ServicesSection />
 
-      {/* 07. Experience (Vertical Career & Projects Timeline) */}
+      {/* 07. Experience & Education */}
       <ExperienceSection />
 
-      {/* 08. About Tarun (Real Portrait, Biography & Values) */}
+      {/* 08. About Tarun A */}
       <AboutSection />
 
-      {/* 09. Skills & Core Competencies */}
+      {/* 09. UI/UX Design Skills & Tools */}
       <SkillsSection />
 
-      {/* 10. Contact CTA & Direct Inquiries */}
+      {/* 10. Frequently Asked Questions (AEO/SEO) */}
+      <FaqSection />
+
+      {/* 11. Contact CTA & Direct Inquiries */}
       <ContactSection />
     </div>
   );

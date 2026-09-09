@@ -5,15 +5,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { profileData } from "@/data/profile";
 import { useCursor } from "./CustomCursor";
 
 const NAV_LINKS = [
   { name: "Work", href: "/#work" },
   { name: "About", href: "/#about" },
+  { name: "Process", href: "/#process" },
+  { name: "Expertise", href: "/#expertise" },
   { name: "Experience", href: "/#experience" },
-  { name: "Services", href: "/#services" },
+  { name: "FAQ", href: "/#faq" },
   { name: "Contact", href: "/#contact" },
 ];
 
@@ -66,7 +68,7 @@ export const Navbar: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation Links aligned to Right */}
-          <nav className="hidden md:flex items-center gap-8 lg:gap-10">
+          <nav className="hidden md:flex items-center gap-7 lg:gap-9">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.name}
@@ -115,13 +117,13 @@ export const Navbar: React.FC = () => {
                   />
                 </div>
               </div>
-              <nav className="flex flex-col gap-5">
+              <nav className="flex flex-col gap-4">
                 {NAV_LINKS.map((link) => (
                   <Link
                     key={link.name}
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="text-2xl sm:text-3xl font-display font-semibold tracking-tight text-[#111111] flex items-center justify-between border-b border-[#E5E5DE] pb-4"
+                    className="text-2xl font-display font-semibold tracking-tight text-[#111111] flex items-center justify-between border-b border-[#E5E5DE] pb-3"
                   >
                     <span>{link.name}</span>
                   </Link>
@@ -131,7 +133,7 @@ export const Navbar: React.FC = () => {
 
             <div className="flex items-center justify-between text-xs text-[#666666] border-t border-[#E5E5DE] pt-6">
               <span>Chennai, India</span>
-              <span className="text-accent font-medium">Available for work</span>
+              <span className="text-accent font-medium">Available for opportunities</span>
             </div>
           </motion.div>
         )}

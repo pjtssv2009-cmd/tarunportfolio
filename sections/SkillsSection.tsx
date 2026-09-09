@@ -15,11 +15,11 @@ export const SkillsSection: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 sm:mb-20 pb-6 border-b border-[#E5E5DE] gap-4">
           <div>
             <h2 className="text-3xl sm:text-5xl font-display font-extrabold tracking-tight text-[#111111]">
-              Skills & Expertise
+              UI/UX Design Skills & Tools
             </h2>
           </div>
           <p className="text-sm sm:text-base text-[#666666] max-w-md">
-            Verified design capabilities, methodologies, and toolsets across research, UI craft, and product architecture.
+            Verified design capabilities, methodologies, and toolsets across research, UI craft, design systems, and product architecture.
           </p>
         </div>
 

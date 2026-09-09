@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Maximize2 } from "lucide-react";
-import { projectsData, Project } from "@/data/projects";
+import { projectsData } from "@/data/projects";
 import { useCursor } from "@/components/CustomCursor";
 import { Lightbox } from "@/components/Lightbox";
 
@@ -36,7 +36,7 @@ export const MoreWorkSection: React.FC = () => {
             </h2>
           </div>
           <p className="text-xs sm:text-sm text-[#666666] max-w-sm">
-            UI implementations, visual analyses, IoT controls, and responsive web experiments.
+            UI implementations, automotive platforms, fitness tracking, IoT controls, and responsive web experiments.
           </p>
         </div>
 
@@ -69,13 +69,13 @@ export const MoreWorkSection: React.FC = () => {
                       // eslint-disable-next-line @next/next/no-img-element
                       <img
                         src={project.coverImage}
-                        alt={project.title}
+                        alt={`${project.title} UI/UX by Tarun A`}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                     ) : (
                       <Image
                         src={project.coverImage}
-                        alt={project.title}
+                        alt={`${project.title} UI/UX by Tarun A`}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="object-cover transition-transform duration-500 group-hover:scale-105"

@@ -18,48 +18,50 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tarunportfolio.com"),
-  title: "Tarun A — UI/UX Designer",
+  metadataBase: new URL("https://tarun-amber.vercel.app"),
+  title: "Tarun A | UI/UX & Product Designer | Chennai, India",
   description:
-    "Tarun A is a UI/UX Designer based in Chennai, India, creating user-centric digital experiences, interfaces and products.",
+    "Tarun A is a UI/UX and Product Designer based in Chennai, India, specializing in web and mobile products, UX research, interaction design, Figma design systems, prototyping, and digital experiences.",
   keywords: [
-    "Tarun A",
     "UI/UX Designer",
     "Product Designer",
-    "Chennai Designer",
-    "UX Case Studies",
-    "Ride Dude UX",
-    "FitPeo",
-    "IRCTC Redesign",
-    "Aprender",
-    "Figma",
+    "UX Designer",
+    "UI Designer",
+    "Digital Product Designer",
+    "Mobile App Designer",
+    "Web Designer",
+    "Figma Designer",
+    "UX Research",
+    "Interaction Design",
     "Design Systems",
-    "Interaction Design"
+    "SaaS Product Designer",
+    "Chennai UI/UX Designer",
+    "Product Designer India"
   ],
   authors: [{ name: "Tarun A", url: "https://www.behance.net/tarun_a" }],
   creator: "Tarun A",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://tarunportfolio.com",
-    siteName: "Tarun A Portfolio",
-    title: "Tarun A — UI/UX Designer",
+    url: "https://tarun-amber.vercel.app",
+    siteName: "Tarun A — UI/UX & Product Designer Portfolio",
+    title: "Tarun A | UI/UX & Product Designer | Chennai, India",
     description:
-      "Tarun A is a UI/UX Designer based in Chennai, India, creating user-centric digital experiences, interfaces and products.",
+      "Tarun A is a UI/UX and Product Designer based in Chennai, India, specializing in web and mobile products, UX research, interaction design, Figma design systems, prototyping, and digital experiences.",
     images: [
       {
         url: "/images/tarun/portrait.png",
         width: 1200,
         height: 630,
-        alt: "Tarun A — UI/UX Designer Portfolio",
+        alt: "Tarun A, UI/UX and Product Designer based in Chennai, India",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tarun A — UI/UX Designer",
+    title: "Tarun A | UI/UX & Product Designer | Chennai, India",
     description:
-      "Designing digital experiences that make complexity feel simple. UI/UX Designer based in Chennai, India.",
+      "Designing intuitive digital products that solve real user and business problems. UI/UX & Product Designer based in Chennai, India.",
     images: ["/images/tarun/portrait.png"],
   },
   icons: {
@@ -81,7 +83,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Tarun A",
-    jobTitle: "UI/UX Designer",
+    jobTitle: "UI/UX & Product Designer",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Chennai",
@@ -90,7 +92,7 @@ export default function RootLayout({
     },
     email: "tarunoffic@gmail.com",
     telephone: "+918248936098",
-    url: "https://www.behance.net/tarun_a",
+    url: "https://tarun-amber.vercel.app",
     sameAs: [
       "https://www.linkedin.com/in/tarun-a-in/",
       "https://www.behance.net/tarun_a"

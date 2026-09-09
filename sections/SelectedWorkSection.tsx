@@ -9,6 +9,24 @@ import { projectsData, Project } from "@/data/projects";
 import { useCursor } from "@/components/CustomCursor";
 import { Lightbox } from "@/components/Lightbox";
 
+// Mapping alt text per Section 26 recommendations
+const getProjectAltText = (slug: string, title: string) => {
+  switch (slug) {
+    case "rewad":
+      return "Rewad loyalty platform mobile app UI designed by Tarun A";
+    case "trippin":
+      return "Trippin custom apparel streetwear brand visual and merchandise design by Tarun A";
+    case "soughteasy":
+      return "SoughtEasy enterprise SaaS admin dashboard UI designed by Tarun A";
+    case "sudhanya":
+      return "Sudhanya organic grocery mobile app interface designed by Tarun A";
+    case "corpfinhub":
+      return "CorpFin Hub FinTech marketplace interface designed by Tarun A";
+    default:
+      return `${title} UI/UX design by Tarun A`;
+  }
+};
+
 export const SelectedWorkSection: React.FC = () => {
   const { setCursorType, setCursorText } = useCursor();
   const featuredProjects = projectsData.filter((p) => p.featured);
@@ -35,11 +53,11 @@ export const SelectedWorkSection: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 sm:mb-24 pb-8 border-b border-[#E5E5DE] gap-6">
           <div>
             <h2 className="text-3xl sm:text-5xl font-display font-extrabold tracking-tight text-[#111111]">
-              Selected Work
+              Selected Product Design Work
             </h2>
           </div>
-          <p className="text-sm sm:text-base text-[#666666] max-w-md">
-            A selection of digital products, interfaces and experiences I&apos;ve worked on.
+          <p className="text-sm sm:text-base text-[#666666] max-w-xl">
+            A selection of UI/UX and product design projects across FinTech, SaaS, e-commerce, AgriTech, enterprise platforms, mobile applications, and digital marketplaces.
           </p>
         </div>
 
@@ -101,12 +119,9 @@ const ProjectEditorialItem: React.FC<ProjectItemProps> = ({
   onMouseEnter,
   onMouseLeave,
 }) => {
-  const { setCursorType } = useCursor();
   const variant = project.layoutVariant;
 
-  // Render different editorial layouts as requested
   if (variant === "image-left") {
-    // Layout 1: Large Image Left + Project Info Right
     return (
       <motion.article
         initial={{ opacity: 0, y: 36 }}
@@ -132,7 +147,6 @@ const ProjectEditorialItem: React.FC<ProjectItemProps> = ({
   }
 
   if (variant === "image-right") {
-    // Layout 2: Project Info Left + Large Image Right
     return (
       <motion.article
         initial={{ opacity: 0, y: 36 }}
@@ -168,23 +182,20 @@ const ProjectEditorialItem: React.FC<ProjectItemProps> = ({
         transition={{ duration: 0.8 }}
         className={`flex flex-col gap-6 ${
           isRewad
-            ? "p-6 sm:p-10 rounded-3xl bg-white border-2 border-accent/25 shadow-lg relative overflow-hidden"
+            ? "p-6 sm:p-10 rounded-3xl bg-white border border-[#E5E5DE] shadow-sm relative overflow-hidden"
             : ""
         }`}
       >
         {isRewad && (
           <div className="flex flex-wrap items-center justify-between gap-3 pb-2 border-b border-[#EAE9E3]">
             <div className="flex items-center gap-2.5">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent text-white font-editorial-mono text-[11px] font-bold tracking-widest uppercase shadow-xs">
-                <span>✦ FLAGSHIP CASE STUDY</span>
-              </span>
               <span className="font-editorial-mono text-xs text-accent font-semibold">
                 {project.category}
               </span>
             </div>
             <div className="flex items-center gap-2">
               <span className="px-2.5 py-0.5 rounded-md bg-[#F8F7F4] border border-[#E5E5DE] text-[11px] font-semibold text-[#444444]">
-                Customer App + Merchant POS + Web Admin
+                Customer App · Merchant POS · Business Admin
               </span>
             </div>
           </div>
@@ -278,6 +289,7 @@ const ProjectImageFrame: React.FC<{
   onMouseLeave: () => void;
 }> = ({ project, aspect = "aspect-[16/10]", isCompact = false, onOpenLightbox, onMouseEnter, onMouseLeave }) => {
   const isSoughtEasy = project.slug === "soughteasy";
+  const altText = getProjectAltText(project.slug, project.title);
 
   return (
     <div
@@ -292,7 +304,7 @@ const ProjectImageFrame: React.FC<{
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={project.coverImage}
-            alt={project.title}
+            alt={altText}
             className={`w-full h-full ${
               isSoughtEasy ? "object-contain p-6 sm:p-10" : "object-cover"
             } transition-transform duration-700 ease-out group-hover:scale-105`}
@@ -300,7 +312,7 @@ const ProjectImageFrame: React.FC<{
         ) : (
           <Image
             src={project.coverImage}
-            alt={project.title}
+            alt={altText}
             fill
             sizes="(max-width: 1024px) 100vw, 60vw"
             className={`${
@@ -414,4 +426,3 @@ const ProjectActionButtons: React.FC<{ project: Project }> = ({ project }) => {
     </div>
   );
 };
-

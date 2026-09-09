@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowUpRight, MapPin, Mail, Phone, CheckCircle2 } from "lucide-react";
+import { MapPin, Mail, Phone, CheckCircle2 } from "lucide-react";
 import { profileData } from "@/data/profile";
 import { useCursor } from "@/components/CustomCursor";
 
@@ -17,7 +17,7 @@ export const AboutSection: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 sm:mb-20 pb-6 border-b border-[#E5E5DE] gap-4">
           <div>
             <h2 className="text-3xl sm:text-5xl font-display font-extrabold tracking-tight text-[#111111]">
-              About Tarun
+              About Tarun A
             </h2>
           </div>
           <div className="flex items-center gap-2 text-xs text-[#666666]">
@@ -39,7 +39,7 @@ export const AboutSection: React.FC = () => {
             <div className="relative w-full aspect-[4/5] rounded-2xl sm:rounded-3xl overflow-hidden bg-gradient-to-b from-[#F1EFEB] to-[#E5E5DE] border border-[#D4D3CC] shadow-lg">
               <Image
                 src={profileData.avatar}
-                alt="Tarun A — UI/UX Designer"
+                alt="Tarun A, UI/UX and Product Designer based in Chennai, India"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-contain object-bottom pt-6"
@@ -60,37 +60,38 @@ export const AboutSection: React.FC = () => {
 
           {/* Bio & Approach Text */}
           <div className="lg:col-span-7 flex flex-col justify-between space-y-6 sm:space-y-8">
-            <div className="space-y-5 text-base sm:text-lg text-[#444444] leading-relaxed">
+            <div className="space-y-4 text-base sm:text-lg text-[#444444] leading-relaxed">
               <p className="text-xl sm:text-2xl font-display font-semibold text-[#111111] leading-snug">
-                I am a UI/UX Designer focused on creating user-centric digital experiences that solve real business problems through thoughtful UX, clear interfaces, and purposeful interaction.
+                I’m Tarun A, a UI/UX and Product Designer based in Chennai, India, specializing in digital product experiences for web and mobile platforms.
               </p>
               <p>
-                Based in Chennai, India, my work is centered on understanding user behavior, wireframing clear task architectures, building comprehensive Figma design systems, and delivering polished, accessible interfaces across web and mobile platforms.
+                My work combines UX research, information architecture, interaction design, visual design, prototyping, and Figma design systems to solve real user and business problems.
               </p>
               <p>
-                I prioritize clarity over decoration—ensuring every layout, interaction token, and typography choice has a tangible reason for being there.
+                I have worked across FinTech, SaaS, e-commerce, AgriTech, enterprise platforms, automotive, education, investment banking, and consumer digital products.
+              </p>
+              <p className="text-sm sm:text-base text-[#666666]">
+                I believe good product design should be clear, purposeful, accessible, and scalable. My goal is to make complex products easier to understand and more effective to use.
               </p>
             </div>
 
-            {/* Key Pillars Checklist */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4 border-t border-[#ECECE6]">
-              {[
-                "User Research & Empathy Mapping",
-                "Mobile UI (iOS & Android)",
-                "Scalable Figma Design Systems",
-                "Responsive Web Platforms",
-                "Interactive Prototyping",
-                "Heuristic Usability Audits",
-              ].map((item) => (
-                <div key={item} className="flex items-center gap-2.5 text-xs sm:text-sm text-[#333333]">
-                  <CheckCircle2 className="w-4 h-4 text-accent shrink-0" />
-                  <span>{item}</span>
-                </div>
-              ))}
+            {/* Core Expertise 10 Points */}
+            <div>
+              <h4 className="text-xs font-editorial-mono uppercase font-bold tracking-wider text-accent mb-3">
+                Core Expertise
+              </h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-2 border-t border-[#ECECE6]">
+                {profileData.coreExpertise.map((item) => (
+                  <div key={item} className="flex items-center gap-2 text-xs sm:text-sm text-[#333333]">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-accent shrink-0" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
             </div>
 
             {/* Contact quick strip */}
-            <div className="pt-4 flex flex-wrap items-center gap-4">
+            <div className="pt-2 flex flex-wrap items-center gap-4">
               <a
                 href={`mailto:${profileData.email}`}
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#111111] text-[#F8F7F4] text-xs sm:text-sm font-semibold tracking-wide hover:bg-accent transition-colors"

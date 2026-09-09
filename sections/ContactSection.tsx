@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Mail, Phone, Copy, Check, MapPin, Linkedin, Globe } from "lucide-react";
+import { ArrowUpRight, Mail, Phone, Copy, Check, MapPin, Linkedin } from "lucide-react";
 import { profileData } from "@/data/profile";
 import { useCursor } from "@/components/CustomCursor";
 
@@ -25,8 +25,6 @@ export const ContactSection: React.FC = () => {
   return (
     <section id="contact" className="w-full py-24 sm:py-36 px-6 sm:px-10 border-t border-[#E5E5DE] bg-[#F8F7F4]">
       <div className="max-w-7xl mx-auto">
-
-
         {/* Large Headline & Intro */}
         <div className="max-w-4xl mb-14 sm:mb-18">
           <motion.h2
@@ -36,9 +34,9 @@ export const ContactSection: React.FC = () => {
             transition={{ duration: 0.7 }}
             className="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-tight text-[#111111] leading-[1.05] mb-6"
           >
-            Let&apos;s create something{" "}
+            Let&apos;s Design Something{" "}
             <span className="text-accent underline decoration-accent/30 decoration-2 underline-offset-8">
-              meaningful
+              Better
             </span>
             .
           </motion.h2>
@@ -48,9 +46,9 @@ export const ContactSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-base sm:text-2xl text-[#555555] leading-relaxed max-w-2xl"
+            className="text-base sm:text-2xl text-[#555555] leading-relaxed max-w-3xl"
           >
-            Have a project, product, or design challenge that needs thoughtful UX & UI craft? Feel free to reach out directly.
+            Have a product idea, digital transformation project, website, mobile application, or UX challenge? I’m available for UI/UX and Product Design opportunities, freelance projects, and collaborative work.
           </motion.p>
         </div>
 
@@ -210,7 +208,7 @@ export const ContactSection: React.FC = () => {
             </div>
             <div className="pt-4 mt-6 border-t border-[#ECECE6]">
               <span className="text-xs text-[#666666] block">
-                Open for full-time roles & projects
+                Open to Full-time · Freelance · Remote
               </span>
             </div>
           </motion.div>
@@ -220,10 +218,10 @@ export const ContactSection: React.FC = () => {
         <div className="flex flex-wrap items-center justify-between gap-4 p-6 sm:p-8 rounded-2xl bg-[#F0EFEA] border border-[#E5E5DE]">
           <div>
             <h4 className="text-base sm:text-lg font-display font-bold text-[#111111]">
-              Looking for full design portfolio archives?
+              Explore More Design Work
             </h4>
             <p className="text-xs sm:text-sm text-[#666666]">
-              Explore additional visual case studies, UI explorations, and motion design on Behance.
+              Explore additional UI explorations, visual design projects, UX case studies, branding work, and design experiments on my Behance portfolio.
             </p>
           </div>
           <a
@@ -242,4 +240,3 @@ export const ContactSection: React.FC = () => {
     </section>
   );
 };
-

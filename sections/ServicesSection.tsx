@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { ArrowUpRight, Plus, Minus } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Plus, Minus } from "lucide-react";
 import { profileData } from "@/data/profile";
 import { useCursor } from "@/components/CustomCursor";
 
@@ -15,17 +15,17 @@ export const ServicesSection: React.FC = () => {
   };
 
   return (
-    <section id="services" className="w-full py-20 sm:py-32 px-6 sm:px-10 border-t border-[#E5E5DE] bg-[#F8F7F4]">
+    <section id="expertise" className="w-full py-20 sm:py-32 px-6 sm:px-10 border-t border-[#E5E5DE] bg-[#F8F7F4]">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 sm:mb-20 pb-6 border-b border-[#E5E5DE] gap-4">
           <div>
             <h2 className="text-3xl sm:text-5xl font-display font-extrabold tracking-tight text-[#111111]">
-              What I Do
+              Product Design Expertise
             </h2>
           </div>
           <p className="text-sm sm:text-base text-[#666666] max-w-md">
-            Disciplines and specialized capabilities rooted in user research, functional interface design, and scalable systems.
+            End-to-end product design capabilities from discovery and user flows to scalable design systems and developer handoff.
           </p>
         </div>
 
@@ -49,7 +49,7 @@ export const ServicesSection: React.FC = () => {
               >
                 <div className="flex items-center justify-between gap-4">
                   <div className="flex items-baseline gap-6 sm:gap-12">
-                    <span className="font-editorial-mono text-sm sm:text-base text-[#888888] font-bold">
+                    <span className="font-editorial-mono text-sm sm:text-base text-accent font-bold">
                       {numStr}
                     </span>
                     <h3 className="text-2xl sm:text-4xl lg:text-5xl font-display font-bold text-[#111111] group-hover:text-accent group-hover:translate-x-2 transition-all duration-300">
@@ -68,29 +68,31 @@ export const ServicesSection: React.FC = () => {
                 </div>
 
                 {/* Expandable Details */}
-                {isOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="mt-6 sm:mt-8 pl-10 sm:pl-20 grid grid-cols-1 md:grid-cols-12 gap-6 items-start"
-                  >
-                    <p className="md:col-span-7 text-sm sm:text-base text-[#555555] leading-relaxed">
-                      {service.description}
-                    </p>
-                    <div className="md:col-span-5 flex flex-wrap gap-2 md:justify-end">
-                      {service.deliverables.map((item) => (
-                        <span
-                          key={item}
-                          className="px-3 py-1 rounded-full bg-white border border-[#E5E5DE] text-xs font-medium text-[#333333]"
-                        >
-                          {item}
-                        </span>
-                      ))}
-                    </div>
-                  </motion.div>
-                )}
+                <AnimatePresence>
+                  {isOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="mt-6 sm:mt-8 pl-10 sm:pl-20 grid grid-cols-1 md:grid-cols-12 gap-6 items-start overflow-hidden"
+                    >
+                      <p className="md:col-span-7 text-sm sm:text-base text-[#555555] leading-relaxed">
+                        {service.description}
+                      </p>
+                      <div className="md:col-span-5 flex flex-wrap gap-2 md:justify-end">
+                        {service.deliverables.map((item) => (
+                          <span
+                            key={item}
+                            className="px-3 py-1 rounded-full bg-white border border-[#E5E5DE] text-xs font-medium text-[#333333]"
+                          >
+                            {item}
+                          </span>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </motion.div>
             );
           })}
