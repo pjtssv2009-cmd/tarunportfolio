@@ -32,7 +32,7 @@ export const HeroSection: React.FC = () => {
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E5E5DE] shadow-xs">
                 <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                 <span className="text-xs text-[#222222] font-semibold">
-                  UI/UX & Product Designer · Chennai, India
+                  {profileData.role} · Chennai, India
                 </span>
               </div>
 
@@ -101,25 +101,19 @@ export const HeroSection: React.FC = () => {
               </Link>
             </motion.div>
 
-            {/* Core Competencies Quick Tags */}
+            {/* Hero Capabilities */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.4 }}
               className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-[#666666] pt-2"
             >
-              <div className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-accent" />
-                <span>UX Research & Usability</span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-accent" />
-                <span>Figma Design Systems</span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-accent" />
-                <span>Mobile & Web Products</span>
-              </div>
+              {profileData.heroCapabilities.map((capability) => (
+                <div key={capability} className="flex items-center gap-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-accent" />
+                  <span>{capability}</span>
+                </div>
+              ))}
             </motion.div>
           </div>
 

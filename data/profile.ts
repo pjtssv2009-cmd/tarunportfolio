@@ -13,6 +13,7 @@ export interface Profile {
   headline: string;
   subheadline: string;
   heroSubtext: string;
+  heroCapabilities: string[];
   philosophyHeadline: string;
   philosophySubtext: string;
   aboutText: string[];
@@ -33,6 +34,18 @@ export interface Profile {
     description: string;
     deliverables: string[];
   }[];
+  aiAssisted: {
+    heading: string;
+    content: string[];
+    tools: string[];
+    workflow: string[];
+    description: string;
+  };
+  availabilitySection: {
+    heading: string;
+    content: string;
+    cta: string;
+  };
   faqs: {
     question: string;
     answer: string;
@@ -50,10 +63,15 @@ export const profileData: Profile = {
   avatar: "/images/tarun/portrait.png",
   logo: "/images/logo.png",
   logoWhite: "/images/logo-white.png",
-  availability: "Open to Full-time Roles · Freelance Projects · Remote Opportunities",
+  availability: "Based in Chennai, India · Open to Full-time & Freelance Opportunities",
   headline: "Designing intuitive digital products that solve real user and business problems.",
   subheadline: "I design user-centered digital experiences for web and mobile products, combining UX research, interaction design, visual design, prototyping, and scalable Figma design systems.",
   heroSubtext: "From complex enterprise workflows to consumer mobile applications, I turn requirements and user needs into clear, accessible, and engaging product experiences.",
+  heroCapabilities: [
+    "UX Research & Usability",
+    "Web & Mobile Product Design",
+    "Figma Design Systems & Prototyping"
+  ],
   philosophyHeadline: "Designing with clarity, purpose, and user needs in mind.",
   philosophySubtext: "I combine research, information architecture, interaction design, visual design, prototyping, and design systems to transform complex requirements into simple and scalable experiences.",
   aboutText: [
@@ -163,6 +181,34 @@ export const profileData: Profile = {
       deliverables: ["Figma design system", "Design tokens", "Reusable components", "Interactive prototypes"]
     }
   ],
+  aiAssisted: {
+    heading: "AI-Assisted Design & Development",
+    content: [
+      "I use modern AI-assisted development tools to turn design concepts into functional websites, prototypes, and application experiences.",
+      "My workflow combines UI/UX design, Figma, AI-assisted coding, rapid prototyping, and iterative development to move from concept to working product faster."
+    ],
+    tools: [
+      "Antigravity",
+      "AI coding and development assistants",
+      "AI-powered prototyping tools",
+      "AI-assisted website and application generation"
+    ],
+    workflow: [
+      "Research",
+      "UX/UI Design",
+      "Figma Prototype",
+      "AI-Assisted Development",
+      "Testing",
+      "Iteration",
+      "Developer Handoff"
+    ],
+    description: "I use these tools to build and validate responsive websites, mobile application prototypes, interactive product experiences, landing pages, dashboards, and MVPs while maintaining a strong focus on usability, visual quality, accessibility, and scalable design."
+  },
+  availabilitySection: {
+    heading: "Open to Product Design Opportunities",
+    content: "Looking for a UI/UX or Product Designer who can combine user-centered thinking, strong visual design, and practical product strategy?\n\nI’m open to full-time UI/UX and Product Design roles, freelance projects, and collaborative opportunities.",
+    cta: "Let's Work Together"
+  },
   faqs: [
     {
       question: "Who is Tarun A?",
@@ -178,7 +224,11 @@ export const profileData: Profile = {
     },
     {
       question: "What design tools does Tarun use?",
-      answer: "Tarun primarily uses Figma for UI/UX design, prototyping, and design systems, along with Adobe Photoshop, Adobe Illustrator, Balsamiq, Marvel, and InVision."
+      answer: "Tarun primarily uses Figma for UI/UX design, prototyping, and design systems, along with Adobe Photoshop, Adobe Illustrator, Balsamiq, Marvel, InVision, and modern AI-assisted development tools."
+    },
+    {
+      question: "Does Tarun use AI for product development?",
+      answer: "Yes. Tarun uses Antigravity and other AI-assisted development and prototyping tools to rapidly build and validate websites, application prototypes, dashboards, and digital product experiences alongside his UI/UX design workflow."
     },
     {
       question: "Is Tarun available for UI/UX opportunities?",

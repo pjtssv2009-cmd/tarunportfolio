@@ -78,7 +78,19 @@ export const skillsData: SkillCategory[] = [
     ]
   },
   {
-    category: "Design Tools",
+    category: "AI-Assisted Development",
+    description: "AI-assisted development, rapid prototyping, and web/mobile validation workflows.",
+    skills: [
+      "Antigravity",
+      "AI-Assisted Coding",
+      "AI Prototyping",
+      "AI-Assisted Web Development",
+      "AI-Assisted App Development",
+      "Rapid Prototyping"
+    ]
+  },
+  {
+    category: "Tools",
     description: "Industry-standard design, vector, and prototyping software.",
     skills: [
       "Figma",

@@ -175,17 +175,19 @@ export const ExperienceSection: React.FC = () => {
             </div>
 
             <div className="bg-accent text-white p-6 sm:p-7 rounded-2xl shadow-sm">
-              <h4 className="text-lg font-display font-bold mb-2">Available for Opportunities</h4>
-              <p className="text-xs sm:text-sm text-white/80 leading-relaxed mb-4">
-                Looking for a dedicated UI/UX Designer for full-time or freelance collaboration?
+              <h4 className="text-lg font-display font-bold mb-2">
+                {profileData.availabilitySection.heading}
+              </h4>
+              <p className="text-xs sm:text-sm text-white/90 leading-relaxed mb-5">
+                Looking for a UI/UX or Product Designer who can combine user-centered thinking, strong visual design, and practical product strategy? I’m open to full-time UI/UX and Product Design roles, freelance projects, and collaborative opportunities.
               </p>
               <a
                 href="#contact"
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white text-[#111111] text-xs font-semibold tracking-wide hover:bg-[#F8F7F4] transition-colors"
+                className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-white text-[#111111] text-xs font-semibold tracking-wide hover:bg-[#F8F7F4] transition-colors"
                 onMouseEnter={() => setCursorType("pointer")}
                 onMouseLeave={() => setCursorType("default")}
               >
-                <span>Get in Touch</span>
+                <span>{profileData.availabilitySection.cta}</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
             </div>

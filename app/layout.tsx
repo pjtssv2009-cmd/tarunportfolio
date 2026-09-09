@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://tarun-amber.vercel.app"),
   title: "Tarun A | UI/UX & Product Designer | Chennai, India",
   description:
-    "Tarun A is a UI/UX and Product Designer based in Chennai, India, specializing in web and mobile products, UX research, interaction design, Figma design systems, prototyping, and digital experiences.",
+    "Tarun A is a UI/UX and Product Designer in Chennai specializing in mobile apps, web platforms, SaaS products, UX research, Figma design systems, prototyping, interaction design, and AI-assisted product development.",
   keywords: [
     "UI/UX Designer",
     "Product Designer",
@@ -34,6 +34,7 @@ export const metadata: Metadata = {
     "UX Research",
     "Interaction Design",
     "Design Systems",
+    "AI-Assisted Development",
     "SaaS Product Designer",
     "Chennai UI/UX Designer",
     "Product Designer India"
@@ -44,10 +45,10 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://tarun-amber.vercel.app",
-    siteName: "Tarun A — UI/UX & Product Designer Portfolio",
-    title: "Tarun A | UI/UX & Product Designer | Chennai, India",
+    siteName: "Tarun A — UI/UX & Product Designer",
+    title: "Tarun A — UI/UX & Product Designer",
     description:
-      "Tarun A is a UI/UX and Product Designer based in Chennai, India, specializing in web and mobile products, UX research, interaction design, Figma design systems, prototyping, and digital experiences.",
+      "UI/UX & Product Designer designing web and mobile products through UX research, Figma, design systems, prototyping, and AI-assisted development.",
     images: [
       {
         url: "/images/tarun/portrait.png",
@@ -59,9 +60,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tarun A | UI/UX & Product Designer | Chennai, India",
+    title: "Tarun A — UI/UX & Product Designer",
     description:
-      "Designing intuitive digital products that solve real user and business problems. UI/UX & Product Designer based in Chennai, India.",
+      "UI/UX & Product Designer designing web and mobile products through UX research, Figma, design systems, prototyping, and AI-assisted development.",
     images: ["/images/tarun/portrait.png"],
   },
   icons: {

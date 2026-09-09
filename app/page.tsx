@@ -5,6 +5,7 @@ import { SelectedWorkSection } from "@/sections/SelectedWorkSection";
 import { MoreWorkSection } from "@/sections/MoreWorkSection";
 import { ProcessSection } from "@/sections/ProcessSection";
 import { ServicesSection } from "@/sections/ServicesSection";
+import { AiAssistedSection } from "@/sections/AiAssistedSection";
 import { ExperienceSection } from "@/sections/ExperienceSection";
 import { AboutSection } from "@/sections/AboutSection";
 import { SkillsSection } from "@/sections/SkillsSection";
@@ -32,19 +33,22 @@ export default function HomePage() {
       {/* 06. Product Design Expertise */}
       <ServicesSection />
 
-      {/* 07. Experience & Education */}
+      {/* 07. AI-Assisted Design & Development */}
+      <AiAssistedSection />
+
+      {/* 08. Experience & Education */}
       <ExperienceSection />
 
-      {/* 08. About Tarun A */}
+      {/* 09. About Tarun A */}
       <AboutSection />
 
-      {/* 09. UI/UX Design Skills & Tools */}
+      {/* 10. UI/UX Design Skills & Tools */}
       <SkillsSection />
 
-      {/* 10. Frequently Asked Questions (AEO/SEO) */}
+      {/* 11. Frequently Asked Questions (AEO/SEO) */}
       <FaqSection />
 
-      {/* 11. Contact CTA & Direct Inquiries */}
+      {/* 12. Contact CTA & Direct Inquiries */}
       <ContactSection />
     </div>
   );
