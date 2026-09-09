@@ -7,6 +7,8 @@ export interface Profile {
   linkedin: string;
   behance: string;
   avatar: string;
+  logo: string;
+  logoWhite: string;
   availability: string;
   headline: string;
   subheadline: string;
@@ -35,6 +37,8 @@ export const profileData: Profile = {
   linkedin: "https://www.linkedin.com/in/tarun-a-in/",
   behance: "https://www.behance.net/tarun_a",
   avatar: "/images/tarun/portrait.png",
+  logo: "/images/logo.png",
+  logoWhite: "/images/logo-white.png",
   availability: "Available for Freelance & Full-time",
   headline: "Designing digital experiences that make complexity feel simple.",
   subheadline: "I create user-centric digital experiences that solve real business problems through thoughtful UX, clear interfaces and purposeful interaction.",

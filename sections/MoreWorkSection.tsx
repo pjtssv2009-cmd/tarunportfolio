@@ -31,9 +31,6 @@ export const MoreWorkSection: React.FC = () => {
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 sm:mb-16 pb-6 border-b border-[#E5E5DE] gap-4">
           <div>
-            <span className="font-editorial-mono text-xs text-accent uppercase tracking-widest font-semibold block mb-2">
-              ARCHIVE & EXPLORATIONS
-            </span>
             <h2 className="text-2xl sm:text-4xl font-display font-bold tracking-tight text-[#111111]">
               More Work & Case Studies
             </h2>
@@ -99,18 +96,14 @@ export const MoreWorkSection: React.FC = () => {
                   >
                     <Maximize2 className="w-3.5 h-3.5" />
                   </button>
-
-                  <div className="absolute top-3 left-3 px-2.5 py-0.5 rounded-full bg-[#111111]/80 backdrop-blur-md text-[#F8F7F4] font-editorial-mono text-[11px]">
-                    {project.number}
-                  </div>
                 </div>
 
                 {/* Content */}
-                <div className="flex items-center justify-between text-[11px] text-[#777777] mb-2">
-                  <span className="font-editorial-mono text-accent font-semibold truncate pr-2">
+                <div className="flex items-center justify-between text-xs text-[#777777] mb-2">
+                  <span className="font-medium text-[#555555] truncate pr-2">
                     {project.category}
                   </span>
-                  <span className="font-editorial-mono">{project.year}</span>
+                  <span>{project.year}</span>
                 </div>
 
                 <h3 className="text-lg sm:text-xl font-display font-bold text-[#111111] mb-2 group-hover:text-accent transition-colors leading-snug">
@@ -145,14 +138,25 @@ export const MoreWorkSection: React.FC = () => {
                     <ArrowUpRight className="w-3.5 h-3.5" />
                   </Link>
 
-                  <a
-                    href={project.behanceUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#777777] hover:text-[#111111] transition-colors"
-                  >
-                    Behance ↗
-                  </a>
+                  {project.liveUrl ? (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#777777] hover:text-[#111111] transition-colors font-medium"
+                    >
+                      Live Site ↗
+                    </a>
+                  ) : project.behanceUrl ? (
+                    <a
+                      href={project.behanceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#777777] hover:text-[#111111] transition-colors"
+                    >
+                      Behance ↗
+                    </a>
+                  ) : null}
                 </div>
               </div>
             </motion.article>

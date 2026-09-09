@@ -14,9 +14,6 @@ export const SkillsSection: React.FC = () => {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 sm:mb-20 pb-6 border-b border-[#E5E5DE] gap-4">
           <div>
-            <span className="font-editorial-mono text-xs text-accent uppercase tracking-widest font-semibold block mb-2">
-              07 / CORE COMPETENCIES
-            </span>
             <h2 className="text-3xl sm:text-5xl font-display font-extrabold tracking-tight text-[#111111]">
               Skills & Expertise
             </h2>
@@ -38,13 +35,10 @@ export const SkillsSection: React.FC = () => {
               className="bg-white p-7 sm:p-8 rounded-2xl border border-[#E5E5DE] shadow-xs flex flex-col justify-between hover:border-accent/40 transition-colors"
             >
               <div>
-                <div className="flex items-center justify-between pb-3 border-b border-[#ECECE6] mb-4">
-                  <span className="font-editorial-mono text-xs font-bold uppercase tracking-wider text-accent">
+                <div className="pb-3 border-b border-[#ECECE6] mb-4">
+                  <h3 className="text-base font-display font-bold text-[#111111]">
                     {cat.category}
-                  </span>
-                  <span className="font-editorial-mono text-[11px] text-[#888888]">
-                    0{idx + 1}
-                  </span>
+                  </h3>
                 </div>
 
                 <p className="text-xs text-[#666666] mb-6 leading-relaxed">

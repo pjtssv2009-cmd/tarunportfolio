@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { profileData } from "@/data/profile";
@@ -17,9 +18,15 @@ export const Footer: React.FC = () => {
           {/* Brand & Location */}
           <div className="md:col-span-5 flex flex-col justify-between">
             <div>
-              <h2 className="text-2xl sm:text-3xl font-display font-bold tracking-tight text-white mb-2">
-                {profileData.name}
-              </h2>
+              <div className="relative h-10 sm:h-12 w-36 sm:w-44 mb-3">
+                <Image
+                  src={profileData.logoWhite}
+                  alt={profileData.name}
+                  width={180}
+                  height={65}
+                  className="h-full w-auto object-contain"
+                />
+              </div>
               <p className="text-sm text-[#999999] mb-4">
                 {profileData.role} · {profileData.location}
               </p>
@@ -32,8 +39,8 @@ export const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div className="md:col-span-3 flex flex-col gap-3">
-            <span className="font-editorial-mono text-xs uppercase tracking-widest text-[#666666] mb-2">
-              NAVIGATION
+            <span className="text-xs font-semibold text-[#888888] tracking-wider uppercase mb-2">
+              Navigation
             </span>
             <Link
               href="/#work"
@@ -79,8 +86,8 @@ export const Footer: React.FC = () => {
 
           {/* Connect / Social */}
           <div className="md:col-span-4 flex flex-col gap-3">
-            <span className="font-editorial-mono text-xs uppercase tracking-widest text-[#666666] mb-2">
-              CONNECT
+            <span className="text-xs font-semibold text-[#888888] tracking-wider uppercase mb-2">
+              Connect
             </span>
             <a
               href={`mailto:${profileData.email}`}

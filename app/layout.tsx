@@ -62,6 +62,10 @@ export const metadata: Metadata = {
       "Designing digital experiences that make complexity feel simple. UI/UX Designer based in Chennai, India.",
     images: ["/images/tarun/portrait.png"],
   },
+  icons: {
+    icon: "/images/logo.png",
+    apple: "/images/logo.png",
+  },
   robots: {
     index: true,
     follow: true,

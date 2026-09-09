@@ -8,7 +8,8 @@ export interface Project {
   year: string;
   featured: boolean;
   layoutVariant: 'image-left' | 'image-right' | 'full-width' | 'floating-meta' | 'split-screen' | 'editorial-asymmetric';
-  behanceUrl: string;
+  behanceUrl?: string;
+  liveUrl?: string;
   coverImage: string;
   gallery: string[];
   tools: string[];
@@ -31,14 +32,220 @@ export interface Project {
 
 export const projectsData: Project[] = [
   {
+    id: "rewad-loyalty",
+    slug: "rewad",
+    number: "01",
+    title: "Rewad — Loyalty & Rewards Ecosystem",
+    category: "FinTech & Loyalty · Multi-Platform Ecosystem",
+    role: "UI/UX Product Designer",
+    year: "2024 — 2026",
+    featured: true,
+    layoutVariant: "full-width",
+    liveUrl: "https://www.rewad.co/",
+    behanceUrl: "https://www.behance.net/tarun-a",
+    coverImage: "/images/projects/rewad/cover.png",
+    gallery: [
+      "/images/projects/rewad/cover.png"
+    ],
+    tools: [
+      "Figma",
+      "Design Systems",
+      "Prototyping",
+      "User Research",
+      "Wireframing"
+    ],
+    tags: [
+      "Customer Mobile App",
+      "Business Merchant App",
+      "Admin Portal",
+      "Marketing Website",
+      "Loyalty Rewards",
+      "QR Scanner",
+      "UI/UX"
+    ],
+    description: "Complete multi-platform digital loyalty ecosystem: Customer mobile app, merchant scanning app, responsive website, and business analytics admin portal.",
+    overview: "Rewad (rewad.co) is a modern customer loyalty ecosystem designed to replace physical stamp cards for local businesses (cafés, salons, boutiques, and restaurants). As product designer, I architected all 4 interconnected pillars of the product: the Customer Mobile App for digital stamp collection & gift redemption, the Merchant Mobile App for sub-second POS barcode scanning, the responsive Marketing Website, and the comprehensive Web Admin Portal for business owners to configure promotions, double-stamp days, and analyze customer lifetime value.",
+    problem: "Physical punch cards lead to high loss rates and provide zero data insights to business owners. Existing digital loyalty solutions were either clunky enterprise software or created unacceptable checkout delays at the cash register.",
+    research: "Conducted field interviews with retail staff and everyday café customers. Discovered that POS verification must take less than 3 seconds to avoid checkout lines, and consumers engage significantly more when rewarded with visual milestone progress rings.",
+    process: "Mapped user flows across four interconnected interfaces simultaneously. Built clickable prototypes in Figma, conducted in-person cashier testing to optimize tap targets for one-handed operation, and created a unified multi-platform design token system.",
+    solution: "A unified, vibrant ecosystem featuring: (1) Customer iOS/Android App with interactive digital stamp cards and nearby partner discovery; (2) Merchant Mobile Scanner with instant optical validation; (3) Business Web Admin Portal with loyalty rules, revenue telemetry, and customer cohort analytics; and (4) Responsive marketing landing page.",
+    outcome: "Engineered sub-2.5 second POS reward redemption, achieved a 92% customer onboarding completion rate, and delivered actionable retention metrics for retail merchants.",
+    learnings: "Multi-sided product ecosystems require strict brand consistency while drastically tuning UI density for context (high-density data analytics for web admin vs. high-speed touch targets for cashiers)."
+  },
+  {
+    id: "the-trippin",
+    slug: "trippin",
+    number: "02",
+    title: "Trippin — Custom Apparel & Streetwear Design",
+    category: "Streetwear & Apparel · Graphic & Merchandise Design",
+    role: "T-Shirt & Apparel Designer",
+    year: "2024 — 2026",
+    featured: true,
+    layoutVariant: "image-right",
+    liveUrl: "https://thetrippin.com/",
+    behanceUrl: "https://www.behance.net/tarun-a",
+    coverImage: "/images/projects/thetrippin/cover.png",
+    gallery: [
+      "/images/projects/thetrippin/cover.png"
+    ],
+    tools: [
+      "Adobe Illustrator",
+      "Adobe Photoshop",
+      "Figma",
+      "Vector Graphics",
+      "Typography"
+    ],
+    tags: [
+      "T-Shirt Design",
+      "Apparel Design",
+      "Streetwear",
+      "Typography",
+      "Merchandise",
+      "Brand Identity",
+      "Print Production"
+    ],
+    description: "Custom graphic apparel, streetwear typography, and corporate gifting merchandise collections manufactured for brands, startups, and events across India.",
+    overview: "Trippin (thetrippin.com) manufactures premium custom apparel (Trippin Tees) and corporate gifting products (Trippin Cutz) for teams, events, and modern brands across India. As T-Shirt Designer, I conceptualized and developed high-impact graphic illustrations, bold typography compositions, back-print artworks, and ready-to-print production vectors across multiple seasonal merchandise lines.",
+    problem: "Merging cutting-edge streetwear aesthetics (cyber-minimalism, Japanese typography, brutalist grid layouts) with industrial screen-printing constraints, ink cures, and brand identity guidelines.",
+    research: "Analyzed contemporary streetwear design trends, poster typography, and technical garment manufacturing constraints (fabric weights, DTG vs. screen printing color separations, bleed margins).",
+    process: "Iterated through dozens of vector sketches, typography lockups, and 3D digital garment renders to test visual balance, contrast on various fabric colors, and print placement scale.",
+    solution: "A distinct collection of oversized streetwear t-shirt graphics, corporate apparel lines, and bespoke graphic identities featuring sharp vector geometry, typography hierarchies, and optimized separation files.",
+    outcome: "Produced print-ready vector assets for thousands of delivered apparel units with zero print-registration defects, driving high customer engagement and bulk corporate repeat orders.",
+    learnings: "Textile and merchandise design requires an exacting understanding of how digital vector precision translates onto physical moving fabrics under varying lighting conditions."
+  },
+  {
+    id: "soughteasy-admin",
+    slug: "soughteasy",
+    number: "03",
+    title: "SoughtEasy — Enterprise SaaS Admin Portal",
+    category: "Enterprise SaaS · Admin Portal UI/UX",
+    role: "Admin Portal UI/UX Designer",
+    year: "2024 — 2026",
+    featured: true,
+    layoutVariant: "split-screen",
+    liveUrl: "https://soughteasy.com/",
+    behanceUrl: "https://www.behance.net/tarun-a",
+    coverImage: "/images/projects/soughteasy/cover.png",
+    gallery: [
+      "/images/projects/soughteasy/cover.png"
+    ],
+    tools: [
+      "Figma",
+      "Design Systems",
+      "Component Architecture",
+      "Information Architecture",
+      "Data Visualization"
+    ],
+    tags: [
+      "Admin Portal",
+      "Enterprise SaaS",
+      "CRM Dashboard",
+      "HR Management",
+      "Finance Operations",
+      "UI/UX Design",
+      "Figma"
+    ],
+    description: "Solely designed the complete multi-tenant administrative portal for SoughtEasy, unifying CRM pipelines, workforce HR management, finance, and role-based permissions.",
+    overview: "SoughtEasy (soughteasy.co.nz) by Chasvi Co Limited (Auckland, New Zealand & Bengaluru, India) is an integrated SMB business operating platform. I was solely responsible for architecting and designing the complete Admin Portal — the central command hub giving operations managers, HR leaders, and business owners comprehensive control over organizational telemetry, team performance, sales pipelines, and access governance.",
+    problem: "SMB admins were burdened with fragmented spreadsheets, isolated CRM tools, and disjointed employee management systems, causing severe administrative drag and high error rates.",
+    research: "Conducted usability interviews with SMB operations managers and team leads. Found that fast bulk editing, glanceable KPI health widgets, and granular permission matrices were the highest priorities for fatigue-free daily management.",
+    process: "Created a scalable 8px design system with modular card components, high-density data tables, multi-parameter filtering, and custom data visualization graphs in Figma.",
+    solution: "A modern, responsive dark/light admin dashboard featuring real-time business health telemetry, visual CRM deal pipelines, HR employee metrics, granular permission toggles, and seamless financial reporting.",
+    outcome: "Accelerated administrative task turnaround by 40%, streamlined workforce onboarding, and provided executives with unified operational governance.",
+    learnings: "High-density enterprise portals succeed when information hierarchy prioritizes rapid scanning without visual noise, coupled with instant confirmation feedback for critical administrative operations."
+  },
+  {
+    id: "sudhanya-app",
+    slug: "sudhanya",
+    number: "04",
+    title: "Sudhanya — Organic Foods & Farm Groceries App",
+    category: "E-Commerce & AgriTech · Mobile App Design",
+    role: "Mobile App UI/UX Designer",
+    year: "2024",
+    featured: true,
+    layoutVariant: "floating-meta",
+    liveUrl: "https://sudhanya.com/",
+    behanceUrl: "https://www.behance.net/tarun-a",
+    coverImage: "/images/projects/sudhanya/cover.png",
+    gallery: [
+      "/images/projects/sudhanya/cover.png"
+    ],
+    tools: [
+      "Figma",
+      "Mobile UI Design",
+      "Prototyping",
+      "User Journey Mapping",
+      "Design Systems"
+    ],
+    tags: [
+      "Mobile App Design",
+      "Organic E-Commerce",
+      "Farm to Table",
+      "Subscription UX",
+      "Grocery Shopping",
+      "UI/UX Design",
+      "Figma"
+    ],
+    description: "End-to-end mobile application design for Sudhanya Organic Store, delivering a seamless farm-to-table shopping experience, organic grocery subscriptions, and sustainable pantry essentials.",
+    overview: "Sudhanya is a premier retailer of naturally grown, chemical-free organic foods — offering unpolished rice, wooden cold-pressed oils, whole-grain millets, and sustainable agricultural essentials. I designed the dedicated mobile application (iOS & Android) focusing on clear product categorization, organic certification transparency, recurring weekly delivery subscriptions, and effortless checkout.",
+    problem: "Online organic grocery shoppers often encounter skepticism regarding product authenticity, complicated delivery windows, and high friction when trying to set up recurring weekly orders for kitchen essentials.",
+    research: "Studied mobile grocery consumer behavior and household purchasing cycles. Discovered that highlighting farm origin stories, showing clear nutritional breakdowns, and offering a 1-tap 'Weekly Essentials Subscription' dramatically improved customer retention and basket size.",
+    process: "Mapped user flows for first-time onboarding, category discovery (Cold-Pressed Oils, Grains & Cereals, Natural Pulses), item customization, subscription schedule manager, and quick radius-based delivery checkout.",
+    solution: "An earthy, modern mobile application interface with warm organic visual tones, transparent farm provenance cards, nutrition fact breakdowns, flexible subscription pause/resume controls, and a frictionless 2-step checkout flow.",
+    outcome: "Enhanced mobile shopping satisfaction with an intuitive subscription builder, boosting repeat organic order frequency and establishing customer trust in farm-to-table traceability.",
+    learnings: "In organic e-commerce, UX transparency (farm origins, purity badges, harvesting methods) is just as critical as visual aesthetics in converting first-time buyers into loyal subscribers."
+  },
+  {
+    id: "corpfin-hub",
+    slug: "corpfinhub",
+    number: "05",
+    title: "CorpFin Hub — UK M&A & Private Capital Marketplace",
+    category: "FinTech & Investment Banking · Web Platform & Deal Marketplace",
+    role: "Senior Product UI/UX Designer",
+    year: "2024 — 2026",
+    featured: true,
+    layoutVariant: "split-screen",
+    liveUrl: "https://www.corpfinhub.co.uk/",
+    behanceUrl: "https://www.behance.net/tarun-a",
+    coverImage: "/images/projects/corpfinhub/cover.png",
+    gallery: [
+      "/images/projects/corpfinhub/cover.png"
+    ],
+    tools: [
+      "Figma",
+      "FinTech UX",
+      "Design Systems",
+      "Data Visualization",
+      "User Research"
+    ],
+    tags: [
+      "FinTech",
+      "M&A Marketplace",
+      "Investment Banking",
+      "Digital NDA",
+      "Deal Pipeline",
+      "Virtual Data Room",
+      "UI/UX Design",
+      "Figma"
+    ],
+    description: "Comprehensive digital marketplace platform connecting UK business owners, M&A advisors, and vetted institutional investors for mid-market company acquisitions and capital raising (£2M+ revenue).",
+    overview: "CorpFin Hub (corpfinhub.co.uk) is a premier UK financial technology platform founded by HSA Advisory to streamline mergers and acquisitions (M&A), capital raising, and strategic investments for the UK mid-market. I designed the complete digital experience — including the deal discovery marketplace, automated digital NDA signing, confidential virtual data rooms, investor matching engine, and advisor deal-flow management dashboards.",
+    problem: "Mid-market M&A transactions traditionally suffer from opaque deal sourcing, slow manual NDA exchange over email, fragmented valuation negotiations, and poor visibility for business sellers looking to connect with qualified acquirers.",
+    research: "Conducted in-depth interviews with UK corporate finance directors, boutique investment bankers, private equity analysts, and business owners. Identified the need for strict confidentiality tiers, frictionless digital NDA authorization, and clear deal pipeline progression stages.",
+    process: "Created an institutional-grade dark financial interface design system. Designed confidential teaser cards, 2-way investor matching matrices, structured M&A transaction pipelines (Discovery → NDA Signed → IM Review → Due Diligence → Closing), and encrypted virtual data room document viewers.",
+    solution: "A high-security, responsive fintech web platform featuring automated NDA execution, deal pipeline Kanban visualizations, multi-parameter investor matching filters, valuation comparison matrices, and secure document telemetry.",
+    outcome: "Accelerated deal discovery and NDA turnaround times from days to minutes, connecting hundreds of vetted UK mid-market opportunities with institutional acquirers and corporate finance professionals.",
+    learnings: "Designing for high-stakes finance demands uncompromising security indicators, rock-solid information hierarchy, and intuitive disclosure controls to preserve seller confidentiality at every stage of the deal."
+  },
+  {
     "id": "185627081",
     "slug": "ride-dude-ux",
-    "number": "01",
+    "number": "06",
     "title": "Ride Dude UX Case Study",
-    "category": "Automotive Community \u00b7 UX Case Study",
+    "category": "Automotive Community · UX Case Study",
     "role": "UI/UX Designer",
     "year": "2024",
-    "featured": true,
+    "featured": false,
     "layoutVariant": "image-left",
     "behanceUrl": "https://www.behance.net/gallery/185627081/Ride-Dude-UX-Case-Study",
     "coverImage": "/images/projects/185627081/cover.png",
@@ -82,12 +289,12 @@ export const projectsData: Project[] = [
   {
     "id": "186975683",
     "slug": "aprender-ux",
-    "number": "02",
+    "number": "07",
     "title": "Aprender UX Case Study",
-    "category": "Education Platform \u00b7 UX Case Study",
+    "category": "Education Platform · UX Case Study",
     "role": "UI/UX Designer",
     "year": "2024",
-    "featured": true,
+    "featured": false,
     "layoutVariant": "image-right",
     "behanceUrl": "https://www.behance.net/gallery/186975683/Aprender-UX-Case-Study",
     "coverImage": "/images/projects/186975683/cover.png",
@@ -130,12 +337,12 @@ export const projectsData: Project[] = [
   {
     "id": "233781535",
     "slug": "fitpeo",
-    "number": "03",
+    "number": "08",
     "title": "FitPeo Fitness Application",
-    "category": "Health & Fitness \u00b7 Mobile App Design",
+    "category": "Health & Fitness · Mobile App Design",
     "role": "UI/UX Designer",
     "year": "2024",
-    "featured": true,
+    "featured": false,
     "layoutVariant": "full-width",
     "behanceUrl": "https://www.behance.net/gallery/233781535/FitPeo-Fitness-Application",
     "coverImage": "/images/projects/233781535/cover.png",
@@ -190,12 +397,12 @@ export const projectsData: Project[] = [
   {
     "id": "194519395",
     "slug": "irctc-redesign",
-    "number": "04",
+    "number": "09",
     "title": "IRCTC Website Redesign",
-    "category": "Public Sector \u00b7 Web Platform Redesign",
+    "category": "Public Sector · Web Platform Redesign",
     "role": "UI/UX Designer",
     "year": "2024",
-    "featured": true,
+    "featured": false,
     "layoutVariant": "floating-meta",
     "behanceUrl": "https://www.behance.net/gallery/194519395/IRCTC-Website-Redesign",
     "coverImage": "/images/projects/194519395/cover.png",
@@ -239,12 +446,12 @@ export const projectsData: Project[] = [
   {
     "id": "218257955",
     "slug": "exotic-indian-eats",
-    "number": "05",
+    "number": "10",
     "title": "Exotic Indian Eats A Responsive Website",
-    "category": "Culinary & Dining \u00b7 Responsive Web Design",
+    "category": "Culinary & Dining · Responsive Web Design",
     "role": "UI/UX Designer",
     "year": "2024",
-    "featured": true,
+    "featured": false,
     "layoutVariant": "split-screen",
     "behanceUrl": "https://www.behance.net/gallery/218257955/Exotic-Indian-Eats-A-Responsive-Website",
     "coverImage": "/images/projects/218257955/cover.png",
@@ -289,12 +496,12 @@ export const projectsData: Project[] = [
   {
     "id": "232917963",
     "slug": "enipu",
-    "number": "06",
+    "number": "11",
     "title": "Case Study (Enipu)",
-    "category": "Food & Beverage \u00b7 End-to-End Case Study",
+    "category": "Food & Beverage · End-to-End Case Study",
     "role": "UI/UX Designer",
     "year": "2024",
-    "featured": true,
+    "featured": false,
     "layoutVariant": "editorial-asymmetric",
     "behanceUrl": "https://www.behance.net/gallery/232917963/Case-Study-%28Enipu%29",
     "coverImage": "/images/projects/232917963/cover.png",
@@ -336,7 +543,7 @@ export const projectsData: Project[] = [
         "all": 1
       }
     },
-    "overview": "An end-to-end UX/UI case study for Enipu \u2014 The Taste of India, an authentic food brand platform delivering traditional regional delicacies to digital consumers.",
+    "overview": "An end-to-end UX/UI case study for Enipu — The Taste of India, an authentic food brand platform delivering traditional regional delicacies to digital consumers.",
     "problem": "Conveying the authentic craft and purity of traditional cuisine while maintaining a contemporary, frictionless e-commerce purchasing flow.",
     "research": "Explored culinary branding and user purchasing trust signals, identifying ingredient transparency and regional origin stories as primary conversion factors.",
     "process": "Designed brand identity accents, curated product storytelling modules, mapped checkout funnels, and built animated prototype interactions.",
@@ -346,9 +553,9 @@ export const projectsData: Project[] = [
   {
     "id": "185624299",
     "slug": "ride-dude-ui",
-    "number": "07",
+    "number": "12",
     "title": "Ride Dude UI Case Study",
-    "category": "Automotive \u00b7 UI & Design System",
+    "category": "Automotive · UI & Design System",
     "role": "UI/UX Designer",
     "year": "2024",
     "featured": false,
@@ -395,9 +602,9 @@ export const projectsData: Project[] = [
   {
     "id": "186975973",
     "slug": "aprender-ui",
-    "number": "08",
+    "number": "13",
     "title": "Aprender UI Case Study",
-    "category": "Education \u00b7 UI & Interaction Design",
+    "category": "Education · UI & Interaction Design",
     "role": "UI/UX Designer",
     "year": "2024",
     "featured": false,
@@ -442,9 +649,9 @@ export const projectsData: Project[] = [
   {
     "id": "187296679",
     "slug": "karate-kids-uxui",
-    "number": "09",
+    "number": "14",
     "title": "Karate Kids Movie UXUI Analysis",
-    "category": "Cinematic Interface \u00b7 UX/UI Analysis",
+    "category": "Cinematic Interface · UX/UI Analysis",
     "role": "UI/UX Designer",
     "year": "2023",
     "featured": false,
@@ -509,9 +716,9 @@ export const projectsData: Project[] = [
   {
     "id": "187468131",
     "slug": "smart-remote",
-    "number": "10",
+    "number": "15",
     "title": "Smart Remote All in One",
-    "category": "IoT & Smart Living \u00b7 Mobile UI App",
+    "category": "IoT & Smart Living · Mobile UI App",
     "role": "UI/UX Designer",
     "year": "2023",
     "featured": false,
@@ -554,9 +761,9 @@ export const projectsData: Project[] = [
   {
     "id": "163543861",
     "slug": "plants",
-    "number": "11",
+    "number": "16",
     "title": "Plants",
-    "category": "E-Commerce \u00b7 Botanical Web Store",
+    "category": "E-Commerce · Botanical Web Store",
     "role": "UI/UX Designer",
     "year": "2023",
     "featured": false,
@@ -601,9 +808,9 @@ export const projectsData: Project[] = [
   {
     "id": "232911803",
     "slug": "enipu-web",
-    "number": "12",
+    "number": "17",
     "title": "enipu (The taste of india )",
-    "category": "Brand & Web \u00b7 Digital Experience",
+    "category": "Brand & Web · Digital Experience",
     "role": "UI/UX Designer",
     "year": "2024",
     "featured": false,
@@ -642,3 +849,4 @@ export const projectsData: Project[] = [
     "learnings": "Custom illustration enhances brand personality while structured layout maintains e-commerce clarity."
   }
 ];
+

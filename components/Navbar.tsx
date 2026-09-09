@@ -1,10 +1,12 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, Menu, X } from "lucide-react";
+import { profileData } from "@/data/profile";
 import { useCursor } from "./CustomCursor";
 
 const NAV_LINKS = [
@@ -39,22 +41,30 @@ export const Navbar: React.FC = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-[#F8F7F4]/85 backdrop-blur-md border-b border-[#E5E5DE] py-3.5 shadow-sm"
-            : "bg-transparent py-5 sm:py-6"
+            ? "bg-[#F8F7F4]/90 backdrop-blur-md border-b border-[#E5E5DE] py-3 shadow-sm"
+            : "bg-transparent py-4 sm:py-5"
         }`}
       >
         <div className="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-between">
-          {/* Logo / Brand */}
+          {/* Logo / Brand with Signature Image */}
           <Link
             href="/"
-            className="group flex items-center gap-2 font-display text-base sm:text-lg font-bold tracking-tight text-[#111111] focus:outline-none"
+            className="group flex items-center gap-3 focus:outline-none"
             onMouseEnter={() => setCursorType("pointer")}
             onMouseLeave={() => setCursorType("default")}
           >
-            <span className="w-2.5 h-2.5 rounded-full bg-accent group-hover:scale-125 transition-transform" />
-            <span className="tracking-tighter">TARUN A</span>
-            <span className="hidden sm:inline-block text-xs uppercase tracking-widest text-[#888888] font-mono ml-2 border-l border-[#D4D3CC] pl-3">
-              UI/UX DESIGNER
+            <div className="relative h-8 sm:h-9 w-28 sm:w-36 flex items-center">
+              <Image
+                src={profileData.logo}
+                alt={profileData.name}
+                width={140}
+                height={50}
+                priority
+                className="h-full w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+              />
+            </div>
+            <span className="hidden sm:inline-block text-xs font-medium text-[#666666] border-l border-[#D4D3CC] pl-3">
+              UI/UX Designer
             </span>
           </Link>
 
@@ -105,10 +115,21 @@ export const Navbar: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="fixed inset-0 z-40 bg-[#F8F7F4] flex flex-col justify-between p-6 sm:p-10 pt-28 md:hidden"
+            className="fixed inset-0 z-40 bg-[#F8F7F4] flex flex-col justify-between p-6 sm:p-10 pt-24 md:hidden"
           >
             <div className="flex flex-col gap-6">
-              <span className="font-editorial-mono text-xs text-[#888888]">NAVIGATION</span>
+              <div className="flex items-center justify-between pb-2 border-b border-[#E5E5DE]">
+                <div className="relative h-8 w-28">
+                  <Image
+                    src={profileData.logo}
+                    alt={profileData.name}
+                    width={130}
+                    height={45}
+                    className="h-full w-auto object-contain"
+                  />
+                </div>
+                <span className="font-editorial-mono text-[11px] text-[#888888]">NAVIGATION</span>
+              </div>
               <nav className="flex flex-col gap-5">
                 {NAV_LINKS.map((link, idx) => (
                   <Link

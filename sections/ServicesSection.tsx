@@ -20,9 +20,6 @@ export const ServicesSection: React.FC = () => {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 sm:mb-20 pb-6 border-b border-[#E5E5DE] gap-4">
           <div>
-            <span className="font-editorial-mono text-xs text-accent uppercase tracking-widest font-semibold block mb-2">
-              04 / CAPABILITIES
-            </span>
             <h2 className="text-3xl sm:text-5xl font-display font-extrabold tracking-tight text-[#111111]">
               What I Do
             </h2>

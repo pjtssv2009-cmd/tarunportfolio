@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowLeft, ArrowUpRight, ArrowRight, Maximize2, Tag, Wrench, Calendar, User } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, ArrowRight, Maximize2, Tag, Wrench, Calendar, User, Globe } from "lucide-react";
 import { Project } from "@/data/projects";
 import { useCursor } from "@/components/CustomCursor";
 import { Lightbox } from "@/components/Lightbox";
@@ -56,16 +56,6 @@ export default function ProjectDetailClient({
           transition={{ duration: 0.6 }}
           className="pb-10 sm:pb-14 border-b border-[#E5E5DE] mb-12"
         >
-          <div className="flex items-center gap-3 mb-4">
-            <span className="font-editorial-mono text-xs text-accent font-bold uppercase tracking-widest">
-              CASE STUDY {project.number}
-            </span>
-            <span className="text-[#CCCCCC]">/</span>
-            <span className="font-editorial-mono text-xs text-[#777777] uppercase tracking-wider">
-              {project.category}
-            </span>
-          </div>
-
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-display font-extrabold tracking-tight text-[#111111] leading-[1.08] mb-6">
             {project.title}
           </h1>
@@ -113,19 +103,42 @@ export default function ProjectDetailClient({
             </div>
           </div>
 
-          {/* Behance External Button */}
-          <div className="mt-6 flex items-center justify-between">
-            <a
-              href={project.behanceUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-accent text-white text-xs sm:text-sm font-semibold tracking-wide hover:bg-accent-hover transition-colors shadow-xs"
-              onMouseEnter={() => setCursorType("arrow")}
-              onMouseLeave={() => setCursorType("default")}
-            >
-              <span>View Original on Behance</span>
-              <ArrowUpRight className="w-4 h-4" />
-            </a>
+          {/* Action Links (Live Website & Behance) */}
+          <div className="mt-6 flex flex-wrap items-center justify-between gap-4">
+            <div className="flex flex-wrap items-center gap-3">
+              {project.liveUrl && (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-accent text-white text-xs sm:text-sm font-semibold tracking-wide hover:bg-accent-hover transition-colors shadow-xs"
+                  onMouseEnter={() => setCursorType("arrow")}
+                  onMouseLeave={() => setCursorType("default")}
+                >
+                  <Globe className="w-4 h-4" />
+                  <span>Visit Live Website</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </a>
+              )}
+
+              {project.behanceUrl && (
+                <a
+                  href={project.behanceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide transition-colors shadow-xs ${
+                    project.liveUrl
+                      ? "bg-white border border-[#D4D3CC] hover:border-accent hover:text-accent text-[#111111]"
+                      : "bg-accent text-white hover:bg-accent-hover"
+                  }`}
+                  onMouseEnter={() => setCursorType("arrow")}
+                  onMouseLeave={() => setCursorType("default")}
+                >
+                  <span>View on Behance</span>
+                  <ArrowUpRight className="w-4 h-4" />
+                </a>
+              )}
+            </div>
 
             {project.stats?.views?.all && (
               <span className="font-editorial-mono text-xs text-[#888888]">
@@ -147,9 +160,6 @@ export default function ProjectDetailClient({
               className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start"
             >
               <div className="md:col-span-4">
-                <span className="font-editorial-mono text-xs text-accent uppercase tracking-widest font-semibold block mb-1">
-                  01 / CONTEXT
-                </span>
                 <h2 className="text-2xl sm:text-3xl font-display font-bold text-[#111111]">
                   Project Overview
                 </h2>
@@ -170,9 +180,6 @@ export default function ProjectDetailClient({
               className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start p-8 sm:p-10 rounded-2xl bg-white border border-[#E5E5DE] shadow-xs"
             >
               <div className="md:col-span-4">
-                <span className="font-editorial-mono text-xs text-red-500 uppercase tracking-widest font-semibold block mb-1">
-                  02 / THE CHALLENGE
-                </span>
                 <h2 className="text-2xl sm:text-3xl font-display font-bold text-[#111111]">
                   The Problem
                 </h2>
@@ -193,9 +200,6 @@ export default function ProjectDetailClient({
               className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start"
             >
               <div className="md:col-span-4">
-                <span className="font-editorial-mono text-xs text-accent uppercase tracking-widest font-semibold block mb-1">
-                  03 / DISCOVERY & PROCESS
-                </span>
                 <h2 className="text-2xl sm:text-3xl font-display font-bold text-[#111111]">
                   UX Research & Strategy
                 </h2>
@@ -217,9 +221,6 @@ export default function ProjectDetailClient({
               className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start p-8 sm:p-10 rounded-2xl bg-[#F1EFEB] border border-[#E5E5DE]"
             >
               <div className="md:col-span-4">
-                <span className="font-editorial-mono text-xs text-emerald-600 uppercase tracking-widest font-semibold block mb-1">
-                  04 / EXECUTION
-                </span>
                 <h2 className="text-2xl sm:text-3xl font-display font-bold text-[#111111]">
                   Design Solution
                 </h2>
@@ -243,9 +244,6 @@ export default function ProjectDetailClient({
         <section className="mb-24">
           <div className="flex items-center justify-between mb-8 pb-4 border-b border-[#E5E5DE]">
             <div>
-              <span className="font-editorial-mono text-xs text-accent uppercase tracking-widest font-semibold block mb-1">
-                PROJECT VISUALS
-              </span>
               <h2 className="text-2xl sm:text-3xl font-display font-bold text-[#111111]">
                 Case Study Artifacts & Screens ({galleryImages.length})
               </h2>

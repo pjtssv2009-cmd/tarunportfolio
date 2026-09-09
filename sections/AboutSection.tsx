@@ -16,9 +16,6 @@ export const AboutSection: React.FC = () => {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 sm:mb-20 pb-6 border-b border-[#E5E5DE] gap-4">
           <div>
-            <span className="font-editorial-mono text-xs text-accent uppercase tracking-widest font-semibold block mb-2">
-              06 / PROFILE
-            </span>
             <h2 className="text-3xl sm:text-5xl font-display font-extrabold tracking-tight text-[#111111]">
               About Tarun
             </h2>
@@ -54,8 +51,8 @@ export const AboutSection: React.FC = () => {
                   <h3 className="text-sm font-display font-bold text-[#111111]">{profileData.name}</h3>
                   <p className="text-[11px] text-[#666666]">{profileData.role}</p>
                 </div>
-                <div className="px-2.5 py-1 rounded-full bg-accent text-white font-editorial-mono text-[10px] font-semibold uppercase tracking-wider">
-                  CHENNAI, IN
+                <div className="px-2.5 py-1 rounded-full bg-[#111111] text-white text-xs font-medium">
+                  Chennai, IN
                 </div>
               </div>
             </div>

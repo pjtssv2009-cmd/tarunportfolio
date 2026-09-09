@@ -16,9 +16,6 @@ export const ExperienceSection: React.FC = () => {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 sm:mb-20 pb-6 border-b border-[#E5E5DE] gap-4">
           <div>
-            <span className="font-editorial-mono text-xs text-accent uppercase tracking-widest font-semibold block mb-2">
-              05 / CAREER & BACKGROUND
-            </span>
             <h2 className="text-3xl sm:text-5xl font-display font-extrabold tracking-tight text-[#111111]">
               Experience
             </h2>
@@ -44,9 +41,9 @@ export const ExperienceSection: React.FC = () => {
           <div className="lg:col-span-8 space-y-12">
             <div className="flex items-center gap-2 mb-6">
               <Briefcase className="w-4 h-4 text-accent" />
-              <span className="font-editorial-mono text-xs font-semibold uppercase tracking-wider text-[#333333]">
-                WORK EXPERIENCE & ROLES
-              </span>
+              <h3 className="text-base font-display font-bold text-[#111111]">
+                Work Experience
+              </h3>
             </div>
 
             <div className="relative pl-6 sm:pl-8 border-l-2 border-[#E5E5DE] space-y-12">
@@ -92,14 +89,34 @@ export const ExperienceSection: React.FC = () => {
                     </p>
 
                     {/* Responsibilities */}
-                    <ul className="space-y-2 mb-6">
+                    <ul className="space-y-2.5 mb-6">
                       {item.responsibilities.map((resp, rIdx) => (
-                        <li key={rIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#555555]">
-                          <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 shrink-0" />
+                        <li key={rIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#555555] leading-relaxed">
+                          <span className="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0" />
                           <span>{resp}</span>
                         </li>
                       ))}
                     </ul>
+
+                    {/* Highlighted KPIs if available */}
+                    {item.kpis && item.kpis.length > 0 && (
+                      <div className="mb-6 p-4 rounded-xl bg-accent/[0.04] border border-accent/15">
+                        <span className="text-xs font-bold text-accent block mb-2.5">
+                          Key Impact & Metrics
+                        </span>
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                          {item.kpis.map((kpi, kIdx) => (
+                            <div
+                              key={kIdx}
+                              className="px-3 py-2 rounded-lg bg-white border border-accent/20 text-[11px] font-semibold text-[#111111] shadow-xs flex items-center gap-1.5"
+                            >
+                              <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
+                              <span>{kpi}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
 
                     {/* Skills pills */}
                     <div className="flex flex-wrap gap-1.5 pt-4 border-t border-[#ECECE6]">
@@ -122,24 +139,36 @@ export const ExperienceSection: React.FC = () => {
           <div className="lg:col-span-4 space-y-8">
             <div className="flex items-center gap-2 mb-6">
               <GraduationCap className="w-4 h-4 text-accent" />
-              <span className="font-editorial-mono text-xs font-semibold uppercase tracking-wider text-[#333333]">
-                EDUCATION & SPECIALIZATION
-              </span>
+              <h3 className="text-base font-display font-bold text-[#111111]">
+                Education & Specialization
+              </h3>
             </div>
 
-            <div className="bg-white p-6 sm:p-7 rounded-2xl border border-[#E5E5DE] shadow-xs space-y-6">
+            <div className="bg-white p-6 sm:p-7 rounded-2xl border border-[#E5E5DE] shadow-xs space-y-6 divide-y divide-[#F0EFEA]">
               {educationData.map((edu, i) => (
-                <div key={i} className="space-y-1">
-                  <h4 className="text-base font-display font-bold text-[#111111]">
-                    {edu.degree}
-                  </h4>
-                  <p className="text-xs text-[#666666]">
-                    {edu.institution} · {edu.location}
+                <div key={i} className={`space-y-2 ${i > 0 ? "pt-5" : ""}`}>
+                  <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+                    <h4 className="text-base font-display font-bold text-[#111111]">
+                      {edu.degree}
+                    </h4>
+                    {edu.period && (
+                      <span className="font-editorial-mono text-[11px] text-[#777777] shrink-0">
+                        {edu.period}
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-xs text-[#555555] font-medium">
+                    {edu.institution} {edu.location ? `· ${edu.location}` : ""}
                   </p>
-                  {edu.period && (
-                    <span className="font-editorial-mono text-[11px] text-[#888888] block pt-1">
-                      {edu.period}
-                    </span>
+                  {edu.highlights && edu.highlights.length > 0 && (
+                    <ul className="mt-2.5 space-y-1.5 pt-1">
+                      {edu.highlights.map((h, hIdx) => (
+                        <li key={hIdx} className="flex items-start gap-2 text-xs text-[#666666] leading-relaxed">
+                          <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 shrink-0" />
+                          <span>{h}</span>
+                        </li>
+                      ))}
+                    </ul>
                   )}
                 </div>
               ))}
