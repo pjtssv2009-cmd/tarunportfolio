@@ -182,27 +182,28 @@ export const profileData: Profile = {
     }
   ],
   aiAssisted: {
-    heading: "AI-Assisted Design & Development",
+    heading: "AI-Assisted Prototyping & Vibe Coding",
     content: [
-      "I use modern AI-assisted development tools to turn design concepts into functional websites, prototypes, and application experiences.",
-      "My workflow combines UI/UX design, Figma, AI-assisted coding, rapid prototyping, and iterative development to move from concept to working product faster."
+      "In addition to UI/UX and product design, I embrace vibe coding using Google Antigravity and similar AI-assisted development tools to rapidly build, test, and iterate on functional prototypes and modern digital interfaces.",
+      "By combining Figma design systems and user-centered thinking with AI-powered development workflows, I turn product concepts into fully working digital experiences with speed and precision."
     ],
     tools: [
-      "Antigravity",
-      "AI coding and development assistants",
-      "AI-powered prototyping tools",
-      "AI-assisted website and application generation"
+      "Vibe Coding with Google Antigravity",
+      "AI-Assisted Web & App Development",
+      "Interactive Prototyping & Live Demos",
+      "Figma Design-to-Code Architecture",
+      "Rapid MVP Validation & User Testing"
     ],
     workflow: [
-      "Research",
-      "UX/UI Design",
-      "Figma Prototype",
-      "AI-Assisted Development",
-      "Testing",
-      "Iteration",
+      "Research & Strategy",
+      "UX/UI Design in Figma",
+      "Interactive Prototyping",
+      "Vibe Coding with Antigravity",
+      "Validation & Testing",
+      "Iterative Refinement",
       "Developer Handoff"
     ],
-    description: "I use these tools to build and validate responsive websites, mobile application prototypes, interactive product experiences, landing pages, dashboards, and MVPs while maintaining a strong focus on usability, visual quality, accessibility, and scalable design."
+    description: "I use vibe coding and modern AI development tools to build and validate responsive websites, mobile application prototypes, interactive product experiences, dashboards, and MVPs while maintaining a strong focus on usability, visual quality, accessibility, and scalable design."
   },
   availabilitySection: {
     heading: "Let's Build Impactful Products Together",
@@ -223,12 +224,12 @@ export const profileData: Profile = {
       answer: "His portfolio includes projects across FinTech, SaaS, e-commerce, AgriTech, enterprise platforms, automotive, education, investment banking, and consumer digital products."
     },
     {
-      question: "What design tools does Tarun use?",
-      answer: "Tarun primarily uses Figma for UI/UX design, prototyping, and design systems, along with Adobe Photoshop, Adobe Illustrator, Balsamiq, Marvel, InVision, and modern AI-assisted development tools."
+      question: "What design and development tools does Tarun use?",
+      answer: "Tarun primarily uses Figma for UI/UX design, prototyping, and scalable design systems, along with Adobe Creative Suite (Photoshop, Illustrator), Balsamiq, and modern AI development environments like Google Antigravity for vibe coding and rapid interactive development."
     },
     {
-      question: "Does Tarun use AI for product development?",
-      answer: "Yes. Tarun uses Antigravity and other AI-assisted development and prototyping tools to rapidly build and validate websites, application prototypes, dashboards, and digital product experiences alongside his UI/UX design workflow."
+      question: "Does Tarun build prototypes using AI and vibe coding?",
+      answer: "Yes. Tarun practices vibe coding using Google Antigravity and similar AI-assisted development tools to rapidly build, test, and validate responsive websites, application prototypes, interactive dashboards, and living MVPs alongside his UI/UX design workflow."
     },
     {
       question: "Is Tarun available for UI/UX opportunities?",

@@ -27,7 +27,7 @@ export const AiAssistedSection: React.FC = () => {
             </h2>
           </div>
           <p className="text-sm sm:text-base text-[#666666] max-w-md">
-            Bridging UI/UX design, rapid prototyping, and AI-assisted development to turn product ideas into working software faster.
+            Bridging UI/UX design, vibe coding with Google Antigravity, and AI-assisted prototyping to turn product ideas into working software faster.
           </p>
         </div>
 

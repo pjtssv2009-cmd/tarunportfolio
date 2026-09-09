@@ -79,14 +79,14 @@ export const skillsData: SkillCategory[] = [
   },
   {
     category: "AI-Assisted Development",
-    description: "AI-assisted development, rapid prototyping, and web/mobile validation workflows.",
+    description: "Vibe coding using Google Antigravity and modern AI tools to rapidly build, test, and validate interactive products.",
     skills: [
       "Antigravity",
-      "AI-Assisted Coding",
-      "AI Prototyping",
-      "AI-Assisted Web Development",
-      "AI-Assisted App Development",
-      "Rapid Prototyping"
+      "Vibe Coding",
+      "AI-Assisted Prototyping",
+      "Interactive Web Apps",
+      "Design-to-Code Validation",
+      "Rapid MVP Building"
     ]
   },
   {
