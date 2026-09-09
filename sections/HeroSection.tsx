@@ -122,7 +122,7 @@ export const HeroSection: React.FC = () => {
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="lg:col-span-5 relative w-full h-[400px] sm:h-[480px] lg:h-[560px] flex items-center justify-center pointer-events-auto"
+            className="lg:col-span-5 relative w-full h-[380px] sm:h-[460px] lg:h-[540px] flex items-center justify-center pointer-events-auto"
           >
             <HeroScene className="w-full h-full" />
           </motion.div>
