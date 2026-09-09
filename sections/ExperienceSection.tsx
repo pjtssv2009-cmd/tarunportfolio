@@ -178,8 +178,8 @@ export const ExperienceSection: React.FC = () => {
               <h4 className="text-lg font-display font-bold mb-2">
                 {profileData.availabilitySection.heading}
               </h4>
-              <p className="text-xs sm:text-sm text-white/90 leading-relaxed mb-5">
-                Looking for a UI/UX or Product Designer who can combine user-centered thinking, strong visual design, and practical product strategy? I’m open to full-time UI/UX and Product Design roles, freelance projects, and collaborative opportunities.
+              <p className="text-xs sm:text-sm text-white/90 leading-relaxed mb-5 whitespace-pre-line">
+                {profileData.availabilitySection.content}
               </p>
               <a
                 href="#contact"

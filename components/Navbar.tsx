@@ -133,7 +133,7 @@ export const Navbar: React.FC = () => {
 
             <div className="flex items-center justify-between text-xs text-[#666666] border-t border-[#E5E5DE] pt-6">
               <span>Chennai, India</span>
-              <span className="text-accent font-medium">Available for opportunities</span>
+              <span className="text-accent font-medium">{profileData.role}</span>
             </div>
           </motion.div>
         )}

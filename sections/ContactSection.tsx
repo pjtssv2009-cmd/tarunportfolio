@@ -48,7 +48,7 @@ export const ContactSection: React.FC = () => {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="text-base sm:text-2xl text-[#555555] leading-relaxed max-w-3xl"
           >
-            Have a product idea, digital transformation project, website, mobile application, or UX challenge? I’m available for UI/UX and Product Design opportunities, freelance projects, and collaborative work.
+            Have a product idea, digital transformation project, website, mobile application, or UX challenge? Let’s connect to discuss how we can design impactful digital solutions together.
           </motion.p>
         </div>
 
@@ -191,16 +191,15 @@ export const ContactSection: React.FC = () => {
           >
             <div>
               <div className="flex items-center justify-between mb-4">
-                <div className="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-600">
+                <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent">
                   <MapPin className="w-5 h-5" />
                 </div>
-                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[11px] font-semibold">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                  <span>Available</span>
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#F5F5F0] text-[#444444] text-[11px] font-semibold">
+                  <span>Location</span>
                 </span>
               </div>
               <span className="text-xs text-[#888888] font-medium block mb-1">
-                Location & Availability
+                Based in
               </span>
               <p className="text-base font-bold text-[#111111]">
                 {profileData.location}
@@ -208,7 +207,7 @@ export const ContactSection: React.FC = () => {
             </div>
             <div className="pt-4 mt-6 border-t border-[#ECECE6]">
               <span className="text-xs text-[#666666] block">
-                Open to Full-time · Freelance · Remote
+                Chennai, Tamil Nadu, India · IST (UTC+5:30)
               </span>
             </div>
           </motion.div>

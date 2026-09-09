@@ -205,8 +205,8 @@ export const profileData: Profile = {
     description: "I use these tools to build and validate responsive websites, mobile application prototypes, interactive product experiences, landing pages, dashboards, and MVPs while maintaining a strong focus on usability, visual quality, accessibility, and scalable design."
   },
   availabilitySection: {
-    heading: "Open to Product Design Opportunities",
-    content: "Looking for a UI/UX or Product Designer who can combine user-centered thinking, strong visual design, and practical product strategy?\n\nI’m open to full-time UI/UX and Product Design roles, freelance projects, and collaborative opportunities.",
+    heading: "Let's Build Impactful Products Together",
+    content: "Looking for a UI/UX or Product Designer who can combine user-centered thinking, strong visual design, and practical product strategy?\n\nLet's connect to discuss your product roadmap and design needs.",
     cta: "Let's Work Together"
   },
   faqs: [
@@ -232,11 +232,11 @@ export const profileData: Profile = {
     },
     {
       question: "Is Tarun available for UI/UX opportunities?",
-      answer: "Yes. Tarun is open to full-time UI/UX and Product Design opportunities, freelance projects, and selected design collaborations."
+      answer: "Yes. Tarun is open to discussing UI/UX and Product Design opportunities, project collaborations, and design consultations."
     },
     {
       question: "Where is Tarun based?",
-      answer: "Tarun is based in Chennai, Tamil Nadu, India, and is open to opportunities with companies and teams in India and internationally."
+      answer: "Tarun is based in Chennai, Tamil Nadu, India, and works with companies and product teams in India and globally."
     },
     {
       question: "What type of products does Tarun design?",
