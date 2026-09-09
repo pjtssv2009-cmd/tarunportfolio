@@ -60,14 +60,20 @@ export const HeroScene: React.FC<{ className?: string }> = ({ className = "" }) 
         className="relative w-full max-w-[380px] sm:max-w-[420px] lg:max-w-[460px] aspect-[4/4.5] flex items-center justify-center"
       >
         {/* Unfiltered High-Resolution PNG with Natural Smooth Alpha Edges */}
-        <div className="relative w-full h-full flex items-center justify-center">
+        <div
+          className="relative w-full h-full flex items-center justify-center"
+          style={{
+            maskImage: "linear-gradient(to bottom, black 88%, transparent 100%)",
+            WebkitMaskImage: "linear-gradient(to bottom, black 88%, transparent 100%)",
+          }}
+        >
           <Image
             src="/images/tarun/tarun-hero.png"
             alt="Tarun A — UI/UX Designer"
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 450px"
             priority
-            className="object-contain drop-shadow-sm select-none"
+            className="object-contain select-none"
             style={{
               filter: "none",
               WebkitFilter: "none",
