@@ -63,7 +63,7 @@ export const profileData: Profile = {
   avatar: "/images/tarun/portrait.png",
   logo: "/images/logo.png",
   logoWhite: "/images/logo-white.png",
-  availability: "Based in Chennai, India · Open to Full-time & Freelance Opportunities",
+  availability: "Based in Chennai, India",
   headline: "Designing intuitive digital products that solve real user and business problems.",
   subheadline: "I design user-centered digital experiences for web and mobile products, combining UX research, interaction design, visual design, prototyping, and scalable Figma design systems.",
   heroSubtext: "From complex enterprise workflows to consumer mobile applications, I turn requirements and user needs into clear, accessible, and engaging product experiences.",

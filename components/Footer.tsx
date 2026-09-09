@@ -35,7 +35,7 @@ export const Footer: React.FC = () => {
               </p>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1A1A1D] border border-[#2D2D32] text-xs text-[#CCCCCC]">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span>Available for Full-time & Freelance Opportunities</span>
+                <span>Based in Chennai, India</span>
               </div>
             </div>
           </div>

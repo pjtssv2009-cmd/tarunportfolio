@@ -35,13 +35,6 @@ export const HeroSection: React.FC = () => {
                   {profileData.role} · Chennai, India
                 </span>
               </div>
-
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 border border-[#ECECE6] text-xs text-[#555555]">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                <span className="text-[11px] font-medium tracking-wide">
-                  Open to Full-time & Freelance
-                </span>
-              </div>
             </motion.div>
 
             {/* Hero Headline */}
@@ -134,8 +127,6 @@ export const HeroSection: React.FC = () => {
       <div className="relative z-10 max-w-7xl mx-auto w-full pt-6 border-t border-[#E5E5DE]/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-[#777777]">
         <div className="flex items-center gap-4 sm:gap-6">
           <span className="font-medium text-[#444444]">Based in Chennai, India</span>
-          <span className="hidden md:inline text-[#AAAAAA]">·</span>
-          <span className="hidden md:inline">Open to Full-time & Freelance Opportunities</span>
         </div>
 
         <Link
