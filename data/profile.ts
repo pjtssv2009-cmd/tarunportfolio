@@ -70,7 +70,7 @@ export const profileData: Profile = {
   logo: "/images/logo.png",
   logoWhite: "/images/logo-white.png",
   availability: "Based in Chennai, India · Open to Full-time, Freelance & Remote Opportunities",
-  headline: "I design intuitive digital products and use AI-assisted development to turn ideas into working experiences.",
+  headline: "Designing digital products from concept to working reality.",
   subheadline: "I specialize in UX research, product design, interaction design, visual design, Figma design systems, and rapid prototyping for web and mobile products.",
   heroSubtext: "I work across the product journey—from understanding user and business needs to designing, prototyping, validating, and AI-assisted building functional digital experiences.",
   heroCapabilities: [

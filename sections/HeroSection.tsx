@@ -45,11 +45,11 @@ export const HeroSection: React.FC = () => {
               className="max-w-3xl"
             >
               <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-tight text-[#111111] leading-[1.06] sm:leading-[1.04] mb-6 sm:mb-8">
-                I design intuitive digital products and use{" "}
+                Designing digital products from concept to{" "}
                 <span className="text-accent underline decoration-accent/30 decoration-2 underline-offset-8">
-                  AI-assisted development
-                </span>{" "}
-                to turn ideas into working experiences.
+                  working reality
+                </span>
+                .
               </h1>
             </motion.div>
 
