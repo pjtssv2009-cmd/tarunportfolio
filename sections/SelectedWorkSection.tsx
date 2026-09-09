@@ -57,7 +57,7 @@ export const SelectedWorkSection: React.FC = () => {
             </h2>
           </div>
           <p className="text-sm sm:text-base text-[#666666] max-w-xl">
-            A selection of UI/UX and product design projects across FinTech, SaaS, e-commerce, AgriTech, enterprise platforms, mobile applications, and digital marketplaces.
+            A curated selection of product and UI/UX design work across FinTech, SaaS, e-commerce, AgriTech, enterprise platforms, mobile applications, marketplaces, and consumer products.
           </p>
         </div>
 

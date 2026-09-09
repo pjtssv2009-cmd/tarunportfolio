@@ -34,22 +34,30 @@ export const ContactSection: React.FC = () => {
             transition={{ duration: 0.7 }}
             className="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-tight text-[#111111] leading-[1.05] mb-6"
           >
-            Let&apos;s Design Something{" "}
+            Let&apos;s Build Something{" "}
             <span className="text-accent underline decoration-accent/30 decoration-2 underline-offset-8">
-              Better
+              Useful
             </span>
             .
           </motion.h2>
 
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-base sm:text-2xl text-[#555555] leading-relaxed max-w-3xl"
+            className="space-y-3 text-base sm:text-xl text-[#555555] leading-relaxed max-w-3xl"
           >
-            Have a product idea, digital transformation project, website, mobile application, or UX challenge? Let’s connect to discuss how we can design impactful digital solutions together.
-          </motion.p>
+            <p>
+              Have a product idea, website, mobile application, SaaS platform, or UX challenge?
+            </p>
+            <p>
+              I’m available for UI/UX and Product Design roles, freelance projects, and collaborative opportunities.
+            </p>
+            <p className="text-sm sm:text-base text-[#777777]">
+              Whether you need to improve an existing product, design a new experience, or turn an idea into a working prototype, let&apos;s talk.
+            </p>
+          </motion.div>
         </div>
 
         {/* Direct Contact Cards Grid */}
@@ -207,7 +215,7 @@ export const ContactSection: React.FC = () => {
             </div>
             <div className="pt-4 mt-6 border-t border-[#ECECE6]">
               <span className="text-xs text-[#666666] block">
-                Chennai, Tamil Nadu, India · IST (UTC+5:30)
+                Open to Full-time Roles · Freelance Projects · Remote Opportunities
               </span>
             </div>
           </motion.div>

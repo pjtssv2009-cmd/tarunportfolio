@@ -14,6 +14,11 @@ export interface Profile {
   subheadline: string;
   heroSubtext: string;
   heroCapabilities: string[];
+  valueProposition: {
+    heading: string;
+    content: string;
+    steps: string;
+  };
   philosophyHeadline: string;
   philosophySubtext: string;
   aboutText: string[];
@@ -36,6 +41,7 @@ export interface Profile {
   }[];
   aiAssisted: {
     heading: string;
+    subheading: string;
     content: string[];
     tools: string[];
     workflow: string[];
@@ -63,21 +69,28 @@ export const profileData: Profile = {
   avatar: "/images/tarun/portrait.png",
   logo: "/images/logo.png",
   logoWhite: "/images/logo-white.png",
-  availability: "Based in Chennai, India",
-  headline: "Designing intuitive digital products that solve real user and business problems.",
-  subheadline: "I design user-centered digital experiences for web and mobile products, combining UX research, interaction design, visual design, prototyping, and scalable Figma design systems.",
-  heroSubtext: "From complex enterprise workflows to consumer mobile applications, I turn requirements and user needs into clear, accessible, and engaging product experiences.",
+  availability: "Based in Chennai, India · Open to Full-time, Freelance & Remote Opportunities",
+  headline: "I design intuitive digital products and use AI-assisted development to turn ideas into working experiences.",
+  subheadline: "I specialize in UX research, product design, interaction design, visual design, Figma design systems, and rapid prototyping for web and mobile products.",
+  heroSubtext: "I work across the product journey—from understanding user and business needs to designing, prototyping, validating, and AI-assisted building functional digital experiences.",
   heroCapabilities: [
     "UX Research & Usability",
     "Web & Mobile Product Design",
     "Figma Design Systems & Prototyping"
   ],
+  valueProposition: {
+    heading: "Design. Prototype. Build. Refine.",
+    content: "I combine product thinking, UX/UI design, Figma systems, and AI-assisted development to move from an idea to a usable digital product faster.",
+    steps: "Research → Design → Prototype → Build → Validate"
+  },
   philosophyHeadline: "Designing with clarity, purpose, and user needs in mind.",
   philosophySubtext: "I combine research, information architecture, interaction design, visual design, prototyping, and design systems to transform complex requirements into simple and scalable experiences.",
   aboutText: [
-    "I’m a UI/UX and Product Designer based in Chennai, India, focused on creating digital products that are intuitive, accessible, and aligned with real business goals.",
-    "My experience spans mobile applications, responsive websites, SaaS platforms, enterprise dashboards, FinTech products, e-commerce, and digital transformation projects.",
-    "I combine research, information architecture, interaction design, visual design, prototyping, and design systems to transform complex requirements into simple and scalable experiences."
+    "I’m Tarun A, a UI/UX and Product Designer based in Chennai, India, focused on solving complex product problems through simple, purposeful experiences.",
+    "I design mobile apps, responsive websites, SaaS platforms, enterprise dashboards, FinTech products, marketplaces, and digital experiences.",
+    "My work combines user research, information architecture, interaction design, visual design, prototyping, and scalable Figma design systems.",
+    "I’ve also expanded my workflow into AI-assisted development, using Google Antigravity and similar AI development tools to turn concepts and prototypes into functional websites, application interfaces, dashboards, and MVPs.",
+    "I believe the best digital products sit at the intersection of user needs, business goals, technology, and thoughtful design."
   ],
   approachSteps: [
     "Understand the problem",
@@ -88,16 +101,16 @@ export const profileData: Profile = {
     "Deliver"
   ],
   coreExpertise: [
-    "UX Research & Usability",
-    "Product & UI/UX Design",
-    "Mobile App Design",
-    "Responsive Web Design",
-    "Information Architecture",
-    "Interaction Design",
-    "Design Systems",
-    "Figma Prototyping",
-    "Usability Testing",
-    "Heuristic Evaluation"
+    "User Research & Usability Testing",
+    "Information Architecture & User Flows",
+    "Wireframing & Interactive Prototyping",
+    "UI Design & Interaction Design",
+    "Mobile App Design (iOS & Android)",
+    "Responsive Web & SaaS Dashboard Design",
+    "Figma Design Systems, Components & Tokens",
+    "AI-Assisted Product Development",
+    "Accessibility (WCAG 2.1 AA) Standards",
+    "Cross-Functional Collaboration & Handoff"
   ],
   designPhilosophy: [
     {
@@ -114,134 +127,155 @@ export const profileData: Profile = {
     },
     {
       title: "Purposeful interaction",
-      description: "Motion and interaction should guide users, communicate feedback, and improve usability—not simply add visual effects."
+      description: "Interaction and motion should guide users, provide feedback, and improve usability."
     }
   ],
   process: [
     {
       number: "01",
-      title: "Understand",
-      description: "Understand the business goals, users, requirements, constraints, and existing experience."
+      title: "Discover",
+      description: "Understand users, business goals, constraints, requirements, and the existing product experience."
     },
     {
       number: "02",
       title: "Research",
-      description: "Study user needs, behaviors, pain points, competitors, and existing workflows."
+      description: "Study user behavior, pain points, workflows, competitors, and opportunities."
     },
     {
       number: "03",
       title: "Define",
-      description: "Translate insights into problem statements, user journeys, information architecture, and task flows."
+      description: "Turn research into clear problems, user journeys, information architecture, and priorities."
     },
     {
       number: "04",
       title: "Design",
-      description: "Create wireframes, high-fidelity interfaces, design systems, and interactive prototypes."
+      description: "Create wireframes, interaction models, high-fidelity UI, design systems, and prototypes."
     },
     {
       number: "05",
       title: "Validate",
-      description: "Test the experience, identify usability issues, gather feedback, and refine the solution."
+      description: "Test assumptions, identify friction, gather feedback, and refine the experience."
     },
     {
       number: "06",
-      title: "Deliver",
-      description: "Prepare design specifications, components, documentation, and developer-ready handoff."
+      title: "Build & Deliver",
+      description: "Use AI-assisted prototyping and development where useful, then prepare production-ready specifications and developer handoff."
+    },
+    {
+      number: "07",
+      title: "Improve",
+      description: "Use feedback, product data, and real-world usage to continuously refine the experience."
     }
   ],
   services: [
     {
       number: "01",
       title: "UI/UX & Product Design",
-      description: "End-to-end product design from discovery and user flows to wireframes, high-fidelity interfaces, prototypes, usability testing, and developer handoff.",
+      description: "Designing end-to-end digital products from problem definition and user flows to high-fidelity UI, prototyping, validation, and developer handoff.",
       deliverables: ["User flows", "Wireframes", "High-fidelity mockups", "Interactive prototypes", "Developer handoff"]
     },
     {
       number: "02",
       title: "Web Design & Redesign",
-      description: "Responsive websites and web platforms designed around clear information architecture, conversion-focused journeys, accessibility, and consistent visual systems.",
+      description: "Designing responsive websites and web platforms with clear information architecture, intuitive navigation, accessibility, and conversion-focused journeys.",
       deliverables: ["Responsive layouts", "Information architecture", "Visual assets", "Design specs"]
     },
     {
       number: "03",
       title: "Mobile App Design",
-      description: "User-centered iOS and Android experiences covering onboarding, navigation, task flows, interaction patterns, and scalable mobile UI systems.",
+      description: "Creating iOS and Android experiences with clear navigation, purposeful interactions, scalable components, and task-focused user flows.",
       deliverables: ["Mobile UI screens", "Gesture interactions", "Component kits", "App prototypes"]
     },
     {
       number: "04",
       title: "UX Research & Usability",
-      description: "User interviews, competitive analysis, journey mapping, heuristic evaluation, usability testing, and UX audits to identify product opportunities and usability problems.",
+      description: "Using interviews, competitive analysis, journey mapping, heuristic evaluation, usability testing, and UX audits to identify problems and opportunities.",
       deliverables: ["User interviews", "Competitive audit", "Journey maps", "UX audit report"]
     },
     {
       number: "05",
       title: "Design Systems & Prototyping",
-      description: "Scalable Figma design systems, reusable components, variables, typography, interaction patterns, and interactive prototypes that support consistent product development.",
+      description: "Building scalable Figma libraries, components, variables, design tokens, interaction patterns, and high-fidelity prototypes.",
       deliverables: ["Figma design system", "Design tokens", "Reusable components", "Interactive prototypes"]
+    },
+    {
+      number: "06",
+      title: "AI-Assisted Product Development",
+      description: "Using Google Antigravity and similar AI-assisted development tools to rapidly prototype, build, test, and iterate functional websites, application interfaces, dashboards, and MVPs.",
+      deliverables: ["Interactive prototypes", "AI-assisted web apps", "Functional MVP builds", "Living design systems"]
     }
   ],
   aiAssisted: {
-    heading: "AI-Assisted Prototyping & Vibe Coding",
+    heading: "AI-Assisted Product Development",
+    subheading: "From design concepts to working digital products.",
     content: [
-      "In addition to UI/UX and product design, I embrace vibe coding using Google Antigravity and similar AI-assisted development tools to rapidly build, test, and iterate on functional prototypes and modern digital interfaces.",
-      "By combining Figma design systems and user-centered thinking with AI-powered development workflows, I turn product concepts into fully working digital experiences with speed and precision."
+      "I combine UI/UX design, Figma, prototyping, and AI-assisted development to rapidly turn ideas into functional digital experiences.",
+      "Using Google Antigravity and similar AI development tools, I can move beyond static design files to build and validate: Responsive websites · Application prototypes · Interactive dashboards · Product MVPs · Landing pages · Design experiments"
     ],
     tools: [
-      "Vibe Coding with Google Antigravity",
-      "AI-Assisted Web & App Development",
-      "Interactive Prototyping & Live Demos",
-      "Figma Design-to-Code Architecture",
-      "Rapid MVP Validation & User Testing"
+      "Google Antigravity AI Development",
+      "Responsive Websites & Web Apps",
+      "Application Prototypes & Live Demos",
+      "Interactive Dashboards & MVPs",
+      "Landing Pages & Design Experiments",
+      "Figma-to-Code Architecture"
     ],
     workflow: [
-      "Research & Strategy",
-      "UX/UI Design in Figma",
-      "Interactive Prototyping",
-      "Vibe Coding with Antigravity",
-      "Validation & Testing",
-      "Iterative Refinement",
-      "Developer Handoff"
+      "Research",
+      "Figma",
+      "Prototype",
+      "AI-Assisted Build",
+      "Test",
+      "Iterate",
+      "Refine"
     ],
-    description: "I use vibe coding and modern AI development tools to build and validate responsive websites, mobile application prototypes, interactive product experiences, dashboards, and MVPs while maintaining a strong focus on usability, visual quality, accessibility, and scalable design."
+    description: "AI accelerates execution, but the design decisions remain grounded in user needs, usability, accessibility, visual quality, product goals, and scalable design systems."
   },
   availabilitySection: {
-    heading: "Let's Build Impactful Products Together",
-    content: "Looking for a UI/UX or Product Designer who can combine user-centered thinking, strong visual design, and practical product strategy?\n\nLet's connect to discuss your product roadmap and design needs.",
+    heading: "Open to Product Design Opportunities",
+    content: "I’m open to full-time UI/UX and Product Design roles, freelance projects, remote opportunities, and selected collaborations.\n\nI can contribute across UX research, product design, UI design, design systems, prototyping, and AI-assisted product development.",
     cta: "Let's Work Together"
   },
   faqs: [
     {
       question: "Who is Tarun A?",
-      answer: "Tarun A is a UI/UX and Product Designer based in Chennai, India, specializing in digital product design for web and mobile platforms."
+      answer: "Tarun A is a UI/UX and Product Designer based in Chennai, India, specializing in digital product experiences for web and mobile platforms."
     },
     {
       question: "What does Tarun specialize in?",
-      answer: "Tarun specializes in UX research, UI design, interaction design, mobile app design, responsive web design, Figma design systems, prototyping, usability analysis, and product design."
+      answer: "Tarun specializes in product design, UX research, UI/UX design, interaction design, mobile app design, responsive web design, information architecture, design systems, prototyping, and usability."
     },
     {
       question: "What industries has Tarun worked in?",
-      answer: "His portfolio includes projects across FinTech, SaaS, e-commerce, AgriTech, enterprise platforms, automotive, education, investment banking, and consumer digital products."
+      answer: "Tarun has worked on digital products and experiences across FinTech, SaaS, e-commerce, AgriTech, enterprise platforms, investment banking, automotive, education, IoT, and consumer products."
     },
     {
-      question: "What design and development tools does Tarun use?",
-      answer: "Tarun primarily uses Figma for UI/UX design, prototyping, and scalable design systems, along with Adobe Creative Suite (Photoshop, Illustrator), Balsamiq, and modern AI development environments like Google Antigravity for vibe coding and rapid interactive development."
+      question: "What design tools does Tarun use?",
+      answer: "Tarun primarily uses Figma, Adobe Photoshop, Adobe Illustrator, Balsamiq, Marvel, and InVision, along with modern AI-assisted development and prototyping tools."
     },
     {
-      question: "Does Tarun build prototypes using AI and vibe coding?",
-      answer: "Yes. Tarun practices vibe coding using Google Antigravity and similar AI-assisted development tools to rapidly build, test, and validate responsive websites, application prototypes, interactive dashboards, and living MVPs alongside his UI/UX design workflow."
+      question: "Does Tarun use AI for product development?",
+      answer: "Yes. Tarun uses Google Antigravity and similar AI-assisted development tools to rapidly prototype, build, test, and iterate websites, application interfaces, dashboards, and MVPs alongside his UI/UX workflow."
+    },
+    {
+      question: "Does Tarun build websites and applications?",
+      answer: "Yes. In addition to UI/UX design, Tarun uses AI-assisted development tools to turn design concepts into responsive websites, application prototypes, dashboards, landing pages, and functional MVP experiences."
+    },
+    {
+      question: "What is Tarun's design process?",
+      answer: "Tarun's process combines discovery, research, problem definition, information architecture, UX/UI design, prototyping, validation, AI-assisted development where appropriate, iteration, and developer handoff."
     },
     {
       question: "Is Tarun available for UI/UX opportunities?",
-      answer: "Yes. Tarun is open to discussing UI/UX and Product Design opportunities, project collaborations, and design consultations."
+      answer: "Yes. Tarun is open to full-time UI/UX and Product Design roles, freelance projects, remote opportunities, and selected collaborations."
     },
     {
       question: "Where is Tarun based?",
-      answer: "Tarun is based in Chennai, Tamil Nadu, India, and works with companies and product teams in India and globally."
+      answer: "Tarun is based in Chennai, Tamil Nadu, India, and is open to opportunities with teams in India and internationally."
     },
     {
-      question: "What type of products does Tarun design?",
-      answer: "Tarun designs mobile applications, responsive websites, SaaS platforms, enterprise dashboards, FinTech products, e-commerce experiences, marketplaces, and digital transformation products."
+      question: "What type of digital products does Tarun design?",
+      answer: "Tarun designs mobile applications, responsive websites, SaaS platforms, enterprise dashboards, FinTech products, marketplaces, e-commerce experiences, and digital transformation products."
     }
   ]
 };

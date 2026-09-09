@@ -17,6 +17,7 @@ export interface EducationItem {
   institution: string;
   period?: string;
   location: string;
+  description?: string;
   highlights?: string[];
 }
 
@@ -28,16 +29,16 @@ export const experienceData: ExperienceItem[] = [
     employmentType: "Full-time",
     period: "April 2026 – Present",
     location: "Manchester, UK / Remote",
-    description: "Designing user-centered digital products and web/mobile experiences for international clients while collaborating with product managers, developers, and stakeholders.",
+    description: "Designing user-centered digital products for international clients across web and mobile platforms.",
     responsibilities: [
-      "Lead UX workflows from requirements and research through high-fidelity UI and prototyping.",
-      "Design responsive web and mobile experiences using Figma.",
-      "Translate complex business requirements into clear user flows and information architectures.",
-      "Collaborate with developers and product teams throughout the product lifecycle.",
-      "Improve usability through user-centered design principles, UX analysis, and iterative design.",
-      "Create reusable components and scalable design patterns for consistent product experiences."
+      "Translate business and product requirements into clear user journeys and digital experiences.",
+      "Design responsive interfaces and interaction systems in Figma.",
+      "Lead UX workflows from early discovery through high-fidelity design and prototyping.",
+      "Collaborate closely with product managers, developers, and stakeholders.",
+      "Build reusable components and scalable design patterns.",
+      "Explore AI-assisted development to rapidly prototype and validate digital product concepts."
     ],
-    skills: ["UX Design", "Interaction Design", "Figma", "User Research", "Wireframing", "Design Systems"],
+    skills: ["UX Design", "Product Design", "Figma", "Interaction Design", "Research", "Prototyping", "Design Systems"],
     isCurrent: true
   },
   {
@@ -61,7 +62,7 @@ export const experienceData: ExperienceItem[] = [
     kpis: [
       "100K+ Users",
       "Up to 35% Engagement Improvement",
-      "30% Fewer Friction Points",
+      "30% Fewer Reported Friction Points",
       "25% Faster Handoff"
     ],
     skills: ["Figma", "Design Thinking", "Agile", "User Research", "Usability Testing", "Design Systems", "Prototyping", "WCAG 2.1 AA"]
@@ -106,8 +107,9 @@ export const educationData: EducationItem[] = [
     institution: "School Of Techies",
     period: "July 2023 – January 2024",
     location: "Chennai, India",
+    description: "Specialized training in UX research, information architecture, wireframing, UI design, design systems, prototyping, and usability.",
     highlights: [
-      "Specialized training in UX research, wireframing, information architecture, UI design, design systems, prototyping, and usability."
+      "Specialized training in UX research, information architecture, wireframing, UI design, design systems, prototyping, and usability."
     ]
   },
   {
@@ -115,6 +117,7 @@ export const educationData: EducationItem[] = [
     institution: "Easwari Engineering College — SRM Group",
     period: "August 2020 – June 2023",
     location: "Chennai, India",
+    description: "Developed a technical and problem-solving foundation through engineering studies, automotive projects, and student leadership.",
     highlights: [
       "Chief Editorial & Technical Head — Student Society of Automotive Engineers",
       "Vice Captain — Team Peregrine Kire",

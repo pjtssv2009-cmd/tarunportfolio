@@ -45,11 +45,11 @@ export const HeroSection: React.FC = () => {
               className="max-w-3xl"
             >
               <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-tight text-[#111111] leading-[1.06] sm:leading-[1.04] mb-6 sm:mb-8">
-                Designing intuitive digital products that solve{" "}
+                I design intuitive digital products and use{" "}
                 <span className="text-accent underline decoration-accent/30 decoration-2 underline-offset-8">
-                  real user
+                  AI-assisted development
                 </span>{" "}
-                and business problems.
+                to turn ideas into working experiences.
               </h1>
             </motion.div>
 
@@ -126,7 +126,7 @@ export const HeroSection: React.FC = () => {
       {/* Bottom Sub-Bar */}
       <div className="relative z-10 max-w-7xl mx-auto w-full pt-6 border-t border-[#E5E5DE]/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-[#777777]">
         <div className="flex items-center gap-4 sm:gap-6">
-          <span className="font-medium text-[#444444]">Based in Chennai, India</span>
+          <span className="font-medium text-[#444444]">{profileData.availability}</span>
         </div>
 
         <Link

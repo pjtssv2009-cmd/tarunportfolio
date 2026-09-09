@@ -17,7 +17,7 @@ export const AboutSection: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 sm:mb-20 pb-6 border-b border-[#E5E5DE] gap-4">
           <div>
             <h2 className="text-3xl sm:text-5xl font-display font-extrabold tracking-tight text-[#111111]">
-              About Tarun A
+              About Me
             </h2>
           </div>
           <div className="flex items-center gap-2 text-xs text-[#666666]">
@@ -61,18 +61,14 @@ export const AboutSection: React.FC = () => {
           {/* Bio & Approach Text */}
           <div className="lg:col-span-7 flex flex-col justify-between space-y-6 sm:space-y-8">
             <div className="space-y-4 text-base sm:text-lg text-[#444444] leading-relaxed">
-              <p className="text-xl sm:text-2xl font-display font-semibold text-[#111111] leading-snug">
-                I’m Tarun A, a UI/UX and Product Designer based in Chennai, India, specializing in digital product experiences for web and mobile platforms.
-              </p>
-              <p>
-                My work combines UX research, information architecture, interaction design, visual design, prototyping, and Figma design systems to solve real user and business problems.
-              </p>
-              <p>
-                I have worked across FinTech, SaaS, e-commerce, AgriTech, enterprise platforms, automotive, education, investment banking, and consumer digital products.
-              </p>
-              <p className="text-sm sm:text-base text-[#666666]">
-                I believe good product design should be clear, purposeful, accessible, and scalable. My goal is to make complex products easier to understand and more effective to use.
-              </p>
+              {profileData.aboutText.map((paragraph, idx) => (
+                <p
+                  key={idx}
+                  className={idx === 0 ? "text-xl sm:text-2xl font-display font-semibold text-[#111111] leading-snug" : idx === profileData.aboutText.length - 1 ? "text-sm sm:text-base text-[#666666]" : ""}
+                >
+                  {paragraph}
+                </p>
+              ))}
             </div>
 
             {/* Core Expertise 10 Points */}

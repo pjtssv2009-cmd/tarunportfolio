@@ -6,99 +6,84 @@ export interface SkillCategory {
 
 export const skillsData: SkillCategory[] = [
   {
-    category: "UX & Product Design",
-    description: "End-to-end product design, information architecture, and structured user journeys.",
+    category: "Product Design",
+    description: "End-to-end product design, UX strategy, information architecture, and structured user journeys.",
     skills: [
-      "UX Design",
       "Product Design",
-      "User Research",
-      "User Flows",
+      "UI/UX Design",
+      "UX Strategy",
       "Information Architecture",
+      "User Flows",
       "User Journey Mapping",
       "Wireframing",
-      "Usability Testing",
-      "Heuristic Evaluation",
-      "Task Flow Optimization"
+      "Prototyping"
     ]
   },
   {
-    category: "UI & Interaction Design",
-    description: "Clean typography, responsive layout systems, and purposeful micro-interactions.",
+    category: "Research & Usability",
+    description: "Evidence-grounded user research, persona definition, usability testing, and UX audits.",
+    skills: [
+      "User Research",
+      "User Interviews",
+      "Competitive Analysis",
+      "Personas",
+      "Empathy Mapping",
+      "Heuristic Evaluation",
+      "Usability Testing",
+      "UX Audits"
+    ]
+  },
+  {
+    category: "UI & Interaction",
+    description: "Visual design, layout systems, accessible interfaces, and purposeful micro-interactions.",
     skills: [
       "UI Design",
       "Mobile App Design",
       "Responsive Web Design",
       "Interaction Design",
       "Visual Design",
-      "Typography",
-      "Layout Systems",
       "Accessibility",
       "Micro-interactions",
-      "Component Architecture"
+      "Design Patterns"
     ]
   },
   {
     category: "Design Systems",
-    description: "Reusable component architectures, variables, design tokens, and developer handoff.",
+    description: "Scalable component architectures, design tokens, variables, and developer handoff.",
     skills: [
-      "Figma Design Systems",
+      "Figma",
+      "Design Systems",
       "Components",
       "Variables",
       "Design Tokens",
       "Component Libraries",
-      "UI Patterns",
-      "Prototyping",
+      "UI Architecture",
       "Developer Handoff"
     ]
   },
   {
-    category: "Research & Strategy",
-    description: "Evidence-grounded user research, persona definition, and competitive analysis.",
-    skills: [
-      "User Interviews",
-      "Personas",
-      "Empathy Mapping",
-      "Competitive Analysis",
-      "Customer Journey Mapping",
-      "Problem Definition",
-      "UX Audits"
-    ]
-  },
-  {
-    category: "Visual & Brand Design",
-    description: "Digital illustrations, custom iconography, brand identity, and art direction.",
-    skills: [
-      "Visual Design",
-      "Digital Illustration",
-      "Iconography",
-      "Graphic Design",
-      "Layout Design",
-      "Brand Identity",
-      "Art Direction"
-    ]
-  },
-  {
     category: "AI-Assisted Development",
-    description: "Vibe coding using Google Antigravity and modern AI tools to rapidly build, test, and validate interactive products.",
+    description: "AI-assisted workflows with Google Antigravity to rapidly prototype, build, test, and iterate products.",
     skills: [
-      "Antigravity",
-      "Vibe Coding",
-      "AI-Assisted Prototyping",
-      "Interactive Web Apps",
-      "Design-to-Code Validation",
-      "Rapid MVP Building"
+      "Google Antigravity",
+      "AI-Assisted Development",
+      "AI-Assisted Coding",
+      "AI Prototyping",
+      "Design-to-Code",
+      "Rapid MVP Development",
+      "AI-Assisted Web & App Development"
     ]
   },
   {
-    category: "Tools",
-    description: "Industry-standard design, vector, and prototyping software.",
+    category: "Visual Design",
+    description: "Digital graphics, vector illustration, branding assets, and typography.",
     skills: [
-      "Figma",
       "Adobe Photoshop",
       "Adobe Illustrator",
-      "Balsamiq",
-      "Marvel",
-      "InVision"
+      "Brand Identity",
+      "Digital Illustration",
+      "Iconography",
+      "Graphic Design"
     ]
   }
 ];

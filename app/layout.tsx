@@ -19,9 +19,9 @@ const plusJakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://tarun-amber.vercel.app"),
-  title: "Tarun A | UI/UX & Product Designer | Chennai, India",
+  title: "Tarun A | UI/UX & Product Designer | Web, Mobile & AI-Assisted Development",
   description:
-    "Tarun A is a UI/UX and Product Designer in Chennai specializing in mobile apps, web platforms, SaaS products, UX research, Figma design systems, prototyping, interaction design, and AI-assisted product development.",
+    "Tarun A is a UI/UX & Product Designer in Chennai, India, specializing in web and mobile products, UX research, Figma design systems, prototyping, interaction design, and AI-assisted development with Google Antigravity.",
   keywords: [
     "UI/UX Designer",
     "Product Designer",
