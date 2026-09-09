@@ -13,8 +13,8 @@ export const HeroScene: React.FC<{ className?: string }> = ({ className = "" }) 
 
   // Smooth spring physics for natural 3D tilt
   const springConfig = { damping: 25, stiffness: 180, mass: 0.6 };
-  const rotateX = useSpring(useTransform(mouseY, [-0.5, 0.5], [8, -8]), springConfig);
-  const rotateY = useSpring(useTransform(mouseX, [-0.5, 0.5], [-10, 10]), springConfig);
+  const rotateX = useSpring(useTransform(mouseY, [-0.5, 0.5], [7, -7]), springConfig);
+  const rotateY = useSpring(useTransform(mouseX, [-0.5, 0.5], [-9, 9]), springConfig);
   const translateX = useSpring(useTransform(mouseX, [-0.5, 0.5], [-8, 8]), springConfig);
   const translateY = useSpring(useTransform(mouseY, [-0.5, 0.5], [-6, 6]), springConfig);
 
@@ -37,10 +37,10 @@ export const HeroScene: React.FC<{ className?: string }> = ({ className = "" }) 
       ref={containerRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      style={{ perspective: 1000 }}
+      style={{ perspective: 1100 }}
       className={`relative w-full h-full flex items-center justify-center pointer-events-auto select-none ${className}`}
     >
-      {/* 3D Parallax Floating Container */}
+      {/* 3D Parallax Floating Container (Centered & Scaled Prominently) */}
       <motion.div
         style={{
           rotateX,
@@ -57,23 +57,23 @@ export const HeroScene: React.FC<{ className?: string }> = ({ className = "" }) 
           duration: 5,
           ease: "easeInOut",
         }}
-        className="relative w-full max-w-[380px] sm:max-w-[420px] lg:max-w-[460px] aspect-[4/4.5] flex items-center justify-center"
+        className="relative w-full max-w-[440px] sm:max-w-[500px] lg:max-w-[560px] h-[460px] sm:h-[540px] lg:h-[620px] flex items-center justify-center"
       >
-        {/* Unfiltered High-Resolution PNG with Natural Smooth Alpha Edges */}
+        {/* High-Resolution Portrait with Natural Smooth Alpha Mask */}
         <div
           className="relative w-full h-full flex items-center justify-center"
           style={{
-            maskImage: "linear-gradient(to bottom, black 88%, transparent 100%)",
-            WebkitMaskImage: "linear-gradient(to bottom, black 88%, transparent 100%)",
+            maskImage: "linear-gradient(to bottom, black 0%, black 78%, rgba(0,0,0,0.85) 88%, transparent 98%)",
+            WebkitMaskImage: "linear-gradient(to bottom, black 0%, black 78%, rgba(0,0,0,0.85) 88%, transparent 98%)",
           }}
         >
           <Image
             src="/images/tarun/tarun-hero.png"
-            alt="Tarun A — UI/UX Designer"
+            alt="Tarun A, UI/UX and Product Designer based in Chennai, India"
             fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 450px"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 560px"
             priority
-            className="object-contain select-none"
+            className="object-contain object-center select-none"
             style={{
               filter: "none",
               WebkitFilter: "none",
