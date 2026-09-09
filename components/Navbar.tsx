@@ -46,10 +46,10 @@ export const Navbar: React.FC = () => {
         }`}
       >
         <div className="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-between">
-          {/* Logo / Brand with Signature Image */}
+          {/* Logo / Brand */}
           <Link
             href="/"
-            className="group flex items-center gap-3 focus:outline-none"
+            className="group flex items-center focus:outline-none"
             onMouseEnter={() => setCursorType("pointer")}
             onMouseLeave={() => setCursorType("default")}
           >
@@ -63,18 +63,15 @@ export const Navbar: React.FC = () => {
                 className="h-full w-auto object-contain transition-transform duration-200 group-hover:scale-105"
               />
             </div>
-            <span className="hidden sm:inline-block text-xs font-medium text-[#666666] border-l border-[#D4D3CC] pl-3">
-              UI/UX Designer
-            </span>
           </Link>
 
-          {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-8">
+          {/* Desktop Navigation Links aligned to Right */}
+          <nav className="hidden md:flex items-center gap-8 lg:gap-10">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-[#444444] hover:text-[#111111] transition-colors relative py-1 focus:outline-none"
+                className="text-sm font-medium text-[#555555] hover:text-[#111111] transition-colors relative py-1 focus:outline-none"
                 onMouseEnter={() => setCursorType("pointer")}
                 onMouseLeave={() => setCursorType("default")}
               >
@@ -83,22 +80,11 @@ export const Navbar: React.FC = () => {
             ))}
           </nav>
 
-          {/* CTA & Mobile Hamburger */}
-          <div className="flex items-center gap-3">
-            <Link
-              href="/#contact"
-              className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#111111] bg-white border border-[#E5E5DE] hover:border-accent hover:text-accent rounded-full transition-all shadow-sm focus:outline-none"
-              onMouseEnter={() => setCursorType("pointer")}
-              onMouseLeave={() => setCursorType("default")}
-            >
-              <span>Let&apos;s Talk</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
-            </Link>
-
-            {/* Mobile Menu Toggle Button */}
+          {/* Mobile Menu Toggle Button (Mobile Only) */}
+          <div className="md:hidden flex items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 rounded-full border border-[#E5E5DE] bg-white/80 text-[#111111] hover:bg-white transition-colors focus:outline-none"
+              className="p-2 rounded-full border border-[#E5E5DE] bg-white/80 text-[#111111] hover:bg-white transition-colors focus:outline-none"
               aria-label="Toggle Navigation Menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -128,10 +114,9 @@ export const Navbar: React.FC = () => {
                     className="h-full w-auto object-contain"
                   />
                 </div>
-                <span className="font-editorial-mono text-[11px] text-[#888888]">NAVIGATION</span>
               </div>
               <nav className="flex flex-col gap-5">
-                {NAV_LINKS.map((link, idx) => (
+                {NAV_LINKS.map((link) => (
                   <Link
                     key={link.name}
                     href={link.href}
@@ -139,25 +124,14 @@ export const Navbar: React.FC = () => {
                     className="text-2xl sm:text-3xl font-display font-semibold tracking-tight text-[#111111] flex items-center justify-between border-b border-[#E5E5DE] pb-4"
                   >
                     <span>{link.name}</span>
-                    <span className="font-mono text-xs text-[#888888]">0{idx + 1}</span>
                   </Link>
                 ))}
               </nav>
             </div>
 
-            <div className="flex flex-col gap-4 border-t border-[#E5E5DE] pt-6">
-              <div className="flex items-center justify-between text-xs text-[#666666]">
-                <span>Chennai, India</span>
-                <span className="text-accent font-medium">Available for work</span>
-              </div>
-              <Link
-                href="/#contact"
-                onClick={() => setMobileMenuOpen(false)}
-                className="w-full flex items-center justify-center gap-2 py-3.5 bg-[#111111] text-[#F8F7F4] rounded-full text-sm font-semibold tracking-wide"
-              >
-                <span>Let&apos;s Talk</span>
-                <ArrowUpRight className="w-4 h-4" />
-              </Link>
+            <div className="flex items-center justify-between text-xs text-[#666666] border-t border-[#E5E5DE] pt-6">
+              <span>Chennai, India</span>
+              <span className="text-accent font-medium">Available for work</span>
             </div>
           </motion.div>
         )}
