@@ -35,16 +35,17 @@ export const Navbar: React.FC = () => {
 
   // Prevent background scrolling when mobile menu is open
   useEffect(() => {
-    if (mobileMenuOpen) {
-      document.body.style.overflow = "hidden";
-      document.body.style.touchAction = "none";
-    } else {
-      document.body.style.overflow = "";
-      document.body.style.touchAction = "";
+    if (typeof document !== "undefined") {
+      if (mobileMenuOpen) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "";
+      }
     }
     return () => {
-      document.body.style.overflow = "";
-      document.body.style.touchAction = "";
+      if (typeof document !== "undefined") {
+        document.body.style.overflow = "";
+      }
     };
   }, [mobileMenuOpen]);
 

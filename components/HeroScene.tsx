@@ -12,17 +12,7 @@ export const HeroScene: React.FC<HeroSceneProps> = ({ className = "" }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
-
-  useEffect(() => {
-    const checkTouch = () => {
-      setIsTouchDevice(
-        window.matchMedia("(pointer: coarse)").matches || window.innerWidth < 768
-      );
-    };
-    checkTouch();
-    window.addEventListener("resize", checkTouch);
-    return () => window.removeEventListener("resize", checkTouch);
-  }, []);
+  const [isMounted, setIsMounted] = useState(false);
 
   // Raw normalized mouse coordinates (-0.5 to 0.5)
   const rawMouseX = useMotionValue(0);
@@ -47,6 +37,25 @@ export const HeroScene: React.FC<HeroSceneProps> = ({ className = "" }) => {
 
   const sheenX = useTransform(smoothMouseX, [-0.5, 0.5], ["20%", "80%"]);
   const sheenY = useTransform(smoothMouseY, [-0.5, 0.5], ["20%", "80%"]);
+
+  // Defined at top level to strictly follow React Rules of Hooks
+  const sheenBackground = useTransform(
+    [sheenX, sheenY],
+    ([x, y]) =>
+      `radial-gradient(circle 260px at ${x} ${y}, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 70%)`
+  );
+
+  useEffect(() => {
+    setIsMounted(true);
+    const checkTouch = () => {
+      setIsTouchDevice(
+        window.matchMedia("(pointer: coarse)").matches || window.innerWidth < 768
+      );
+    };
+    checkTouch();
+    window.addEventListener("resize", checkTouch);
+    return () => window.removeEventListener("resize", checkTouch);
+  }, []);
 
   useEffect(() => {
     if (isTouchDevice) return;
@@ -97,8 +106,8 @@ export const HeroScene: React.FC<HeroSceneProps> = ({ className = "" }) => {
       {/* 3D Transform Stage */}
       <motion.div
         style={{
-          rotateX: isTouchDevice ? 0 : rotateX,
-          rotateY: isTouchDevice ? 0 : rotateY,
+          rotateX,
+          rotateY,
           transformStyle: "preserve-3d",
         }}
         animate={
@@ -123,12 +132,12 @@ export const HeroScene: React.FC<HeroSceneProps> = ({ className = "" }) => {
         }
         className="relative w-full max-w-[320px] xs:max-w-[400px] sm:max-w-[560px] md:max-w-[680px] lg:max-w-[760px] h-[210px] xs:h-[260px] sm:h-[380px] md:h-[460px] lg:h-[520px] flex items-center justify-center will-change-transform"
       >
-        {/* Layer 1: Clearly Visible White Brand LOGO BEHIND Portrait Cutout (Z: -35px) */}
+        {/* Layer 1: White Brand Logo BEHIND Portrait Cutout (Z: -35px) */}
         <motion.div
           style={{
             transform: "translateZ(-35px)",
-            x: isTouchDevice ? 0 : bgLogoTranslateX,
-            y: isTouchDevice ? 0 : bgLogoTranslateY,
+            x: bgLogoTranslateX,
+            y: bgLogoTranslateY,
           }}
           className="absolute inset-0 flex items-center justify-center pointer-events-none z-0"
         >
@@ -151,8 +160,8 @@ export const HeroScene: React.FC<HeroSceneProps> = ({ className = "" }) => {
         <motion.div
           style={{
             transform: "translateZ(30px)",
-            x: isTouchDevice ? 0 : portraitTranslateX,
-            y: isTouchDevice ? 0 : portraitTranslateY,
+            x: portraitTranslateX,
+            y: portraitTranslateY,
             transformStyle: "preserve-3d",
           }}
           className="relative z-10 w-full h-full flex items-center justify-center"
@@ -191,15 +200,11 @@ export const HeroScene: React.FC<HeroSceneProps> = ({ className = "" }) => {
           </div>
 
           {/* Layer 3: Interactive Light Sheen Highlight (Z: +45px) */}
-          {!isTouchDevice && (
+          {isMounted && !isTouchDevice && (
             <motion.div
               style={{
                 transform: "translateZ(45px)",
-                background: useTransform(
-                  [sheenX, sheenY],
-                  ([x, y]) =>
-                    `radial-gradient(circle 260px at ${x} ${y}, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 70%)`
-                ),
+                background: sheenBackground,
               }}
               className="absolute inset-0 pointer-events-none rounded-2xl opacity-75 mix-blend-overlay transition-opacity duration-300"
             />
