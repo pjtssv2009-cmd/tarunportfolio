@@ -136,9 +136,14 @@ export const HeroSection: React.FC = () => {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
             </span>
-            <span className="font-medium text-[#E4E4E7]">Based in Chennai, India</span>
-            <span className="text-white/40"> · </span>
-            <span>Open to Full-time, Freelance &amp; Remote Opportunities</span>
+            <span className="hidden sm:inline">
+              <span className="font-medium text-[#E4E4E7]">Based in Chennai, India</span>
+              <span className="text-white/40"> · </span>
+              <span>Open to Full-time, Freelance &amp; Remote Opportunities</span>
+            </span>
+            <span className="sm:hidden font-medium text-[#E4E4E7]">
+              Open to Full-time, Freelance &amp; Remote Opportunities
+            </span>
           </p>
         </div>
 
