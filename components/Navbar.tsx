@@ -88,15 +88,15 @@ export const Navbar: React.FC = () => {
           <div className="md:hidden flex items-center justify-between w-full">
             <Link
               href="/#top"
-              className="relative flex items-center h-7 w-24 focus:outline-none"
+              className="relative flex items-center h-8 w-28 focus:outline-none"
               aria-label="Tarun A Home"
             >
               <Image
                 src={isScrolled ? profileData.logo : profileData.logoWhite}
                 alt="Tarun A Brand Logo"
-                width={100}
-                height={28}
-                className="h-6 w-auto object-contain transition-opacity duration-200"
+                width={120}
+                height={32}
+                className="h-7 w-auto object-contain transition-opacity duration-200"
                 priority
               />
             </Link>
@@ -130,12 +130,22 @@ export const Navbar: React.FC = () => {
             {/* Top Close / Title header inside drawer */}
             <div className="flex flex-col gap-6">
               <div className="flex items-center justify-between pb-3 border-b border-white/10">
-                <span className="text-xs font-editorial-mono uppercase tracking-widest text-[#A1A1AA]">
-                  Navigation
-                </span>
-                <span className="text-xs text-[#71717A]">
-                  Chennai, IN
-                </span>
+                <div className="relative h-6 w-24">
+                  <Image
+                    src="/images/logo-white.png"
+                    alt="Tarun A Brand Logo"
+                    width={96}
+                    height={24}
+                    className="h-6 w-auto object-contain"
+                  />
+                </div>
+                <button
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="p-1 rounded-full text-white/70 hover:text-white"
+                  aria-label="Close menu"
+                >
+                  <X className="w-5 h-5" />
+                </button>
               </div>
 
               {/* Navigation Links */}
