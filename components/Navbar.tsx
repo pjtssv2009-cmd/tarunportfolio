@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
@@ -29,6 +28,7 @@ export const Navbar: React.FC = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 30);
     };
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -43,37 +43,22 @@ export const Navbar: React.FC = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-[#F8F7F4]/90 backdrop-blur-md border-b border-[#E5E5DE] py-3 shadow-sm"
+            ? "bg-[#F8F7F4]/90 backdrop-blur-md border-b border-[#E5E5DE] py-3.5 shadow-sm"
             : "bg-transparent py-4 sm:py-5"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-between">
-          {/* Logo / Brand */}
-          <Link
-            href="/"
-            className="group flex items-center focus:outline-none"
-            onMouseEnter={() => setCursorType("pointer")}
-            onMouseLeave={() => setCursorType("default")}
-          >
-            <div className="relative h-8 sm:h-9 w-28 sm:w-36 flex items-center">
-              <Image
-                src={profileData.logo}
-                alt={profileData.name}
-                width={140}
-                height={50}
-                priority
-                className="h-full w-auto object-contain transition-transform duration-200 group-hover:scale-105"
-              />
-            </div>
-          </Link>
-
-          {/* Desktop Navigation Links aligned to Right */}
-          <nav className="hidden md:flex items-center gap-7 lg:gap-9">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-center relative">
+          {/* Centered Desktop Navigation Links */}
+          <nav className="hidden md:flex items-center justify-center gap-7 lg:gap-10">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-[#555555] hover:text-[#111111] transition-colors relative py-1 focus:outline-none"
+                className={`text-sm font-medium tracking-wide transition-colors relative py-1 focus:outline-none ${
+                  isScrolled
+                    ? "text-[#555555] hover:text-[#111111]"
+                    : "text-white/85 hover:text-white"
+                }`}
                 onMouseEnter={() => setCursorType("pointer")}
                 onMouseLeave={() => setCursorType("default")}
               >
@@ -82,11 +67,15 @@ export const Navbar: React.FC = () => {
             ))}
           </nav>
 
-          {/* Mobile Menu Toggle Button (Mobile Only) */}
-          <div className="md:hidden flex items-center">
+          {/* Mobile Menu Toggle Button (Aligned Right on Mobile) */}
+          <div className="md:hidden flex items-center justify-end w-full">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-full border border-[#E5E5DE] bg-white/80 text-[#111111] hover:bg-white transition-colors focus:outline-none"
+              className={`p-2 rounded-full border transition-colors focus:outline-none ${
+                isScrolled
+                  ? "border-[#E5E5DE] bg-white/80 text-[#111111] hover:bg-white"
+                  : "border-white/20 bg-white/10 text-white hover:bg-white/20"
+              }`}
               aria-label="Toggle Navigation Menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -103,19 +92,17 @@ export const Navbar: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="fixed inset-0 z-40 bg-[#F8F7F4] flex flex-col justify-between p-6 sm:p-10 pt-24 md:hidden"
+            className="fixed inset-0 z-40 bg-[#F8F7F4] flex flex-col justify-between p-6 sm:p-10 pt-20 md:hidden"
           >
             <div className="flex flex-col gap-6">
-              <div className="flex items-center justify-between pb-2 border-b border-[#E5E5DE]">
-                <div className="relative h-8 w-28">
-                  <Image
-                    src={profileData.logo}
-                    alt={profileData.name}
-                    width={130}
-                    height={45}
-                    className="h-full w-auto object-contain"
-                  />
-                </div>
+              <div className="flex items-center justify-between pb-3 border-b border-[#E5E5DE]">
+                <span className="text-sm font-semibold text-[#111111]">Navigation</span>
+                <button
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="p-1.5 rounded-full text-[#555555] hover:text-[#111111]"
+                >
+                  <X className="w-5 h-5" />
+                </button>
               </div>
               <nav className="flex flex-col gap-4">
                 {NAV_LINKS.map((link) => (
