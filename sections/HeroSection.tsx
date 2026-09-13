@@ -14,7 +14,7 @@ export const HeroSection: React.FC = () => {
   return (
     <section
       id="top"
-      className="relative min-h-[95vh] sm:min-h-screen w-full flex flex-col justify-between pt-24 sm:pt-28 pb-10 sm:pb-14 px-4 sm:px-8 md:px-10 overflow-hidden bg-gradient-to-b from-[#09090D] via-[#0E0E14] to-[#0A0A0E] text-white border-b border-white/[0.06]"
+      className="relative min-h-[100dvh] sm:min-h-screen w-full flex flex-col justify-between pt-20 sm:pt-28 pb-8 sm:pb-14 px-4 sm:px-8 md:px-10 overflow-hidden bg-gradient-to-b from-[#09090D] via-[#0E0E14] to-[#0A0A0E] text-white border-b border-white/[0.06]"
     >
       {/* Dark Ambient Luminous Mesh & Glows */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
@@ -32,14 +32,14 @@ export const HeroSection: React.FC = () => {
       </div>
 
       {/* Centered Main Hero Content */}
-      <div className="relative z-10 max-w-6xl mx-auto w-full flex-1 flex flex-col items-center justify-center py-4 sm:py-6 text-center">
+      <div className="relative z-10 max-w-6xl mx-auto w-full flex-1 flex flex-col items-center justify-center py-2 sm:py-6 text-center">
         
         {/* Middle Centerpiece: 3D Portrait Cutout with Glowing White Logo Behind */}
         <motion.div
           initial={{ opacity: 0, scale: 0.96, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-          className="relative w-full my-2 sm:my-3 flex items-center justify-center pointer-events-auto"
+          className="relative w-full my-1 sm:my-3 flex items-center justify-center pointer-events-auto"
         >
           <HeroScene className="w-full" />
         </motion.div>
@@ -49,19 +49,19 @@ export const HeroSection: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-          className="w-full max-w-5xl mx-auto mt-4 sm:mt-6"
+          className="w-full max-w-5xl mx-auto mt-3 sm:mt-6 px-1"
         >
-          <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-[2.85rem] xl:text-[3.25rem] font-display font-extrabold tracking-tight text-white leading-[1.2] sm:leading-[1.18] lg:leading-[1.16] mb-5 sm:mb-6">
+          <h1 className="text-[1.35rem] xs:text-[1.65rem] sm:text-3xl md:text-4xl lg:text-[2.85rem] xl:text-[3.25rem] font-display font-extrabold tracking-tight text-white leading-[1.25] sm:leading-[1.18] lg:leading-[1.16] mb-4 sm:mb-6">
             <span className="block sm:whitespace-nowrap">
               Hey, I&apos;m{" "}
-              <span className="text-[#3B82F6] underline decoration-[#3B82F6]/40 decoration-2 underline-offset-8">
+              <span className="text-[#3B82F6] underline decoration-[#3B82F6]/40 decoration-2 underline-offset-4 sm:underline-offset-8">
                 Tarun A
               </span>{" "}
               — a Product Designer
             </span>
             <span className="block sm:whitespace-nowrap mt-1.5 sm:mt-2">
               crafting experiences that{" "}
-              <span className="text-[#3B82F6] underline decoration-[#3B82F6]/40 decoration-2 underline-offset-8">
+              <span className="text-[#3B82F6] underline decoration-[#3B82F6]/40 decoration-2 underline-offset-4 sm:underline-offset-8">
                 actually convert
               </span>
               .
@@ -74,7 +74,7 @@ export const HeroSection: React.FC = () => {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
-          className="max-w-2xl mx-auto text-base sm:text-lg text-[#A1A1AA] leading-relaxed mb-6 sm:mb-8 font-normal"
+          className="max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-[#A1A1AA] leading-relaxed mb-5 sm:mb-8 font-normal px-2 sm:px-0"
         >
           <p>{profileData.subheadline}</p>
         </motion.div>
@@ -84,11 +84,11 @@ export const HeroSection: React.FC = () => {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
-          className="flex flex-wrap items-center justify-center gap-3.5 sm:gap-4 mb-6 sm:mb-8"
+          className="flex flex-col xs:flex-row items-center justify-center gap-3 sm:gap-4 w-full max-w-xs xs:max-w-none mb-5 sm:mb-8"
         >
           <Link
             href="#work"
-            className="inline-flex items-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-white text-[#0A0A0E] text-sm font-semibold tracking-wide hover:bg-[#3B82F6] hover:text-white transition-all duration-200 shadow-lg shadow-white/5 group"
+            className="w-full xs:w-auto inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-white text-[#0A0A0E] text-sm font-semibold tracking-wide hover:bg-[#3B82F6] hover:text-white transition-all duration-200 shadow-lg shadow-white/5 group"
             onMouseEnter={() => setCursorType("pointer")}
             onMouseLeave={() => setCursorType("default")}
           >
@@ -98,7 +98,7 @@ export const HeroSection: React.FC = () => {
 
           <Link
             href="#contact"
-            className="inline-flex items-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-white/[0.08] border border-white/20 hover:border-white hover:bg-white/[0.15] text-white text-sm font-semibold tracking-wide transition-all duration-200 shadow-xs group"
+            className="w-full xs:w-auto inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-white/[0.08] border border-white/20 hover:border-white hover:bg-white/[0.15] text-white text-sm font-semibold tracking-wide transition-all duration-200 shadow-xs group"
             onMouseEnter={() => setCursorType("pointer")}
             onMouseLeave={() => setCursorType("default")}
           >
@@ -112,11 +112,11 @@ export const HeroSection: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.5 }}
-          className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-[#D4D4D8]"
+          className="flex flex-wrap items-center justify-center gap-x-4 sm:gap-x-6 gap-y-2 text-xs text-[#D4D4D8] px-2"
         >
           {profileData.heroCapabilities.map((capability) => (
             <div key={capability} className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-3.5 h-3.5 text-[#3B82F6]" />
+              <CheckCircle2 className="w-3.5 h-3.5 text-[#3B82F6] shrink-0" />
               <span>{capability}</span>
             </div>
           ))}
@@ -124,8 +124,9 @@ export const HeroSection: React.FC = () => {
       </div>
 
       {/* Bottom Sub-Bar */}
-      <div className="relative z-10 max-w-7xl mx-auto w-full pt-6 border-t border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#888888]">
-        <div className="flex items-center gap-4 sm:gap-6 text-center sm:text-left">
+      <div className="relative z-10 max-w-7xl mx-auto w-full pt-5 sm:pt-6 border-t border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-xs text-[#888888]">
+        <div className="flex items-center gap-2 text-center sm:text-left">
+          <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
           <span className="font-medium text-[#A1A1AA]">{profileData.availability}</span>
         </div>
 

@@ -29,9 +29,24 @@ export const Navbar: React.FC = () => {
       setIsScrolled(window.scrollY > 30);
     };
     handleScroll();
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Prevent background scrolling when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+      document.body.style.touchAction = "none";
+    } else {
+      document.body.style.overflow = "";
+      document.body.style.touchAction = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+      document.body.style.touchAction = "";
+    };
+  }, [mobileMenuOpen]);
 
   // Close mobile menu on route change
   useEffect(() => {
@@ -43,11 +58,11 @@ export const Navbar: React.FC = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-[#F8F7F4]/90 backdrop-blur-md border-b border-[#E5E5DE] py-3.5 shadow-sm"
-            : "bg-transparent py-4 sm:py-5"
+            ? "bg-[#F8F7F4]/90 backdrop-blur-md border-b border-[#E5E5DE] py-3 sm:py-3.5 shadow-sm"
+            : "bg-transparent py-3.5 sm:py-5"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-center relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-center relative">
           {/* Centered Desktop Navigation Links */}
           <nav className="hidden md:flex items-center justify-center gap-7 lg:gap-10">
             {NAV_LINKS.map((link) => (
@@ -67,16 +82,26 @@ export const Navbar: React.FC = () => {
             ))}
           </nav>
 
-          {/* Mobile Menu Toggle Button (Aligned Right on Mobile) */}
-          <div className="md:hidden flex items-center justify-end w-full">
+          {/* Mobile Menu Header Bar (Pill on Mobile) */}
+          <div className="md:hidden flex items-center justify-between w-full">
+            <Link
+              href="/#top"
+              className={`text-sm font-display font-bold tracking-tight transition-colors ${
+                isScrolled ? "text-[#111111]" : "text-white"
+              }`}
+            >
+              Tarun A
+            </Link>
+
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className={`p-2 rounded-full border transition-colors focus:outline-none ${
+              className={`p-2 rounded-full border transition-all focus:outline-none ${
                 isScrolled
-                  ? "border-[#E5E5DE] bg-white/80 text-[#111111] hover:bg-white"
-                  : "border-white/20 bg-white/10 text-white hover:bg-white/20"
+                  ? "border-[#E5E5DE] bg-white/90 text-[#111111] shadow-xs active:scale-95"
+                  : "border-white/20 bg-white/10 text-white active:scale-95 backdrop-blur-md"
               }`}
-              aria-label="Toggle Navigation Menu"
+              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileMenuOpen}
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -88,39 +113,70 @@ export const Navbar: React.FC = () => {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+            exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="fixed inset-0 z-40 bg-[#F8F7F4] flex flex-col justify-between p-6 sm:p-10 pt-20 md:hidden"
+            className="fixed inset-0 z-40 bg-[#0E0E14]/95 backdrop-blur-xl flex flex-col justify-between p-6 pt-20 pb-8 text-white md:hidden overflow-y-auto"
           >
+            {/* Top Close / Title header inside drawer */}
             <div className="flex flex-col gap-6">
-              <div className="flex items-center justify-between pb-3 border-b border-[#E5E5DE]">
-                <span className="text-sm font-semibold text-[#111111]">Navigation</span>
-                <button
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="p-1.5 rounded-full text-[#555555] hover:text-[#111111]"
-                >
-                  <X className="w-5 h-5" />
-                </button>
+              <div className="flex items-center justify-between pb-3 border-b border-white/10">
+                <span className="text-xs font-editorial-mono uppercase tracking-widest text-[#A1A1AA]">
+                  Navigation
+                </span>
+                <span className="text-xs text-[#71717A]">
+                  Chennai, IN
+                </span>
               </div>
-              <nav className="flex flex-col gap-4">
-                {NAV_LINKS.map((link) => (
-                  <Link
+
+              {/* Navigation Links */}
+              <nav className="flex flex-col gap-3">
+                {NAV_LINKS.map((link, idx) => (
+                  <motion.div
                     key={link.name}
-                    href={link.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="text-2xl font-display font-semibold tracking-tight text-[#111111] flex items-center justify-between border-b border-[#E5E5DE] pb-3"
+                    initial={{ opacity: 0, x: -12 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: idx * 0.04, duration: 0.2 }}
                   >
-                    <span>{link.name}</span>
-                  </Link>
+                    <Link
+                      href={link.href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="text-xl xs:text-2xl font-display font-semibold tracking-tight text-white/90 hover:text-[#3B82F6] flex items-center justify-between py-2 border-b border-white/[0.06] transition-colors"
+                    >
+                      <span>{link.name}</span>
+                      <span className="text-xs font-editorial-mono text-white/40">
+                        0{idx + 1}
+                      </span>
+                    </Link>
+                  </motion.div>
                 ))}
               </nav>
             </div>
 
-            <div className="flex items-center justify-between text-xs text-[#666666] border-t border-[#E5E5DE] pt-6">
-              <span>Chennai, India</span>
-              <span className="text-accent font-medium">{profileData.role}</span>
+            {/* Quick CTAs & Contact Info in Mobile Drawer */}
+            <div className="mt-8 pt-6 border-t border-white/10 flex flex-col gap-4">
+              <div className="flex items-center gap-3">
+                <Link
+                  href="/#work"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex-1 py-3 px-4 rounded-full bg-white text-[#0A0A0E] text-xs font-semibold text-center hover:bg-[#3B82F6] hover:text-white transition-colors"
+                >
+                  View Selected Work
+                </Link>
+                <Link
+                  href="/#contact"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex-1 py-3 px-4 rounded-full bg-white/10 border border-white/20 text-white text-xs font-semibold text-center hover:bg-white/20 transition-colors"
+                >
+                  Let&apos;s Talk
+                </Link>
+              </div>
+
+              <div className="flex items-center justify-between text-xs text-[#A1A1AA] pt-2">
+                <span>{profileData.email}</span>
+                <span className="text-emerald-400 font-medium">● Available for roles</span>
+              </div>
             </div>
           </motion.div>
         )}

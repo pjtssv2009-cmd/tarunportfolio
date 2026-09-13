@@ -104,7 +104,7 @@ export const HeroScene: React.FC<HeroSceneProps> = ({ className = "" }) => {
         animate={
           isTouchDevice
             ? {
-                y: [0, -8, 0],
+                y: [0, -6, 0],
                 scale: [1, 1.01, 1],
               }
             : isHovered
@@ -121,7 +121,7 @@ export const HeroScene: React.FC<HeroSceneProps> = ({ className = "" }) => {
                 },
               }
         }
-        className="relative w-full max-w-[500px] sm:max-w-[600px] md:max-w-[680px] lg:max-w-[760px] h-[360px] sm:h-[430px] md:h-[490px] lg:h-[530px] flex items-center justify-center will-change-transform"
+        className="relative w-full max-w-[320px] xs:max-w-[400px] sm:max-w-[560px] md:max-w-[680px] lg:max-w-[760px] h-[210px] xs:h-[260px] sm:h-[380px] md:h-[460px] lg:h-[520px] flex items-center justify-center will-change-transform"
       >
         {/* Layer 1: Clearly Visible White Brand LOGO BEHIND Portrait Cutout (Z: -35px) */}
         <motion.div
@@ -133,10 +133,10 @@ export const HeroScene: React.FC<HeroSceneProps> = ({ className = "" }) => {
           className="absolute inset-0 flex items-center justify-center pointer-events-none z-0"
         >
           {/* Luminous Neon-Blue Ambient Radial Aura */}
-          <div className="absolute w-[380px] sm:w-[520px] lg:w-[620px] h-[380px] sm:h-[520px] lg:h-[620px] rounded-full bg-gradient-to-tr from-accent/30 via-indigo-500/15 to-transparent blur-3xl opacity-90" />
+          <div className="absolute w-[220px] xs:w-[300px] sm:w-[480px] lg:w-[600px] h-[220px] xs:h-[300px] sm:h-[480px] lg:h-[600px] rounded-full bg-gradient-to-tr from-[#3B82F6]/30 via-[#6366F1]/15 to-transparent blur-2xl sm:blur-3xl opacity-90" />
           
           {/* Background Brand Logo - Crisp White & Sized Wide Behind Subject */}
-          <div className="relative w-[340px] sm:w-[480px] md:w-[600px] lg:w-[720px] h-[130px] sm:h-[180px] md:h-[220px] lg:h-[260px] flex items-center justify-center opacity-90 sm:opacity-95 transition-opacity duration-300">
+          <div className="relative w-[230px] xs:w-[290px] sm:w-[460px] md:w-[580px] lg:w-[700px] h-[80px] xs:h-[105px] sm:h-[165px] md:h-[210px] lg:h-[250px] flex items-center justify-center opacity-90 sm:opacity-95 transition-opacity duration-300">
             <Image
               src="/images/logo-white.png"
               alt="Tarun A Brand Logo"
@@ -161,10 +161,10 @@ export const HeroScene: React.FC<HeroSceneProps> = ({ className = "" }) => {
           <div
             className="absolute inset-0 flex items-center justify-center pointer-events-none"
             style={{
-              transform: "translateZ(-15px) translateY(20px)",
+              transform: "translateZ(-15px) translateY(16px)",
             }}
           >
-            <div className="w-[65%] h-[65%] rounded-full bg-black/40 blur-2xl opacity-75" />
+            <div className="w-[65%] h-[65%] rounded-full bg-black/40 blur-xl sm:blur-2xl opacity-75" />
           </div>
 
           {/* High-Fidelity Portrait Image with Smooth Fade-out Mask at Bottom */}
@@ -185,7 +185,7 @@ export const HeroScene: React.FC<HeroSceneProps> = ({ className = "" }) => {
               sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 760px"
               className="object-contain object-bottom select-none pointer-events-none"
               style={{
-                filter: "drop-shadow(0 18px 36px rgba(0,0,0,0.3))",
+                filter: "drop-shadow(0 14px 28px rgba(0,0,0,0.3))",
               }}
             />
           </div>
