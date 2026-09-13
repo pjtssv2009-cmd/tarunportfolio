@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
@@ -83,15 +84,21 @@ export const Navbar: React.FC = () => {
             ))}
           </nav>
 
-          {/* Mobile Menu Header Bar (Pill on Mobile) */}
+          {/* Mobile Menu Header Bar (Logo on Left, Menu Button on Right) */}
           <div className="md:hidden flex items-center justify-between w-full">
             <Link
               href="/#top"
-              className={`text-sm font-display font-bold tracking-tight transition-colors ${
-                isScrolled ? "text-[#111111]" : "text-white"
-              }`}
+              className="relative flex items-center h-7 w-24 focus:outline-none"
+              aria-label="Tarun A Home"
             >
-              Tarun A
+              <Image
+                src={isScrolled ? profileData.logo : profileData.logoWhite}
+                alt="Tarun A Brand Logo"
+                width={100}
+                height={28}
+                className="h-6 w-auto object-contain transition-opacity duration-200"
+                priority
+              />
             </Link>
 
             <button

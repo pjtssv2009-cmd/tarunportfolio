@@ -44,22 +44,24 @@ export const HeroSection: React.FC = () => {
           <HeroScene className="w-full" />
         </motion.div>
 
-        {/* 2-Line Conversational Headline with Name & Value Highlights */}
+        {/* 3-Line Conversational Headline with Name & Value Highlights */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-          className="w-full max-w-5xl mx-auto mt-3 sm:mt-6 px-1"
+          className="w-full max-w-5xl mx-auto mt-3 sm:mt-6 px-2"
         >
-          <h1 className="text-[1.35rem] xs:text-[1.65rem] sm:text-3xl md:text-4xl lg:text-[2.85rem] xl:text-[3.25rem] font-display font-extrabold tracking-tight text-white leading-[1.25] sm:leading-[1.18] lg:leading-[1.16] mb-4 sm:mb-6">
-            <span className="block sm:whitespace-nowrap">
+          <h1 className="text-[1.32rem] xs:text-[1.55rem] sm:text-3xl md:text-4xl lg:text-[2.85rem] xl:text-[3.25rem] font-display font-extrabold tracking-tight text-white leading-[1.24] sm:leading-[1.18] lg:leading-[1.16] mb-4 sm:mb-6">
+            <span className="block">
               Hey, I&apos;m{" "}
               <span className="text-[#3B82F6] underline decoration-[#3B82F6]/40 decoration-2 underline-offset-4 sm:underline-offset-8">
                 Tarun A
-              </span>{" "}
+              </span>
+            </span>
+            <span className="block mt-1 sm:mt-1.5">
               — a Product Designer
             </span>
-            <span className="block sm:whitespace-nowrap mt-1.5 sm:mt-2">
+            <span className="block mt-1 sm:mt-2">
               crafting experiences that{" "}
               <span className="text-[#3B82F6] underline decoration-[#3B82F6]/40 decoration-2 underline-offset-4 sm:underline-offset-8">
                 actually convert
@@ -107,15 +109,15 @@ export const HeroSection: React.FC = () => {
           </Link>
         </motion.div>
 
-        {/* Centered Capabilities */}
+        {/* Left-Aligned Capabilities Checklist in Centered Block */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.5 }}
-          className="flex flex-wrap items-center justify-center gap-x-4 sm:gap-x-6 gap-y-2 text-xs text-[#D4D4D8] px-2"
+          className="w-fit mx-auto flex flex-col items-start gap-2.5 text-xs text-[#D4D4D8] px-2"
         >
           {profileData.heroCapabilities.map((capability) => (
-            <div key={capability} className="flex items-center gap-1.5">
+            <div key={capability} className="flex items-center gap-2 text-left">
               <CheckCircle2 className="w-3.5 h-3.5 text-[#3B82F6] shrink-0" />
               <span>{capability}</span>
             </div>
