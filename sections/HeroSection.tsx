@@ -126,15 +126,19 @@ export const HeroSection: React.FC = () => {
       </div>
 
       {/* Bottom Sub-Bar */}
-      <div className="relative z-10 max-w-7xl mx-auto w-full pt-5 sm:pt-6 border-t border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-xs text-[#888888]">
-        <div className="flex items-center gap-2 text-center sm:text-left">
-          <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-          <span className="font-medium text-[#A1A1AA]">{profileData.availability}</span>
+      <div className="relative z-10 max-w-7xl mx-auto w-full pt-4 sm:pt-6 border-t border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-xs text-[#888888]">
+        {/* Availability Pill Badge */}
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.06] border border-white/10 backdrop-blur-xs text-[11px] sm:text-xs text-center shadow-xs">
+          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+          <span className="text-[#D4D4D8] font-medium leading-tight">
+            <span className="hidden sm:inline">{profileData.availability}</span>
+            <span className="sm:hidden">Available for Full-time &amp; Freelance Roles</span>
+          </span>
         </div>
 
         <Link
           href="#work"
-          className="inline-flex items-center gap-2 text-xs font-medium text-[#A1A1AA] hover:text-[#3B82F6] transition-colors"
+          className="inline-flex items-center gap-1.5 text-xs font-medium text-[#A1A1AA] hover:text-[#3B82F6] transition-colors"
           onMouseEnter={() => setCursorType("pointer")}
           onMouseLeave={() => setCursorType("default")}
         >
