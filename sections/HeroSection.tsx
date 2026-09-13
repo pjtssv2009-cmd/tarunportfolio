@@ -127,18 +127,24 @@ export const HeroSection: React.FC = () => {
 
       {/* Bottom Sub-Bar */}
       <div className="relative z-10 max-w-7xl mx-auto w-full pt-4 sm:pt-6 border-t border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-xs text-[#888888]">
-        {/* Availability Pill Badge */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.06] border border-white/10 backdrop-blur-xs text-[11px] sm:text-xs text-center shadow-xs">
-          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
-          <span className="text-[#D4D4D8] font-medium leading-tight">
-            <span className="hidden sm:inline">{profileData.availability}</span>
-            <span className="sm:hidden">Available for Full-time &amp; Freelance Roles</span>
-          </span>
+        {/* Availability Status with Inline Radar Dot */}
+        <div className="max-w-md sm:max-w-none text-center sm:text-left">
+          <p className="text-xs text-[#A1A1AA] leading-relaxed">
+            <span className="inline-flex items-center justify-center mr-2 align-middle -translate-y-[1px]">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              </span>
+            </span>
+            <span className="font-medium text-[#E4E4E7]">Based in Chennai, India</span>
+            <span className="text-white/40"> · </span>
+            <span>Open to Full-time, Freelance &amp; Remote Opportunities</span>
+          </p>
         </div>
 
         <Link
           href="#work"
-          className="inline-flex items-center gap-1.5 text-xs font-medium text-[#A1A1AA] hover:text-[#3B82F6] transition-colors"
+          className="inline-flex items-center gap-1.5 text-xs font-medium text-[#A1A1AA] hover:text-[#3B82F6] transition-colors shrink-0"
           onMouseEnter={() => setCursorType("pointer")}
           onMouseLeave={() => setCursorType("default")}
         >
